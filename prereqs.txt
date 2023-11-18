@@ -1,0 +1,54 @@
+MATH1050 - None (for the sake of this assignment)
+MATH1060 - None (for the sake of this assignment)
+CS1400 - MATH1050
+CS1410 - CS1400
+CS1440 - CS1400
+CS2410 - CS1410
+CS2420 - CS1410
+CS2610 - CS1410
+MATH1210 - MATH1050 MATH1060
+MATH2270 - MATH1210
+STAT3000 - MATH1210
+MATH3310 - MATH1210
+CS2810 - CS 1410 admitted
+CS3100 - CS2420 admitted
+CS3450 - CS2420 CS2610 admitted
+CS4700 - CS2420 admitted
+CS5300 - CS2810 admitted
+CS5000 - CS2420 admitted
+CS5050 - CS2420 admitted
+ENGL3085 - admitted
+CS3200 - CS2410 admitted
+CS3430 - CS1410 MATH1210 admitted
+CS3460 - CS1440 CS2420 admitted
+CS4250 - admitted
+CS4320 - CS2420 admitted
+CS4460 - CS2420 CS3100 admitted
+CS4610 - CS2610 admitted
+CS4950 - CS2420 admitted
+CS5030 - CS2420 admitted
+CS5040 - CS2420 admitted
+CS5060 - CS2420 admitted
+CS5080 - CS2420 admitted
+CS5110 - CS2420 admitted
+CS5140 - None admitted
+CS5250 - CS2420 admitted
+CS5260 - CS5250 admitted
+CS5300 - CS2810 admitted
+CS5400 - CS2420 MATH2270 admitted
+CS5410 - CS2420 CS3100 admitted
+CS5470 - CS2420 MATH2270 admitted
+CS5510 - CS2420 admitted
+CS5600 - CS2420 admitted
+CS5640 - CS2420 admitted
+CS5665 - CS2420 admitted
+CS5680 - CS2420 MATH2270 STAT3000 admitted
+CS5700 - CS3450 admitted
+CS5750 - STAT3000 admitted
+CS5800 - CS2420 admitted
+CS5820 - CS2420 admitted
+CS5830 - CS2420 admitted
+CS5840 - CS2420 MATH2270 CS5665 admitted
+CS5850 - CS2420 admitted
+CS5890 - CS2420 admitted
+CS5950 - CS2420 admitted
