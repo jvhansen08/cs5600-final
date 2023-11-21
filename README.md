@@ -1,10 +1,10 @@
 # CS5600 Project 2
 
 ### Overview
-Per my project proposal, I have defined GPS operators to plan out what courses must be taken in order to take some Computer Science course (i.e. If I want to take CS2420, I must first take CS1400 and CS1410). I found that, after doing so, I had a little extra time, so I tried to expand the scope of the project to include all undergraduate courses at USU. While it wasn't entirely successful, these results can be found in the [BONUS](\BONUS) directory. This data was manually sourced from the [USU catalog](https://catalog.usu.edu/preview_program.php?catoid=38&poid=36772).
+Per my project proposal, I have defined GPS operators to plan out what courses must be taken in order to take some Computer Science course (i.e. If I want to take CS2420, I must first take CS1400 and CS1410). I found that, after doing so, I had a little extra time, so I tried to expand the scope of the project to include all undergraduate courses at USU. While it wasn't entirely successful, these results can be found in the [BONUS](./BONUS) directory. This data was manually sourced from the [USU catalog](https://catalog.usu.edu/preview_program.php?catoid=38&poid=36772).
 
 ### Running the program
-I used the boilerplate code provided in assignment 10. I have assumed an initial state of the world where no classes have been taken. In order to change this, feel free to add courses (i.e. cs-1400 or cs-1410) to the \*registration-world\* list on line 48 of [ops.lisp](\ops.lisp). Once you have chosen your initial state of the world, open a linux terminal and navigate to the the current directory. Once there, start a lisp interpreter with the command 'clisp' and run the following commands:
+I used the boilerplate code provided in assignment 10. I have assumed an initial state of the world where no classes have been taken. In order to change this, feel free to add courses (i.e. cs-1400 or cs-1410) to the \*registration-world\* list on line 48 of [ops.lisp](./ops.lisp). Once you have chosen your initial state of the world, open a linux terminal and navigate to the the current directory. Once there, start a lisp interpreter with the command 'clisp' and run the following commands:
 ```lisp
 (load "gps.lisp")
 (use *registration-ops*)
