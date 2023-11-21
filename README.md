@@ -6,11 +6,11 @@ Per my project proposal, I have defined GPS operators to plan out what courses m
 ### Running the program
 I used the boilerplate code provided in assignment 10. I have assumed an initial state of the world where no classes have been taken. In order to change this, feel free to add courses (i.e. cs-1400 or cs-1410) to the \*registration-world\* list on line 48 of [ops.lisp](./ops.lisp). Once you have chosen your initial state of the world, open a linux terminal and navigate to the the current directory. Once there, start a lisp interpreter with the command 'clisp' and run the following commands:
 ```lisp
-(load "gps.lisp")
-(use *registration-ops*)
+> (load "gps.lisp")
+> (use *registration-ops*)
 ;;;The next command is optional
-(trace-gps) ;;; you can run this command if you would like to see the 'thought-process' of GPS
-(gps *registration-world* `(GOAL)) ;;; replace 'GOAL' with the desired course, i.e. cs-3450 or cs-5000
+> (trace-gps) ;;; you can run this command if you would like to see the 'thought-process' of GPS
+> (gps *registration-world* `(GOAL)) ;;; replace 'GOAL' with the desired course, i.e. cs-3450 or cs-5000
 ```
 ### Sample results
 I have included a couple of the runs below:
