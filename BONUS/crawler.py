@@ -1,37 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import re
-import os
 import json
 
-# def getMajorLinks(url):
-#     majorLinks = {}
-#     if os.path.isfile("majors.json"):
-#         with open("majors.json", "r") as f:
-#             majorLinks = json.load(f)
-#     else:
-#         response = requests.get(url)
-#         html = BeautifulSoup(response.text, 'html.parser')
-#         majorList = html.find_all('ul')[20]
-#         ulParser = BeautifulSoup(str(majorList), 'html.parser')
-#         liElements = ulParser.find_all('li')
-#         for li in liElements:
-#             a = li.find('a')
-#             majorLinks[a.text] = f"https://catalog.usu.edu/{a.get('href')}"
-#         with open("majors.json", "w") as f:
-#             json.dump(majorLinks, f, indent=4)
-#     return majorLinks
-
-
-# def savePreReqs(majors):
-#     for k,v in majors.items():
-#         with open("courses", 'w') as f:
-#             response = requests.get(v)
-#             html = BeautifulSoup(response.text, 'html.parser')
-#             courseList = html.find_all('div', 'acalog-core')
-#             print(courseList)
-
-# majors = getMajorLinks("https://catalog.usu.edu/content.php?catoid=38&navoid=29050")
 
 NUM_PAGES = 73
 
@@ -42,7 +13,6 @@ def parseCourses(url, allCourses):
         a = row.find('a')
         if a:
             findPreReq(a.get('href'), allCourses)
-
 
 def findPreReq(url, allCourses):
     response = requests.get("https://catalog.usu.edu/" + url)
@@ -63,12 +33,12 @@ def findPreReq(url, allCourses):
     except Exception as e:
         print(e)
 
+def main():
+    allCourses = {}
+    for i in range(NUM_PAGES):
+        parseCourses(f"https://catalog.usu.edu/content.php?catoid=38&catoid=38&navoid=28875&filter%5Bitem_type%5D=3&filter%5Bonly_active%5D=1&filter%5B3%5D=1&filter%5Bcpage%5D={i + 1}#acalog_template_course_filter", allCourses)
 
+    with open("allData.json", 'w') as f:
+        json.dump(allCourses, f, indent=4)
 
-allCourses = {}
-for i in range(NUM_PAGES):
-    print(i)
-    currCourse = parseCourses(f"https://catalog.usu.edu/content.php?catoid=38&catoid=38&navoid=28875&filter%5Bitem_type%5D=3&filter%5Bonly_active%5D=1&filter%5B3%5D=1&filter%5Bcpage%5D={i + 1}#acalog_template_course_filter", allCourses)
-
-with open("allData.json", 'w') as f:
-    json.dump(allCourses, f, indent=4)
+main()
