@@ -32,14 +32,13 @@ lispProgram = """(in-package :user)
   (list
 """
 
-for course in preReqs['data']:
-    for k, v in course.items():
-        preconds = " ".join(v)
-        lispCommand = f"\n\t\t(make-op :action 'take-{k}"
-        if len(preconds) > 0:
-            lispCommand += f"\n\t\t\t:preconds '({preconds})"
-        lispCommand += f"\n\t\t\t:add-list '({k}))"
-        lispProgram += lispCommand
+for k, v in preReqs.items():
+    preconds = " ".join(v)
+    lispCommand = f"\n\t\t(make-op :action 'take-{k}"
+    if len(preconds) > 0:
+        lispCommand += f"\n\t\t\t:preconds '({preconds})"
+    lispCommand += f"\n\t\t\t:add-list '({k}))"
+    lispProgram += lispCommand
 
 lispProgram += """))
 (mapc #'convert-op *registration-ops*)

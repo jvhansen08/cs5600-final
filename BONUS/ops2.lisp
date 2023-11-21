@@ -31,13 +31,13 @@
 			:preconds '(acct-2010)
 			:add-list '(acct-2020))
 		(make-op :action 'take-acct-3110
-			:preconds '(acct-2010 acct-2020)
+			:preconds '(acct-2020 acct-2010)
 			:add-list '(acct-3110))
 		(make-op :action 'take-acct-3120
 			:preconds '(acct-3110)
 			:add-list '(acct-3120))
 		(make-op :action 'take-acct-3310
-			:preconds '(acct-2010 acct-2020)
+			:preconds '(acct-2020 acct-2010)
 			:add-list '(acct-3310))
 		(make-op :action 'take-acct-3510
 			:preconds '(acct-2010)
@@ -66,10 +66,8 @@
 			:preconds '(as-1120)
 			:add-list '(as-1020))
 		(make-op :action 'take-as-1110
-			:preconds '(as-1010)
 			:add-list '(as-1110))
 		(make-op :action 'take-as-1120
-			:preconds '(as-1020)
 			:add-list '(as-1120))
 		(make-op :action 'take-as-2010
 			:preconds '(as-2110)
@@ -78,36 +76,30 @@
 			:preconds '(as-2120)
 			:add-list '(as-2020))
 		(make-op :action 'take-as-2110
-			:preconds '(as-2010)
 			:add-list '(as-2110))
 		(make-op :action 'take-as-2120
-			:preconds '(as-2020)
 			:add-list '(as-2120))
 		(make-op :action 'take-as-3010
-			:preconds '(as-2010 as-2020 as-3110)
+			:preconds '(as-3110 as-2020 as-2010)
 			:add-list '(as-3010))
 		(make-op :action 'take-as-3020
-			:preconds '(as-2010 as-2020 as-3120)
+			:preconds '(as-3120 as-2020 as-2010)
 			:add-list '(as-3020))
 		(make-op :action 'take-as-3060
 			:add-list '(as-3060))
 		(make-op :action 'take-as-3110
-			:preconds '(as-3010)
 			:add-list '(as-3110))
 		(make-op :action 'take-as-3120
-			:preconds '(as-3020)
 			:add-list '(as-3120))
 		(make-op :action 'take-as-4010
-			:preconds '(as-3010 as-3020 as-4110)
+			:preconds '(as-4110 as-3020 as-3010)
 			:add-list '(as-4010))
 		(make-op :action 'take-as-4020
-			:preconds '(as-3010 as-3020 as-4120)
+			:preconds '(as-4120 as-3020 as-3010)
 			:add-list '(as-4020))
 		(make-op :action 'take-as-4110
-			:preconds '(as-4010)
 			:add-list '(as-4110))
 		(make-op :action 'take-as-4120
-			:preconds '(as-4020)
 			:add-list '(as-4120))
 		(make-op :action 'take-ag-4250
 			:add-list '(ag-4250))
@@ -170,7 +162,7 @@
 		(make-op :action 'take-aste-3500
 			:add-list '(aste-3500))
 		(make-op :action 'take-aste-3600
-			:preconds '(math-1050 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 math-1050)
 			:add-list '(aste-3600))
 		(make-op :action 'take-aste-3620
 			:add-list '(aste-3620))
@@ -193,12 +185,12 @@
 			:preconds '(math-1050)
 			:add-list '(aste-4100))
 		(make-op :action 'take-aste-4150
-			:preconds '(aste-2710 aste-3240)
+			:preconds '(aste-3240 aste-2710)
 			:add-list '(aste-4150))
 		(make-op :action 'take-aste-4155
 			:add-list '(aste-4155))
 		(make-op :action 'take-aste-4210
-			:preconds '(bsed-4210 fcse-4210 tee-4210)
+			:preconds '(tee-4210 fcse-4210 bsed-4210)
 			:add-list '(aste-4210))
 		(make-op :action 'take-aste-4215
 			:add-list '(aste-4215))
@@ -221,12 +213,10 @@
 		(make-op :action 'take-aste-5154
 			:add-list '(aste-5154))
 		(make-op :action 'take-aste-5220
-			:preconds '(aste-6220)
 			:add-list '(aste-5220))
 		(make-op :action 'take-aste-5260
 			:add-list '(aste-5260))
 		(make-op :action 'take-aste-5400
-			:preconds '(aste-6400)
 			:add-list '(aste-5400))
 		(make-op :action 'take-aste-5450
 			:preconds '(ndfs-5450)
@@ -236,18 +226,18 @@
 		(make-op :action 'take-aste-5550
 			:add-list '(aste-5550))
 		(make-op :action 'take-aste-5600
-			:preconds '(cai-5600 aste-6600)
+			:preconds '(cai-5600)
 			:add-list '(aste-5600))
 		(make-op :action 'take-aste-5610
-			:preconds '(aste-5600 aste-6600 cai-5600 cai-6600 cai-5610 aste-6610)
+			:preconds '(cai-5610 cai-5600 aste-5600)
 			:add-list '(aste-5610))
 		(make-op :action 'take-aste-5620
-			:preconds '(cai-5620 aste-6620)
+			:preconds '(cai-5620)
 			:add-list '(aste-5620))
 		(make-op :action 'take-aste-5630
 			:add-list '(aste-5630))
 		(make-op :action 'take-aste-5635
-			:preconds '(aste-3240 aste-4150)
+			:preconds '(aste-4150 aste-3240)
 			:add-list '(aste-5635))
 		(make-op :action 'take-aste-5640
 			:add-list '(aste-5640))
@@ -272,7 +262,7 @@
 			:preconds '(advs-2020)
 			:add-list '(advs-2040))
 		(make-op :action 'take-advs-2050
-			:preconds '(advs-2010 advs-2020 advs-2030 advs-2040)
+			:preconds '(advs-2040 advs-2030 advs-2020 advs-2010)
 			:add-list '(advs-2050))
 		(make-op :action 'take-advs-2060
 			:preconds '(advs-2010)
@@ -343,7 +333,7 @@
 			:preconds '(advs-2200)
 			:add-list '(advs-3520))
 		(make-op :action 'take-advs-3600
-			:preconds '(advs-2600 advs-2650)
+			:preconds '(advs-2650 advs-2600)
 			:add-list '(advs-3600))
 		(make-op :action 'take-advs-3610
 			:preconds '(advs-3150)
@@ -366,7 +356,7 @@
 		(make-op :action 'take-advs-3930
 			:add-list '(advs-3930))
 		(make-op :action 'take-advs-4200
-			:preconds '(advs-2200 chem-1120 chem-1220 chem-2310)
+			:preconds '(chem-2310 chem-1220 chem-1120 advs-2200)
 			:add-list '(advs-4200))
 		(make-op :action 'take-advs-4210
 			:preconds '(advs-4200)
@@ -375,12 +365,12 @@
 			:preconds '(advs-4200)
 			:add-list '(advs-4220))
 		(make-op :action 'take-advs-4230
-			:preconds '(advs-3170 advs-3400 advs-3610)
+			:preconds '(advs-3610 advs-3400 advs-3170)
 			:add-list '(advs-4230))
 		(make-op :action 'take-advs-4250
 			:add-list '(advs-4250))
 		(make-op :action 'take-advs-4260
-			:preconds '(advs-5160 advs-5260)
+			:preconds '(advs-5260 advs-5160)
 			:add-list '(advs-4260))
 		(make-op :action 'take-advs-4270
 			:add-list '(advs-4270))
@@ -396,65 +386,64 @@
 		(make-op :action 'take-advs-4920
 			:add-list '(advs-4920))
 		(make-op :action 'take-advs-5000
-			:preconds '(biol-1610 chem-2310 chem-3700 biol-3300)
+			:preconds '(biol-3300 chem-3700 chem-2310 biol-1610)
 			:add-list '(advs-5000))
 		(make-op :action 'take-advs-5030
 			:preconds '(advs-1110)
 			:add-list '(advs-5030))
 		(make-op :action 'take-advs-5080
-			:preconds '(advs-2080 advs-4200 advs-4560 advs-6080)
+			:preconds '(advs-4560 advs-4200 advs-2080)
 			:add-list '(advs-5080))
 		(make-op :action 'take-advs-5090
-			:preconds '(advs-2090 advs-4200 advs-4560 advs-6090)
+			:preconds '(advs-4560 advs-4200 advs-2090)
 			:add-list '(advs-5090))
 		(make-op :action 'take-advs-5110
-			:preconds '(biol-1610 biol-1620 chem-1210 chem-1220 biol-5110 advs-6110)
+			:preconds '(biol-5110 chem-1220 chem-1210 biol-1620 biol-1610)
 			:add-list '(advs-5110))
 		(make-op :action 'take-advs-5120
-			:preconds '(advs-2120 advs-4200 advs-4560 advs-6120)
+			:preconds '(advs-4560 advs-4200 advs-2120)
 			:add-list '(advs-5120))
 		(make-op :action 'take-advs-5130
-			:preconds '(advs-4200 advs-4560 advs-6130)
+			:preconds '(advs-4560 advs-4200)
 			:add-list '(advs-5130))
 		(make-op :action 'take-advs-5160
-			:preconds '(biol-5160 ndfs-5160 psc-5160)
+			:preconds '(psc-5160 ndfs-5160 biol-5160)
 			:add-list '(advs-5160))
 		(make-op :action 'take-advs-5190
-			:preconds '(advs-2190 advs-4200 advs-4560 advs-6190)
+			:preconds '(advs-4560 advs-4200 advs-2190)
 			:add-list '(advs-5190))
 		(make-op :action 'take-advs-5220
-			:preconds '(chem-3700 biol-5220 ndfs-5220 advs-6220)
+			:preconds '(ndfs-5220 biol-5220 chem-3700)
 			:add-list '(advs-5220))
 		(make-op :action 'take-advs-5260
-			:preconds '(chem-3700 chem-5710 biol-3060 biol-5260 ndfs-5260 psc-5260)
+			:preconds '(psc-5260 ndfs-5260 biol-5260 biol-3060 chem-5710 chem-3700)
 			:add-list '(advs-5260))
 		(make-op :action 'take-advs-5280
-			:preconds '(advs-5260 biol-5280 advs-6280)
+			:preconds '(biol-5280 advs-5260)
 			:add-list '(advs-5280))
 		(make-op :action 'take-advs-5300
-			:preconds '(advs-6300)
 			:add-list '(advs-5300))
 		(make-op :action 'take-advs-5350
-			:preconds '(biol-5600 chem-3700 advs-6350)
+			:preconds '(chem-3700 biol-5600)
 			:add-list '(advs-5350))
 		(make-op :action 'take-advs-5400
-			:preconds '(chem-1220 biol-1620 chem-2300 biol-5400 pubh-5400 advs-6400)
+			:preconds '(pubh-5400 biol-5400 chem-2300 biol-1620 chem-1220)
 			:add-list '(advs-5400))
 		(make-op :action 'take-advs-5500
-			:preconds '(advs-3500 advs-6500)
+			:preconds '(advs-3500)
 			:add-list '(advs-5500))
 		(make-op :action 'take-advs-5520
-			:preconds '(wild-4000 advs-6520)
+			:preconds '(wild-4000)
 			:add-list '(advs-5520))
 		(make-op :action 'take-advs-5530
-			:preconds '(advs-3500 advs-2200 advs-6530)
+			:preconds '(advs-2200 advs-3500)
 			:add-list '(advs-5530))
 		(make-op :action 'take-advs-5630
 			:add-list '(advs-5630))
 		(make-op :action 'take-advs-5650
 			:add-list '(advs-5650))
 		(make-op :action 'take-advs-5820
-			:preconds '(advs-4560 biol-3060 advs-6820)
+			:preconds '(biol-3060 advs-4560)
 			:add-list '(advs-5820))
 		(make-op :action 'take-advs-5860
 			:preconds '(wild-5860)
@@ -483,7 +472,7 @@
 		(make-op :action 'take-anth-2018
 			:add-list '(anth-2018))
 		(make-op :action 'take-anth-2210
-			:preconds '(engl-2210 hist-2210)
+			:preconds '(hist-2210 engl-2210)
 			:add-list '(anth-2210))
 		(make-op :action 'take-anth-2330
 			:add-list '(anth-2330))
@@ -492,7 +481,7 @@
 		(make-op :action 'take-anth-2525
 			:add-list '(anth-2525))
 		(make-op :action 'take-anth-2720
-			:preconds '(engl-2720 hist-2720)
+			:preconds '(hist-2720 engl-2720)
 			:add-list '(anth-2720))
 		(make-op :action 'take-anth-2977
 			:add-list '(anth-2977))
@@ -553,13 +542,12 @@
 		(make-op :action 'take-anth-3550
 			:add-list '(anth-3550))
 		(make-op :action 'take-anth-3710
-			:preconds '(engl-3710 hist-3710 rels-3710)
+			:preconds '(rels-3710 hist-3710 engl-3710)
 			:add-list '(anth-3710))
 		(make-op :action 'take-anth-4100
 			:preconds '(ling-4100)
 			:add-list '(anth-4100))
 		(make-op :action 'take-anth-4110
-			:preconds '(anth-6110)
 			:add-list '(anth-4110))
 		(make-op :action 'take-anth-4115
 			:add-list '(anth-4115))
@@ -568,14 +556,12 @@
 		(make-op :action 'take-anth-4130
 			:add-list '(anth-4130))
 		(make-op :action 'take-anth-4140
-			:preconds '(anth-6140)
 			:add-list '(anth-4140))
 		(make-op :action 'take-anth-4150
 			:add-list '(anth-4150))
 		(make-op :action 'take-anth-4160
 			:add-list '(anth-4160))
 		(make-op :action 'take-anth-4170
-			:preconds '(anth-6170)
 			:add-list '(anth-4170))
 		(make-op :action 'take-anth-4180
 			:add-list '(anth-4180))
@@ -584,7 +570,7 @@
 		(make-op :action 'take-anth-4200
 			:add-list '(anth-4200))
 		(make-op :action 'take-anth-4210
-			:preconds '(envs-4210 anth-6210)
+			:preconds '(envs-4210)
 			:add-list '(anth-4210))
 		(make-op :action 'take-anth-4240
 			:add-list '(anth-4240))
@@ -601,61 +587,55 @@
 			:preconds '(anth-1010)
 			:add-list '(anth-4980))
 		(make-op :action 'take-anth-4990
-			:preconds '(anth-1010 anth-4980)
+			:preconds '(anth-4980 anth-1010)
 			:add-list '(anth-4990))
 		(make-op :action 'take-anth-5115
-			:preconds '(anth-6115)
 			:add-list '(anth-5115))
 		(make-op :action 'take-anth-5130
-			:preconds '(soc-5130 anth-6130)
+			:preconds '(soc-5130)
 			:add-list '(anth-5130))
 		(make-op :action 'take-anth-5190
-			:preconds '(anth-6190)
 			:add-list '(anth-5190))
 		(make-op :action 'take-anth-5195
-			:preconds '(anth-1090 rels-1090 anth-3160 rels-1010 rels-5195)
+			:preconds '(rels-5195 rels-1010 anth-3160 rels-1090 anth-1090)
 			:add-list '(anth-5195))
 		(make-op :action 'take-anth-5210
 			:add-list '(anth-5210))
 		(make-op :action 'take-anth-5250
-			:preconds '(stat-1040 stat-1045 anth-3250 anth-6250)
+			:preconds '(anth-3250 stat-1045 stat-1040)
 			:add-list '(anth-5250))
 		(make-op :action 'take-anth-5300
-			:preconds '(anth-1030 anth-6300)
+			:preconds '(anth-1030)
 			:add-list '(anth-5300))
 		(make-op :action 'take-anth-5310
-			:preconds '(anth-6310)
 			:add-list '(anth-5310))
 		(make-op :action 'take-anth-5320
-			:preconds '(anth-6320)
 			:add-list '(anth-5320))
 		(make-op :action 'take-anth-5330
-			:preconds '(anth-1020 anth-1030 geo-1110 geo-2200 anth-6330)
+			:preconds '(geo-2200 geo-1110 anth-1030 anth-1020)
 			:add-list '(anth-5330))
 		(make-op :action 'take-anth-5340
-			:preconds '(anth-1030 anth-2330)
+			:preconds '(anth-2330 anth-1030)
 			:add-list '(anth-5340))
 		(make-op :action 'take-anth-5380
-			:preconds '(anth-1030 anth-2330 anth-6380)
+			:preconds '(anth-2330 anth-1030)
 			:add-list '(anth-5380))
 		(make-op :action 'take-anth-5420
-			:preconds '(anth-1030 anth-6420)
+			:preconds '(anth-1030)
 			:add-list '(anth-5420))
 		(make-op :action 'take-anth-5650
-			:preconds '(anth-6650)
 			:add-list '(anth-5650))
 		(make-op :action 'take-anth-5700
-			:preconds '(engl-5700 hist-5700)
+			:preconds '(hist-5700 engl-5700)
 			:add-list '(anth-5700))
 		(make-op :action 'take-anth-5800
-			:preconds '(anth-6800)
 			:add-list '(anth-5800))
 		(make-op :action 'take-anth-5900
 			:add-list '(anth-5900))
 		(make-op :action 'take-anth-5980
 			:add-list '(anth-5980))
 		(make-op :action 'take-cai-4300
-			:preconds '(cai-5000 cai-6300)
+			:preconds '(cai-5000)
 			:add-list '(cai-4300))
 		(make-op :action 'take-cai-5000
 			:add-list '(cai-5000))
@@ -667,40 +647,31 @@
 			:preconds '(cai-5000)
 			:add-list '(cai-5200))
 		(make-op :action 'take-cai-5310
-			:preconds '(cai-5000 cai-6310)
+			:preconds '(cai-5000)
 			:add-list '(cai-5310))
 		(make-op :action 'take-cai-5400
-			:preconds '(cai-5000 phil-5400 cai-6400)
+			:preconds '(phil-5400 cai-5000)
 			:add-list '(cai-5400))
 		(make-op :action 'take-cai-5500
-			:preconds '(cai-6500)
 			:add-list '(cai-5500))
 		(make-op :action 'take-cai-5510
-			:preconds '(cai-6510)
 			:add-list '(cai-5510))
 		(make-op :action 'take-cai-5520
-			:preconds '(cai-6520)
 			:add-list '(cai-5520))
 		(make-op :action 'take-cai-5530
-			:preconds '(cai-6530)
 			:add-list '(cai-5530))
 		(make-op :action 'take-cai-5540
-			:preconds '(cai-6540)
 			:add-list '(cai-5540))
 		(make-op :action 'take-cai-5550
-			:preconds '(cai-6550)
 			:add-list '(cai-5550))
 		(make-op :action 'take-cai-5600
-			:preconds '(aste-5600 cai-6600)
 			:add-list '(cai-5600))
 		(make-op :action 'take-cai-5610
-			:preconds '(cai-5600 aste-5610 cai-6610)
+			:preconds '(cai-5600)
 			:add-list '(cai-5610))
 		(make-op :action 'take-cai-5620
-			:preconds '(aste-5620 cai-6620)
 			:add-list '(cai-5620))
 		(make-op :action 'take-cai-5630
-			:preconds '(cai-6630)
 			:add-list '(cai-5630))
 		(make-op :action 'take-cai-5800
 			:add-list '(cai-5800))
@@ -713,29 +684,23 @@
 		(make-op :action 'take-cai-5880
 			:add-list '(cai-5880))
 		(make-op :action 'take-cai-5890
-			:preconds '(cai-6890)
 			:add-list '(cai-5890))
 		(make-op :action 'take-cai-5900
-			:preconds '(cai-6900)
 			:add-list '(cai-5900))
 		(make-op :action 'take-cai-5910
-			:preconds '(cai-6910)
 			:add-list '(cai-5910))
 		(make-op :action 'take-cai-5920
-			:preconds '(cai-6920)
 			:add-list '(cai-5920))
 		(make-op :action 'take-cai-5930
-			:preconds '(cai-6930)
 			:add-list '(cai-5930))
 		(make-op :action 'take-cai-5940
-			:preconds '(cai-6940)
 			:add-list '(cai-5940))
 		(make-op :action 'take-apec-1400
 			:add-list '(apec-1400))
 		(make-op :action 'take-apec-1600
 			:add-list '(apec-1600))
 		(make-op :action 'take-apec-2010
-			:preconds '(apec-1600 ecn-1500)
+			:preconds '(ecn-1500 apec-1600)
 			:add-list '(apec-2010))
 		(make-op :action 'take-apec-2120
 			:add-list '(apec-2120))
@@ -758,7 +723,7 @@
 		(make-op :action 'take-apec-3400
 			:add-list '(apec-3400))
 		(make-op :action 'take-apec-4010
-			:preconds '(ecn-3010 ecn-4010 apec-2010 ecn-2010 math-1100 math-1210 stat-2300 stat-2000)
+			:preconds '(stat-2000 stat-2300 math-1210 math-1100 ecn-2010 apec-2010 ecn-4010 ecn-3010)
 			:add-list '(apec-4010))
 		(make-op :action 'take-apec-4250
 			:add-list '(apec-4250))
@@ -767,39 +732,37 @@
 		(make-op :action 'take-apec-4900
 			:add-list '(apec-4900))
 		(make-op :action 'take-apec-5000
-			:preconds '(apec-3010 apec-3310 apec-4010 ecn-4010)
+			:preconds '(ecn-4010 apec-4010 apec-3310 apec-3010)
 			:add-list '(apec-5000))
 		(make-op :action 'take-apec-5010
-			:preconds '(apec-3010 apec-3310)
+			:preconds '(apec-3310 apec-3010)
 			:add-list '(apec-5010))
 		(make-op :action 'take-apec-5015
-			:preconds '(apec-2310 apec-3310)
+			:preconds '(apec-3310 apec-2310)
 			:add-list '(apec-5015))
 		(make-op :action 'take-apec-5020
-			:preconds '(apec-3010 apec-3310)
+			:preconds '(apec-3310 apec-3010)
 			:add-list '(apec-5020))
 		(make-op :action 'take-apec-5040
 			:add-list '(apec-5040))
 		(make-op :action 'take-apec-5150
-			:preconds '(acct-2010 apec-3010)
+			:preconds '(apec-3010 acct-2010)
 			:add-list '(apec-5150))
 		(make-op :action 'take-apec-5300
-			:preconds '(apec-3310 apec-6300)
+			:preconds '(apec-3310)
 			:add-list '(apec-5300))
 		(make-op :action 'take-apec-5330
-			:preconds '(stat-2000 stat-2300 stat-3000)
+			:preconds '(stat-3000 stat-2300 stat-2000)
 			:add-list '(apec-5330))
 		(make-op :action 'take-apec-5500
-			:preconds '(math-1100 math-1210)
+			:preconds '(math-1210 math-1100)
 			:add-list '(apec-5500))
 		(make-op :action 'take-apec-5560
-			:preconds '(apec-2010 ecn-2010 apec-3012)
+			:preconds '(apec-3012 ecn-2010 apec-2010)
 			:add-list '(apec-5560))
 		(make-op :action 'take-apec-5700
-			:preconds '(apec-6700)
 			:add-list '(apec-5700))
 		(make-op :action 'take-apec-5710
-			:preconds '(apec-6710)
 			:add-list '(apec-5710))
 		(make-op :action 'take-apec-5940
 			:add-list '(apec-5940))
@@ -866,18 +829,18 @@
 			:preconds '(art-1020 art-1020)
 			:add-list '(art-2110))
 		(make-op :action 'take-art-2200
-			:preconds '(art-1020 art-1120)
+			:preconds '(art-1120 art-1020)
 			:add-list '(art-2200))
 		(make-op :action 'take-art-2220
 			:preconds '(art-2200)
 			:add-list '(art-2220))
 		(make-op :action 'take-art-2230
-			:preconds '(art-1020 art-1120)
+			:preconds '(art-1120 art-1020)
 			:add-list '(art-2230))
 		(make-op :action 'take-art-2260
 			:add-list '(art-2260))
 		(make-op :action 'take-art-2400
-			:preconds '(art-1020 art-1120 art-1130)
+			:preconds '(art-1130 art-1120 art-1020)
 			:add-list '(art-2400))
 		(make-op :action 'take-art-2500
 			:add-list '(art-2500))
@@ -903,7 +866,7 @@
 		(make-op :action 'take-art-2900
 			:add-list '(art-2900))
 		(make-op :action 'take-art-2920
-			:preconds '(art-1020 art-1120 art-1130)
+			:preconds '(art-1130 art-1120 art-1020)
 			:add-list '(art-2920))
 		(make-op :action 'take-art-3000
 			:add-list '(art-3000))
@@ -926,7 +889,7 @@
 			:preconds '(art-2230)
 			:add-list '(art-3250))
 		(make-op :action 'take-art-3260
-			:preconds '(art-1020 art-1120 art-1130 art-2230)
+			:preconds '(art-2230 art-1130 art-1120 art-1020)
 			:add-list '(art-3260))
 		(make-op :action 'take-art-3270
 			:add-list '(art-3270))
@@ -953,7 +916,7 @@
 			:preconds '(art-2650)
 			:add-list '(art-3660))
 		(make-op :action 'take-art-3700
-			:preconds '(eled-3000 eled-3001 art-2200 art-2230 art-2400 art-2650 art-2810)
+			:preconds '(art-2810 art-2650 art-2400 art-2230 art-2200 eled-3001 eled-3000)
 			:add-list '(art-3700))
 		(make-op :action 'take-art-3810
 			:preconds '(art-2810)
@@ -971,13 +934,13 @@
 			:preconds '(art-2200)
 			:add-list '(art-4220))
 		(make-op :action 'take-art-4250
-			:preconds '(art-3220 art-3230 art-3240 art-3250)
+			:preconds '(art-3250 art-3240 art-3230 art-3220)
 			:add-list '(art-4250))
 		(make-op :action 'take-art-4260
 			:preconds '(art-2110)
 			:add-list '(art-4260))
 		(make-op :action 'take-art-4270
-			:preconds '(art-2200 art-3200)
+			:preconds '(art-3200 art-2200)
 			:add-list '(art-4270))
 		(make-op :action 'take-art-4300
 			:preconds '(art-3300)
@@ -1001,7 +964,7 @@
 			:preconds '(art-4440)
 			:add-list '(art-4445))
 		(make-op :action 'take-art-4450
-			:preconds '(art-4410 art-4420 art-4440)
+			:preconds '(art-4440 art-4420 art-4410)
 			:add-list '(art-4450))
 		(make-op :action 'take-art-4455
 			:preconds '(art-4440)
@@ -1014,7 +977,6 @@
 		(make-op :action 'take-art-4475
 			:add-list '(art-4475))
 		(make-op :action 'take-art-4480
-			:preconds '(art-6480)
 			:add-list '(art-4480))
 		(make-op :action 'take-art-4610
 			:preconds '(art-3610)
@@ -1023,13 +985,13 @@
 			:preconds '(art-4660)
 			:add-list '(art-4620))
 		(make-op :action 'take-art-4630
-			:preconds '(art-2600 art-6630)
+			:preconds '(art-2600)
 			:add-list '(art-4630))
 		(make-op :action 'take-art-4640
-			:preconds '(art-3650 art-3660)
+			:preconds '(art-3660 art-3650)
 			:add-list '(art-4640))
 		(make-op :action 'take-art-4650
-			:preconds '(art-3650 art-3660)
+			:preconds '(art-3660 art-3650)
 			:add-list '(art-4650))
 		(make-op :action 'take-art-4660
 			:preconds '(art-4610)
@@ -1102,7 +1064,7 @@
 		(make-op :action 'take-arth-3200
 			:add-list '(arth-3200))
 		(make-op :action 'take-arth-3210
-			:preconds '(clas-3210 engl-3210 hist-3210 rels-3210)
+			:preconds '(rels-3210 hist-3210 engl-3210 clas-3210)
 			:add-list '(arth-3210))
 		(make-op :action 'take-arth-3215
 			:preconds '(arth-2710)
@@ -1111,25 +1073,25 @@
 			:preconds '(arth-2710)
 			:add-list '(arth-3220))
 		(make-op :action 'take-arth-3270
-			:preconds '(arth-2710 arth-2720)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-3270))
 		(make-op :action 'take-arth-3295
-			:preconds '(arth-2710 arth-2720)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-3295))
 		(make-op :action 'take-arth-3310
-			:preconds '(arth-2710 arth-2720)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-3310))
 		(make-op :action 'take-arth-3320
-			:preconds '(arth-2710 arth-2720)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-3320))
 		(make-op :action 'take-arth-3340
-			:preconds '(arth-2710 arth-2720)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-3340))
 		(make-op :action 'take-arth-3420
-			:preconds '(arth-2710 arth-2720)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-3420))
 		(make-op :action 'take-arth-3510
-			:preconds '(arth-2710 rels-3510)
+			:preconds '(rels-3510 arth-2710)
 			:add-list '(arth-3510))
 		(make-op :action 'take-arth-3610
 			:preconds '(arth-2710)
@@ -1168,30 +1130,29 @@
 		(make-op :action 'take-arth-3840
 			:add-list '(arth-3840))
 		(make-op :action 'take-arth-3860
-			:preconds '(arth-2710 arth-2720)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-3860))
 		(make-op :action 'take-arth-4210
 			:add-list '(arth-4210))
 		(make-op :action 'take-arth-4260
-			:preconds '(arth-2710 arth-2720)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-4260))
 		(make-op :action 'take-arth-4310
-			:preconds '(arth-2710 arth-2720 arth-6310)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-4310))
 		(make-op :action 'take-arth-4410
-			:preconds '(arth-2710 arth-2720 arth-6410)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-4410))
 		(make-op :action 'take-arth-4520
 			:add-list '(arth-4520))
 		(make-op :action 'take-arth-4630
-			:preconds '(arth-6430)
 			:add-list '(arth-4630))
 		(make-op :action 'take-arth-4710
 			:add-list '(arth-4710))
 		(make-op :action 'take-arth-4725
 			:add-list '(arth-4725))
 		(make-op :action 'take-arth-4730
-			:preconds '(arth-2710 arth-2720)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(arth-4730))
 		(make-op :action 'take-arth-4790
 			:add-list '(arth-4790))
@@ -1271,7 +1232,7 @@
 		(make-op :action 'take-av-1170
 			:add-list '(av-1170))
 		(make-op :action 'take-av-1240
-			:preconds '(av-1130 av-1140 av-1170)
+			:preconds '(av-1170 av-1140 av-1130)
 			:add-list '(av-1240))
 		(make-op :action 'take-av-1900
 			:add-list '(av-1900))
@@ -1281,22 +1242,22 @@
 			:preconds '(av-1905 av-1905 av-1905 av-1905)
 			:add-list '(av-1910))
 		(make-op :action 'take-av-1920
-			:preconds '(av-1900 av-1905 av-1910)
+			:preconds '(av-1910 av-1905 av-1900)
 			:add-list '(av-1920))
 		(make-op :action 'take-av-1930
-			:preconds '(av-1900 av-1905 av-1910 av-3500 av-3505)
+			:preconds '(av-3505 av-3500 av-1910 av-1905 av-1900)
 			:add-list '(av-1930))
 		(make-op :action 'take-av-1940
-			:preconds '(av-1900 av-1905 av-1910)
+			:preconds '(av-1910 av-1905 av-1900)
 			:add-list '(av-1940))
 		(make-op :action 'take-av-1950
-			:preconds '(av-1900 av-1905 av-1910)
+			:preconds '(av-1910 av-1905 av-1900)
 			:add-list '(av-1950))
 		(make-op :action 'take-av-1960
-			:preconds '(av-1900 av-1905 av-1910)
+			:preconds '(av-1910 av-1905 av-1900)
 			:add-list '(av-1960))
 		(make-op :action 'take-av-1970
-			:preconds '(av-1900 av-1905 av-1910)
+			:preconds '(av-1910 av-1905 av-1900)
 			:add-list '(av-1970))
 		(make-op :action 'take-av-1980
 			:preconds '(av-1950)
@@ -1312,13 +1273,12 @@
 			:preconds '(av-2110)
 			:add-list '(av-2100))
 		(make-op :action 'take-av-2110
-			:preconds '(av-2100 av-2100)
 			:add-list '(av-2110))
 		(make-op :action 'take-av-2140
-			:preconds '(av-2100 av-2150)
+			:preconds '(av-2150 av-2100)
 			:add-list '(av-2140))
 		(make-op :action 'take-av-2150
-			:preconds '(av-2110 av-2140)
+			:preconds '(av-2110)
 			:add-list '(av-2150))
 		(make-op :action 'take-av-2160
 			:add-list '(av-2160))
@@ -1332,10 +1292,8 @@
 			:preconds '(av-2200)
 			:add-list '(av-2180))
 		(make-op :action 'take-av-2190
-			:preconds '(av-2170 av-2170)
 			:add-list '(av-2190))
 		(make-op :action 'take-av-2200
-			:preconds '(av-2180 av-2180)
 			:add-list '(av-2200))
 		(make-op :action 'take-av-2250
 			:add-list '(av-2250))
@@ -1351,16 +1309,14 @@
 			:preconds '(av-2355)
 			:add-list '(av-2335))
 		(make-op :action 'take-av-2350
-			:preconds '(av-2330)
 			:add-list '(av-2350))
 		(make-op :action 'take-av-2355
-			:preconds '(av-2335)
 			:add-list '(av-2355))
 		(make-op :action 'take-av-2365
 			:preconds '(av-2355)
 			:add-list '(av-2365))
 		(make-op :action 'take-av-2401
-			:preconds '(av-2350 av-2450 av-2451)
+			:preconds '(av-2451 av-2450 av-2350)
 			:add-list '(av-2401))
 		(make-op :action 'take-av-2430
 			:preconds '(tee-2300)
@@ -1369,31 +1325,31 @@
 			:preconds '(av-2430 tee-2300 av-2430)
 			:add-list '(av-2440))
 		(make-op :action 'take-av-2450
-			:preconds '(av-2350 av-2401)
+			:preconds '(av-2350)
 			:add-list '(av-2450))
 		(make-op :action 'take-av-2451
-			:preconds '(av-2350 av-2401)
+			:preconds '(av-2350)
 			:add-list '(av-2451))
 		(make-op :action 'take-av-2500
-			:preconds '(av-2330 av-2350)
+			:preconds '(av-2350 av-2330)
 			:add-list '(av-2500))
 		(make-op :action 'take-av-2504
-			:preconds '(av-2330 av-2350)
+			:preconds '(av-2350 av-2330)
 			:add-list '(av-2504))
 		(make-op :action 'take-av-2505
-			:preconds '(av-2330 av-2350)
+			:preconds '(av-2350 av-2330)
 			:add-list '(av-2505))
 		(make-op :action 'take-av-2520
-			:preconds '(av-2350 av-2450 av-2451 av-2540)
+			:preconds '(av-2540 av-2451 av-2450 av-2350)
 			:add-list '(av-2520))
 		(make-op :action 'take-av-2525
 			:preconds '(av-2365)
 			:add-list '(av-2525))
 		(make-op :action 'take-av-2530
-			:preconds '(av-2320 av-2330)
+			:preconds '(av-2330 av-2320)
 			:add-list '(av-2530))
 		(make-op :action 'take-av-2540
-			:preconds '(av-2350 av-2450 av-2451 av-2520)
+			:preconds '(av-2451 av-2450 av-2350)
 			:add-list '(av-2540))
 		(make-op :action 'take-av-2545
 			:preconds '(av-2365)
@@ -1405,13 +1361,13 @@
 			:preconds '(av-2540)
 			:add-list '(av-2620))
 		(make-op :action 'take-av-2625
-			:preconds '(av-2545 av-2665)
+			:preconds '(av-2665 av-2545)
 			:add-list '(av-2625))
 		(make-op :action 'take-av-2630
-			:preconds '(av-2330 av-2320)
+			:preconds '(av-2320 av-2330)
 			:add-list '(av-2630))
 		(make-op :action 'take-av-2660
-			:preconds '(av-2450 av-2451 av-2540)
+			:preconds '(av-2540 av-2451 av-2450)
 			:add-list '(av-2660))
 		(make-op :action 'take-av-2665
 			:preconds '(av-2365)
@@ -1420,7 +1376,7 @@
 			:preconds '(av-2660)
 			:add-list '(av-2670))
 		(make-op :action 'take-av-2675
-			:preconds '(av-2665 av-2625)
+			:preconds '(av-2625 av-2665)
 			:add-list '(av-2675))
 		(make-op :action 'take-av-2870
 			:preconds '(av-2670)
@@ -1438,67 +1394,67 @@
 			:preconds '(av-2545)
 			:add-list '(av-3145))
 		(make-op :action 'take-av-3280
-			:preconds '(av-2140 av-2150 av-2170 av-2190 av-2200 av-2440 av-3420 av-4200 phys-1800)
+			:preconds '(phys-1800 av-4200 av-3420 av-2440 av-2200 av-2190 av-2170 av-2150 av-2140)
 			:add-list '(av-3280))
 		(make-op :action 'take-av-3410
-			:preconds '(av-2540 av-2620 av-2660)
+			:preconds '(av-2660 av-2620 av-2540)
 			:add-list '(av-3410))
 		(make-op :action 'take-av-3420
 			:preconds '(av-1140)
 			:add-list '(av-3420))
 		(make-op :action 'take-av-3440
-			:preconds '(av-2540 av-2620)
+			:preconds '(av-2620 av-2540)
 			:add-list '(av-3440))
 		(make-op :action 'take-av-3500
 			:add-list '(av-3500))
 		(make-op :action 'take-av-3505
 			:add-list '(av-3505))
 		(make-op :action 'take-av-3510
-			:preconds '(av-1900 av-1905 av-1910 av-3500 av-3505)
+			:preconds '(av-3505 av-3500 av-1910 av-1905 av-1900)
 			:add-list '(av-3510))
 		(make-op :action 'take-av-3515
-			:preconds '(av-1900 av-1905 av-1910 av-3500 av-3505)
+			:preconds '(av-3505 av-3500 av-1910 av-1905 av-1900)
 			:add-list '(av-3515))
 		(make-op :action 'take-av-3520
 			:preconds '(av-3515)
 			:add-list '(av-3520))
 		(make-op :action 'take-av-3525
-			:preconds '(av-3515 av-3520)
+			:preconds '(av-3520 av-3515)
 			:add-list '(av-3525))
 		(make-op :action 'take-av-3530
-			:preconds '(av-3500 av-3505)
+			:preconds '(av-3505 av-3500)
 			:add-list '(av-3530))
 		(make-op :action 'take-av-3535
-			:preconds '(av-1900 av-1905 av-1910 av-3500 av-3505)
+			:preconds '(av-3505 av-3500 av-1910 av-1905 av-1900)
 			:add-list '(av-3535))
 		(make-op :action 'take-av-3550
-			:preconds '(av-3515 av-3535)
+			:preconds '(av-3535 av-3515)
 			:add-list '(av-3550))
 		(make-op :action 'take-av-3560
-			:preconds '(av-3500 av-3505)
+			:preconds '(av-3505 av-3500)
 			:add-list '(av-3560))
 		(make-op :action 'take-av-3590
 			:add-list '(av-3590))
 		(make-op :action 'take-av-3720
-			:preconds '(av-2670 av-3410)
+			:preconds '(av-3410 av-2670)
 			:add-list '(av-3720))
 		(make-op :action 'take-av-3725
-			:preconds '(av-2545 av-2675)
+			:preconds '(av-2675 av-2545)
 			:add-list '(av-3725))
 		(make-op :action 'take-av-3735
-			:preconds '(av-2675 av-3725)
+			:preconds '(av-3725 av-2675)
 			:add-list '(av-3735))
 		(make-op :action 'take-av-3740
-			:preconds '(av-2670 av-3410 av-3720)
+			:preconds '(av-3720 av-3410 av-2670)
 			:add-list '(av-3740))
 		(make-op :action 'take-av-3760
-			:preconds '(av-3720 av-3740 av-3740)
+			:preconds '(av-3740 av-3740 av-3720)
 			:add-list '(av-3760))
 		(make-op :action 'take-av-3825
-			:preconds '(av-3725 av-3735)
+			:preconds '(av-3735 av-3725)
 			:add-list '(av-3825))
 		(make-op :action 'take-av-3835
-			:preconds '(av-3735 av-3825)
+			:preconds '(av-3825 av-3735)
 			:add-list '(av-3835))
 		(make-op :action 'take-av-3880
 			:preconds '(av-3740)
@@ -1513,7 +1469,7 @@
 		(make-op :action 'take-av-4110
 			:add-list '(av-4110))
 		(make-op :action 'take-av-4150
-			:preconds '(av-1140 av-1240 av-2170)
+			:preconds '(av-2170 av-1240 av-1140)
 			:add-list '(av-4150))
 		(make-op :action 'take-av-4200
 			:preconds '(av-1170)
@@ -1527,7 +1483,7 @@
 		(make-op :action 'take-av-4490
 			:add-list '(av-4490))
 		(make-op :action 'take-av-4505
-			:preconds '(av-2175 av-2355)
+			:preconds '(av-2355 av-2175)
 			:add-list '(av-4505))
 		(make-op :action 'take-av-4605
 			:preconds '(av-2365)
@@ -1551,7 +1507,6 @@
 		(make-op :action 'take-av-4930
 			:add-list '(av-4930))
 		(make-op :action 'take-av-5150
-			:preconds '(av-6150)
 			:add-list '(av-5150))
 		(make-op :action 'take-av-5160
 			:add-list '(av-5160))
@@ -1559,13 +1514,13 @@
 			:preconds '(av-3880)
 			:add-list '(av-5300))
 		(make-op :action 'take-av-5400
-			:preconds '(av-2670 av-3410)
+			:preconds '(av-3410 av-2670)
 			:add-list '(av-5400))
 		(make-op :action 'take-av-5420
 			:preconds '(av-5400)
 			:add-list '(av-5420))
 		(make-op :action 'take-av-5500
-			:preconds '(av-2670 av-3880)
+			:preconds '(av-3880 av-2670)
 			:add-list '(av-5500))
 		(make-op :action 'take-av-5760
 			:add-list '(av-5760))
@@ -1580,22 +1535,22 @@
 		(make-op :action 'take-beng-2290
 			:add-list '(beng-2290))
 		(make-op :action 'take-beng-2330
-			:preconds '(biol-1610 chem-2300 chem-2310 chem-2315 phys-2210 phys-2215)
+			:preconds '(phys-2215 phys-2210 chem-2315 chem-2310 chem-2300 biol-1610)
 			:add-list '(beng-2330))
 		(make-op :action 'take-beng-2400
 			:preconds '(math-1220)
 			:add-list '(beng-2400))
 		(make-op :action 'take-beng-3000
-			:preconds '(engr-2210 tee-2300)
+			:preconds '(tee-2300 engr-2210)
 			:add-list '(beng-3000))
 		(make-op :action 'take-beng-3200
-			:preconds '(chem-2300 chem-2310 chem-2315)
+			:preconds '(chem-2315 chem-2310 chem-2300)
 			:add-list '(beng-3200))
 		(make-op :action 'take-beng-3500
-			:preconds '(beng-2400 math-2250 math-2270)
+			:preconds '(math-2270 math-2250 beng-2400)
 			:add-list '(beng-3500))
 		(make-op :action 'take-beng-3670
-			:preconds '(beng-2400 mae-2300 beng-3500)
+			:preconds '(beng-3500 mae-2300 beng-2400)
 			:add-list '(beng-3670))
 		(make-op :action 'take-beng-3870
 			:add-list '(beng-3870))
@@ -1610,62 +1565,61 @@
 		(make-op :action 'take-beng-4930
 			:add-list '(beng-4930))
 		(make-op :action 'take-beng-5020
-			:preconds '(beng-3670 cee-3670 engr-2450 mae-2450 math-2250 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2250 mae-2450 engr-2450 cee-3670 beng-3670)
 			:add-list '(beng-5020))
 		(make-op :action 'take-beng-5500
-			:preconds '(math-2250 math-2270 cee-2450 cs-1400 beng-6500)
+			:preconds '(cs-1400 cee-2450 math-2270 math-2250)
 			:add-list '(beng-5500))
 		(make-op :action 'take-beng-5600
-			:preconds '(beng-3670 cee-3670 beng-6600)
+			:preconds '(cee-3670 beng-3670)
 			:add-list '(beng-5600))
 		(make-op :action 'take-beng-5610
-			:preconds '(beng-3200 ndfs-5610 beng-6610)
+			:preconds '(ndfs-5610 beng-3200)
 			:add-list '(beng-5610))
 		(make-op :action 'take-beng-5620
-			:preconds '(chem-3700 math-2250 beng-6620)
+			:preconds '(math-2250 chem-3700)
 			:add-list '(beng-5620))
 		(make-op :action 'take-beng-5630
-			:preconds '(beng-6630)
 			:add-list '(beng-5630))
 		(make-op :action 'take-beng-5640
 			:add-list '(beng-5640))
 		(make-op :action 'take-beng-5660
 			:add-list '(beng-5660))
 		(make-op :action 'take-beng-5680
-			:preconds '(cee-5680 beng-6680)
+			:preconds '(cee-5680)
 			:add-list '(beng-5680))
 		(make-op :action 'take-beng-5700
-			:preconds '(phys-2210 phys-2310 phys-2215 phys-2220 phys-2320 phys-2225 ece-5700 mae-5700 phys-5700)
+			:preconds '(phys-5700 mae-5700 ece-5700 phys-2225 phys-2320 phys-2220 phys-2215 phys-2310 phys-2210)
 			:add-list '(beng-5700))
 		(make-op :action 'take-beng-5710
-			:preconds '(beng-5700 ece-5700 mae-5700 phys-5700 ece-5710 phys-5710)
+			:preconds '(phys-5710 ece-5710 phys-5700 mae-5700 ece-5700 beng-5700)
 			:add-list '(beng-5710))
 		(make-op :action 'take-beng-5790
-			:preconds '(biol-5790 chem-5790 beng-6790)
+			:preconds '(chem-5790 biol-5790)
 			:add-list '(beng-5790))
 		(make-op :action 'take-beng-5810
-			:preconds '(beng-3200 beng-3670 cee-3670 beng-3670 cee-3670 cee-3610 pubh-3610 cee-3640 cee-5810 beng-6810)
+			:preconds '(cee-5810 cee-3640 pubh-3610 cee-3610 cee-3670 beng-3670 cee-3670 beng-3670 beng-3200)
 			:add-list '(beng-5810))
 		(make-op :action 'take-beng-5830
-			:preconds '(beng-3200 beng-3670 cee-3670 cee-3610 pubh-3610 cee-3640 cee-5830 beng-6830)
+			:preconds '(cee-5830 cee-3640 pubh-3610 cee-3610 cee-3670 beng-3670 beng-3200)
 			:add-list '(beng-5830))
 		(make-op :action 'take-beng-5840
-			:preconds '(math-2250 phys-2210 beng-6840)
+			:preconds '(phys-2210 math-2250)
 			:add-list '(beng-5840))
 		(make-op :action 'take-beng-5850
-			:preconds '(beng-2330 beng-5020 beng-6850)
+			:preconds '(beng-5020 beng-2330)
 			:add-list '(beng-5850))
 		(make-op :action 'take-beng-5870
-			:preconds '(beng-3670 cee-3670 engr-2450 mae-2450 math-2250 math-2270 math-2280 beng-6870)
+			:preconds '(math-2280 math-2270 math-2250 mae-2450 engr-2450 cee-3670 beng-3670)
 			:add-list '(beng-5870))
 		(make-op :action 'take-beng-5880
-			:preconds '(beng-3500 beng-6880)
+			:preconds '(beng-3500)
 			:add-list '(beng-5880))
 		(make-op :action 'take-beng-5890
-			:preconds '(beng-2330 beng-6890)
+			:preconds '(beng-2330)
 			:add-list '(beng-5890))
 		(make-op :action 'take-beng-5910
-			:preconds '(beng-2330 beng-6910)
+			:preconds '(beng-2330)
 			:add-list '(beng-5910))
 		(make-op :action 'take-beng-5930
 			:add-list '(beng-5930))
@@ -1689,35 +1643,35 @@
 		(make-op :action 'take-biol-1415
 			:add-list '(biol-1415))
 		(make-op :action 'take-biol-1610
-			:preconds '(biol-1615 biol-1615 biol-1620 biol-1625 biol-3300 biol-1615 biol-3300)
+			:preconds '(biol-3300 biol-1615 biol-3300 biol-1625 biol-1620 biol-1615 biol-1615)
 			:add-list '(biol-1610))
 		(make-op :action 'take-biol-1615
 			:add-list '(biol-1615))
 		(make-op :action 'take-biol-1620
-			:preconds '(biol-1625 biol-1625 biol-1610)
+			:preconds '(biol-1625 biol-1625)
 			:add-list '(biol-1620))
 		(make-op :action 'take-biol-1625
 			:add-list '(biol-1625))
 		(make-op :action 'take-biol-1750
 			:add-list '(biol-1750))
 		(make-op :action 'take-biol-2030
-			:preconds '(biol-1610 chem-1010 biol-2035)
+			:preconds '(biol-2035 chem-1010 biol-1610)
 			:add-list '(biol-2030))
 		(make-op :action 'take-biol-2035
 			:add-list '(biol-2035))
 		(make-op :action 'take-biol-2060
-			:preconds '(usu-1350 biol-1010 biol-1610 biol-2320 biol-2420 chem-1010 chem-1110 chem-1210 heal-1500)
+			:preconds '(heal-1500 chem-1210 chem-1110 chem-1010 biol-2420 biol-2320 biol-1610 biol-1010 usu-1350)
 			:add-list '(biol-2060))
 		(make-op :action 'take-biol-2220
-			:preconds '(biol-1610 biol-1620 biol-1620 wats-2220)
+			:preconds '(wats-2220 biol-1620 biol-1620 biol-1610)
 			:add-list '(biol-2220))
 		(make-op :action 'take-biol-2320
 			:add-list '(biol-2320))
 		(make-op :action 'take-biol-2420
-			:preconds '(biol-1010 biol-1610 biol-2060 biol-2320 chem-1010 chem-1110 chem-1210 usu-1350)
+			:preconds '(usu-1350 chem-1210 chem-1110 chem-1010 biol-2320 biol-1610 biol-1010)
 			:add-list '(biol-2420))
 		(make-op :action 'take-biol-2520
-			:preconds '(biol-2320 biol-2420)
+			:preconds '(biol-2420 biol-2320)
 			:add-list '(biol-2520))
 		(make-op :action 'take-biol-2700
 			:add-list '(biol-2700))
@@ -1730,47 +1684,47 @@
 		(make-op :action 'take-biol-3010
 			:add-list '(biol-3010))
 		(make-op :action 'take-biol-3020
-			:preconds '(biol-1610 biol-1615 biol-1620 biol-1625)
+			:preconds '(biol-1625 biol-1620 biol-1615 biol-1610)
 			:add-list '(biol-3020))
 		(make-op :action 'take-biol-3030
-			:preconds '(biol-1010 biol-1610 usu-1350 honr-1350 biol-3060)
+			:preconds '(biol-3060 honr-1350 usu-1350 biol-1610 biol-1010)
 			:add-list '(biol-3030))
 		(make-op :action 'take-biol-3040
 			:add-list '(biol-3040))
 		(make-op :action 'take-biol-3050
-			:preconds '(biol-1610 biol-1620 chem-1110 chem-1210)
+			:preconds '(chem-1210 chem-1110 biol-1620 biol-1610)
 			:add-list '(biol-3050))
 		(make-op :action 'take-biol-3055
-			:preconds '(biol-1610 biol-1620 biol-1615 biol-1625 biol-3050 chem-1210 stat-2000 stat-3000)
+			:preconds '(stat-3000 stat-2000 chem-1210 biol-3050 biol-1625 biol-1615 biol-1620 biol-1610)
 			:add-list '(biol-3055))
 		(make-op :action 'take-biol-3060
-			:preconds '(biol-1610 chem-1110 chem-1210 biol-1610)
+			:preconds '(biol-1610 chem-1210 chem-1110 biol-1610)
 			:add-list '(biol-3060))
 		(make-op :action 'take-biol-3065
-			:preconds '(biol-1615 biol-1625 biol-3060)
+			:preconds '(biol-3060 biol-1625 biol-1615)
 			:add-list '(biol-3065))
 		(make-op :action 'take-biol-3070
-			:preconds '(biol-1610 biol-1620 stat-2000 stat-3000 math-1060 math-1210)
+			:preconds '(math-1210 math-1060 stat-3000 stat-2000 biol-1620 biol-1610)
 			:add-list '(biol-3070))
 		(make-op :action 'take-biol-3085
-			:preconds '(biol-1610 biol-1620 biol-1615 biol-1625 biol-2220 math-1100 math-1210 stat-2000 stat-3000)
+			:preconds '(stat-3000 stat-2000 math-1210 math-1100 biol-2220 biol-1625 biol-1615 biol-1620 biol-1610)
 			:add-list '(biol-3085))
 		(make-op :action 'take-biol-3090
-			:preconds '(biol-1620 chem-1210 chem-1120)
+			:preconds '(chem-1120 chem-1210 biol-1620)
 			:add-list '(biol-3090))
 		(make-op :action 'take-biol-3095
-			:preconds '(biol-1615 biol-1625 biol-3090)
+			:preconds '(biol-3090 biol-1625 biol-1615)
 			:add-list '(biol-3095))
 		(make-op :action 'take-biol-3100
 			:add-list '(biol-3100))
 		(make-op :action 'take-biol-3200
-			:preconds '(biol-1620 biol-1625)
+			:preconds '(biol-1625 biol-1620)
 			:add-list '(biol-3200))
 		(make-op :action 'take-biol-3220
-			:preconds '(biol-2220 math-1100 math-1210)
+			:preconds '(math-1210 math-1100 biol-2220)
 			:add-list '(biol-3220))
 		(make-op :action 'take-biol-3300
-			:preconds '(biol-1610 biol-1615 chem-1120 chem-1220 chem-2300 chem-2310 biol-1610 biol-1610)
+			:preconds '(chem-2310 chem-2300 chem-1220 chem-1120 biol-1615)
 			:add-list '(biol-3300))
 		(make-op :action 'take-biol-3500
 			:add-list '(biol-3500))
@@ -1781,115 +1735,114 @@
 			:preconds '(biol-2320)
 			:add-list '(biol-4000))
 		(make-op :action 'take-biol-4030
-			:preconds '(biol-1610 biol-2060 biol-2420 pubh-4030)
+			:preconds '(pubh-4030 biol-2420 biol-2060 biol-1610)
 			:add-list '(biol-4030))
 		(make-op :action 'take-biol-4040
 			:preconds '(pubh-4040)
 			:add-list '(biol-4040))
 		(make-op :action 'take-biol-4050
-			:preconds '(biol-3070 biol-6050)
+			:preconds '(biol-3070)
 			:add-list '(biol-4050))
 		(make-op :action 'take-biol-4060
-			:preconds '(biol-1620 biol-1625 biol-2220 wats-2220)
+			:preconds '(wats-2220 biol-2220 biol-1625 biol-1620)
 			:add-list '(biol-4060))
 		(make-op :action 'take-biol-4230
-			:preconds '(math-2280 math-2270 biol-4270 math-4230)
+			:preconds '(math-4230 biol-4270 math-2270 math-2280)
 			:add-list '(biol-4230))
 		(make-op :action 'take-biol-4250
 			:add-list '(biol-4250))
 		(make-op :action 'take-biol-4270
-			:preconds '(biol-1610 biol-2220 math-1210)
+			:preconds '(math-1210 biol-2220 biol-1610)
 			:add-list '(biol-4270))
 		(make-op :action 'take-biol-4300
-			:preconds '(stat-3000 biol-6300)
+			:preconds '(stat-3000)
 			:add-list '(biol-4300))
 		(make-op :action 'take-biol-4310
-			:preconds '(biol-1620 math-1210 stat-3000)
+			:preconds '(stat-3000 math-1210 biol-1620)
 			:add-list '(biol-4310))
 		(make-op :action 'take-biol-4320
-			:preconds '(biol-1620 math-1210 stat-3000)
+			:preconds '(stat-3000 math-1210 biol-1620)
 			:add-list '(biol-4320))
 		(make-op :action 'take-biol-4400
-			:preconds '(biol-1620 biol-1625 math-1050)
+			:preconds '(math-1050 biol-1625 biol-1620)
 			:add-list '(biol-4400))
 		(make-op :action 'take-biol-4410
-			:preconds '(biol-1610 biol-1615)
+			:preconds '(biol-1615 biol-1610)
 			:add-list '(biol-4410))
 		(make-op :action 'take-biol-4420
-			:preconds '(biol-1620 biol-6420)
+			:preconds '(biol-1620)
 			:add-list '(biol-4420))
 		(make-op :action 'take-biol-4430
-			:preconds '(biol-1610 biol-1615)
+			:preconds '(biol-1615 biol-1610)
 			:add-list '(biol-4430))
 		(make-op :action 'take-biol-4450
-			:preconds '(biol-1620 chem-1220)
+			:preconds '(chem-1220 biol-1620)
 			:add-list '(biol-4450))
 		(make-op :action 'take-biol-4500
-			:preconds '(biol-1610 biol-1615 biol-1620 biol-1625)
+			:preconds '(biol-1625 biol-1620 biol-1615 biol-1610)
 			:add-list '(biol-4500))
 		(make-op :action 'take-biol-4540
-			:preconds '(biol-1620 biol-6540)
+			:preconds '(biol-1620)
 			:add-list '(biol-4540))
 		(make-op :action 'take-biol-4600
-			:preconds '(biol-1620 biol-1625 biol-2320)
+			:preconds '(biol-2320 biol-1625 biol-1620)
 			:add-list '(biol-4600))
 		(make-op :action 'take-biol-4650
-			:preconds '(biol-1620 biol-6650)
+			:preconds '(biol-1620)
 			:add-list '(biol-4650))
 		(make-op :action 'take-biol-4710
 			:add-list '(biol-4710))
 		(make-op :action 'take-biol-4750
 			:add-list '(biol-4750))
 		(make-op :action 'take-biol-4770
-			:preconds '(math-1100 math-1210 biol-1610 chem-1210 biol-6770)
+			:preconds '(chem-1210 biol-1610 math-1210 math-1100)
 			:add-list '(biol-4770))
 		(make-op :action 'take-biol-5010
-			:preconds '(biol-1620 biol-6010)
+			:preconds '(biol-1620)
 			:add-list '(biol-5010))
 		(make-op :action 'take-biol-5110
-			:preconds '(biol-1610 biol-1620 chem-1210 chem-1220 advs-5110 biol-6110)
+			:preconds '(chem-1220 chem-1210 biol-1620 biol-1610)
 			:add-list '(biol-5110))
 		(make-op :action 'take-biol-5150
-			:preconds '(chem-1220 biol-3060 biol-3300 biol-5210)
+			:preconds '(biol-5210 biol-3300 biol-3060 chem-1220)
 			:add-list '(biol-5150))
 		(make-op :action 'take-biol-5160
-			:preconds '(advs-5160 ndfs-5160 psc-5160)
+			:preconds '(psc-5160 ndfs-5160)
 			:add-list '(biol-5160))
 		(make-op :action 'take-biol-5190
-			:preconds '(biol-3060 chem-3700 chem-5700 biol-6190)
+			:preconds '(chem-5700 chem-3700 biol-3060)
 			:add-list '(biol-5190))
 		(make-op :action 'take-biol-5210
-			:preconds '(biol-1620 biol-3060 chem-2300 chem-2320 chem-3700 chem-5700)
+			:preconds '(chem-5700 chem-3700 chem-2320 chem-2300 biol-3060 biol-1620)
 			:add-list '(biol-5210))
 		(make-op :action 'take-biol-5220
-			:preconds '(chem-3700 advs-5220 ndfs-5220 biol-6220)
+			:preconds '(ndfs-5220 chem-3700)
 			:add-list '(biol-5220))
 		(make-op :action 'take-biol-5230
-			:preconds '(biol-3060 biol-5210 chem-3700 chem-5700)
+			:preconds '(chem-5700 chem-3700 biol-5210 biol-3060)
 			:add-list '(biol-5230))
 		(make-op :action 'take-biol-5240
 			:preconds '(biol-3060)
 			:add-list '(biol-5240))
 		(make-op :action 'take-biol-5260
-			:preconds '(chem-3700 chem-5710 biol-3060 advs-5260 ndfs-5260 psc-5260)
+			:preconds '(psc-5260 ndfs-5260 biol-3060 chem-5710 chem-3700)
 			:add-list '(biol-5260))
 		(make-op :action 'take-biol-5280
-			:preconds '(advs-5260 advs-5280 biol-6280)
+			:preconds '(advs-5260)
 			:add-list '(biol-5280))
 		(make-op :action 'take-biol-5300
-			:preconds '(biol-3300 math-1210)
+			:preconds '(math-1210 biol-3300)
 			:add-list '(biol-5300))
 		(make-op :action 'take-biol-5310
-			:preconds '(biol-1610 biol-1615 biol-1620 biol-1625 chem-1220 psc-3000 psc-5310)
+			:preconds '(psc-5310 psc-3000 chem-1220 biol-1625 biol-1620 biol-1615 biol-1610)
 			:add-list '(biol-5310))
 		(make-op :action 'take-biol-5323
-			:preconds '(biol-6323)
 			:add-list '(biol-5323))
 		(make-op :action 'take-biol-5390
-			:preconds '(engl-2010 biol-3060 wild-4880 biol-6390)
+			:preconds '(wild-4880 biol-3060 engl-2010)
 			:add-list '(biol-5390))
 		(make-op :action 'take-biol-5400
-			:preconds '(chem-1220 biol-1620 chem-2300 advs-5400 pubh-5400 biol-6400)
+			:preconds '(pubh-5400 chem-2300 biol-1620 chem-1220)
 			:add-list '(biol-5400))
 		(make-op :action 'take-biol-5530
 			:preconds '(biol-1620)
@@ -1898,36 +1851,35 @@
 			:preconds '(wats-5550)
 			:add-list '(biol-5550))
 		(make-op :action 'take-biol-5560
-			:preconds '(biol-1620 biol-1625)
+			:preconds '(biol-1625 biol-1620)
 			:add-list '(biol-5560))
 		(make-op :action 'take-biol-5570
-			:preconds '(biol-1620 biol-1625)
+			:preconds '(biol-1625 biol-1620)
 			:add-list '(biol-5570))
 		(make-op :action 'take-biol-5580
-			:preconds '(biol-1620 biol-1625 wild-5580)
+			:preconds '(wild-5580 biol-1625 biol-1620)
 			:add-list '(biol-5580))
 		(make-op :action 'take-biol-5600
-			:preconds '(biol-1620 biol-1625 chem-1110 chem-1120 chem-1220 biol-6600)
+			:preconds '(chem-1220 chem-1120 chem-1110 biol-1625 biol-1620)
 			:add-list '(biol-5600))
 		(make-op :action 'take-biol-5610
-			:preconds '(biol-1620 biol-1625 biol-2420 biol-4450 biol-5600)
+			:preconds '(biol-5600 biol-4450 biol-2420 biol-1625 biol-1620)
 			:add-list '(biol-5610))
 		(make-op :action 'take-biol-5625
-			:preconds '(biol-1610 biol-1615 biol-1620 biol-1625 biol-4450)
+			:preconds '(biol-4450 biol-1625 biol-1620 biol-1615 biol-1610)
 			:add-list '(biol-5625))
 		(make-op :action 'take-biol-5630
 			:add-list '(biol-5630))
 		(make-op :action 'take-biol-5790
-			:preconds '(beng-5790 chem-5790 biol-6790)
+			:preconds '(chem-5790)
 			:add-list '(biol-5790))
 		(make-op :action 'take-biol-5800
-			:preconds '(biol-1620 biol-1625)
+			:preconds '(biol-1625 biol-1620)
 			:add-list '(biol-5800))
 		(make-op :action 'take-biol-5810
 			:preconds '(biol-5800)
 			:add-list '(biol-5810))
 		(make-op :action 'take-biol-5850
-			:preconds '(biol-6850)
 			:add-list '(biol-5850))
 		(make-op :action 'take-bccm-1010
 			:add-list '(bccm-1010))
@@ -1940,7 +1892,7 @@
 		(make-op :action 'take-bccm-2015
 			:add-list '(bccm-2015))
 		(make-op :action 'take-bccm-2020
-			:preconds '(bccm-1010 bccm-2010)
+			:preconds '(bccm-2010 bccm-1010)
 			:add-list '(bccm-2020))
 		(make-op :action 'take-bccm-2030
 			:preconds '(bccm-2010)
@@ -2115,7 +2067,6 @@
 			:preconds '(bcis-1260)
 			:add-list '(bcis-1250))
 		(make-op :action 'take-bcis-1260
-			:preconds '(bcis-1250)
 			:add-list '(bcis-1260))
 		(make-op :action 'take-bcis-1300
 			:add-list '(bcis-1300))
@@ -2189,21 +2140,21 @@
 			:preconds '(bsed-2510)
 			:add-list '(bsed-4150))
 		(make-op :action 'take-bsed-4210
-			:preconds '(aste-4210 fcse-4210 tee-4210)
+			:preconds '(tee-4210 fcse-4210)
 			:add-list '(bsed-4210))
 		(make-op :action 'take-bsed-4300
 			:add-list '(bsed-4300))
 		(make-op :action 'take-bsed-5500
-			:preconds '(bsed-4150 bsed-4300 bsed-5630)
+			:preconds '(bsed-5630 bsed-4300 bsed-4150)
 			:add-list '(bsed-5500))
 		(make-op :action 'take-bsed-5630
-			:preconds '(bsed-4150 bsed-4300 bsed-5500)
+			:preconds '(bsed-4300 bsed-4150)
 			:add-list '(bsed-5630))
 		(make-op :action 'take-bhis-1010
-			:preconds '(heal-1008 bhis-1015)
+			:preconds '(bhis-1015 heal-1008)
 			:add-list '(bhis-1010))
 		(make-op :action 'take-bhis-1015
-			:preconds '(bhis-1010 heal-1008 bhis-1010)
+			:preconds '(heal-1008)
 			:add-list '(bhis-1015))
 		(make-op :action 'take-bhis-1020
 			:add-list '(bhis-1020))
@@ -2246,7 +2197,7 @@
 			:preconds '(engl-2010)
 			:add-list '(bus-3200))
 		(make-op :action 'take-bus-3400
-			:preconds '(acct-2010 math-1050 stat-1040 stat-1045 stat-2000 stat-2300 stat-3000 psy-3010)
+			:preconds '(psy-3010 stat-3000 stat-2300 stat-2000 stat-1045 stat-1040 math-1050 acct-2010)
 			:add-list '(bus-3400))
 		(make-op :action 'take-bus-4250
 			:add-list '(bus-4250))
@@ -2255,7 +2206,7 @@
 		(make-op :action 'take-chem-1015
 			:add-list '(chem-1015))
 		(make-op :action 'take-chem-1110
-			:preconds '(chem-1210 chem-1220 math-1050)
+			:preconds '(math-1050 chem-1220 chem-1210)
 			:add-list '(chem-1110))
 		(make-op :action 'take-chem-1115
 			:add-list '(chem-1115))
@@ -2274,7 +2225,7 @@
 			:preconds '(chem-1210 chem-1210)
 			:add-list '(chem-1220))
 		(make-op :action 'take-chem-1225
-			:preconds '(chem-1215 chem-1220 chem-1215 chem-1220)
+			:preconds '(chem-1220 chem-1215 chem-1220 chem-1215)
 			:add-list '(chem-1225))
 		(make-op :action 'take-chem-1990
 			:add-list '(chem-1990))
@@ -2282,47 +2233,47 @@
 			:preconds '(chem-1210)
 			:add-list '(chem-2300))
 		(make-op :action 'take-chem-2310
-			:preconds '(chem-1220 chem-1120)
+			:preconds '(chem-1120 chem-1220)
 			:add-list '(chem-2310))
 		(make-op :action 'take-chem-2315
-			:preconds '(chem-2310 chem-1215 chem-2300 chem-2310)
+			:preconds '(chem-2310 chem-2300 chem-1215 chem-2310)
 			:add-list '(chem-2315))
 		(make-op :action 'take-chem-2320
-			:preconds '(chem-2310 chem-2310 chem-2300)
+			:preconds '(chem-2300 chem-2310 chem-2310)
 			:add-list '(chem-2320))
 		(make-op :action 'take-chem-2325
-			:preconds '(chem-2315 chem-2315 chem-2320)
+			:preconds '(chem-2320 chem-2315 chem-2315)
 			:add-list '(chem-2325))
 		(make-op :action 'take-chem-2977
 			:add-list '(chem-2977))
 		(make-op :action 'take-chem-2988
 			:add-list '(chem-2988))
 		(make-op :action 'take-chem-3000
-			:preconds '(chem-1210 chem-1220 math-1050)
+			:preconds '(math-1050 chem-1220 chem-1210)
 			:add-list '(chem-3000))
 		(make-op :action 'take-chem-3005
-			:preconds '(chem-1215 chem-1225 chem-3000 math-1050)
+			:preconds '(math-1050 chem-3000 chem-1225 chem-1215)
 			:add-list '(chem-3005))
 		(make-op :action 'take-chem-3060
-			:preconds '(chem-1220 math-2210 phys-2220)
+			:preconds '(phys-2220 math-2210 chem-1220)
 			:add-list '(chem-3060))
 		(make-op :action 'take-chem-3070
 			:preconds '(chem-3060)
 			:add-list '(chem-3070))
 		(make-op :action 'take-chem-3090
-			:preconds '(chem-3060 chem-3070 chem-3060 chem-3070)
+			:preconds '(chem-3070 chem-3060 chem-3070 chem-3060)
 			:add-list '(chem-3090))
 		(make-op :action 'take-chem-3510
-			:preconds '(chem-1220 chem-2310 chem-2315)
+			:preconds '(chem-2315 chem-2310 chem-1220)
 			:add-list '(chem-3510))
 		(make-op :action 'take-chem-3520
 			:preconds '(chem-3510)
 			:add-list '(chem-3520))
 		(make-op :action 'take-chem-3650
-			:preconds '(chem-1010 chem-1120 chem-1220)
+			:preconds '(chem-1220 chem-1120 chem-1010)
 			:add-list '(chem-3650))
 		(make-op :action 'take-chem-3700
-			:preconds '(chem-2300 chem-2310)
+			:preconds '(chem-2310 chem-2300)
 			:add-list '(chem-3700))
 		(make-op :action 'take-chem-3710
 			:preconds '(chem-3700 chem-3700)
@@ -2334,34 +2285,34 @@
 		(make-op :action 'take-chem-4800
 			:add-list '(chem-4800))
 		(make-op :action 'take-chem-4890
-			:preconds '(chem-5700 chem-5710)
+			:preconds '(chem-5710 chem-5700)
 			:add-list '(chem-4890))
 		(make-op :action 'take-chem-4990
 			:preconds '(chem-3060)
 			:add-list '(chem-4990))
 		(make-op :action 'take-chem-5070
-			:preconds '(chem-1220 math-1220 phys-2120 phys-2220 chem-5700)
+			:preconds '(chem-5700 phys-2220 phys-2120 math-1220 chem-1220)
 			:add-list '(chem-5070))
 		(make-op :action 'take-chem-5100
 			:preconds '(chem-3070)
 			:add-list '(chem-5100))
 		(make-op :action 'take-chem-5520
-			:preconds '(chem-3070 chem-3510)
+			:preconds '(chem-3510 chem-3070)
 			:add-list '(chem-5520))
 		(make-op :action 'take-chem-5530
-			:preconds '(chem-2325 chem-3070 chem-3520)
+			:preconds '(chem-3520 chem-3070 chem-2325)
 			:add-list '(chem-5530))
 		(make-op :action 'take-chem-5640
-			:preconds '(chem-3000 chem-3060 chem-3070)
+			:preconds '(chem-3070 chem-3060 chem-3000)
 			:add-list '(chem-5640))
 		(make-op :action 'take-chem-5650
-			:preconds '(chem-5640 chem-3005 chem-3070 chem-3090)
+			:preconds '(chem-3090 chem-3070 chem-3005 chem-5640)
 			:add-list '(chem-5650))
 		(make-op :action 'take-chem-5670
-			:preconds '(chem-3000 chem-3005 chem-3070 chem-6670)
+			:preconds '(chem-3070 chem-3005 chem-3000)
 			:add-list '(chem-5670))
 		(make-op :action 'take-chem-5680
-			:preconds '(chem-5670 chem-3000 chem-3005 chem-5670)
+			:preconds '(chem-5670 chem-3005 chem-3000 chem-5670)
 			:add-list '(chem-5680))
 		(make-op :action 'take-chem-5700
 			:preconds '(chem-2320)
@@ -2370,10 +2321,9 @@
 			:preconds '(chem-5700 chem-5700)
 			:add-list '(chem-5710))
 		(make-op :action 'take-chem-5720
-			:preconds '(engl-2010 chem-5710)
+			:preconds '(chem-5710 engl-2010)
 			:add-list '(chem-5720))
 		(make-op :action 'take-chem-5790
-			:preconds '(beng-5790 biol-5790 chem-6790)
 			:add-list '(chem-5790))
 		(make-op :action 'take-chin-1010
 			:add-list '(chin-1010))
@@ -2445,7 +2395,7 @@
 		(make-op :action 'take-chin-4090
 			:add-list '(chin-4090))
 		(make-op :action 'take-chin-4100
-			:preconds '(chin-3010 chin-6100)
+			:preconds '(chin-3010)
 			:add-list '(chin-4100))
 		(make-op :action 'take-chin-4210
 			:preconds '(chin-2020)
@@ -2460,28 +2410,28 @@
 		(make-op :action 'take-cee-1880
 			:add-list '(cee-1880))
 		(make-op :action 'take-cee-2240
-			:preconds '(math-1050 math-1060)
+			:preconds '(math-1060 math-1050)
 			:add-list '(cee-2240))
 		(make-op :action 'take-cee-2270
 			:add-list '(cee-2270))
 		(make-op :action 'take-cee-2450
-			:preconds '(cee-1400 cs-1400 math-1210 math-1220 math-2250 math-2280)
+			:preconds '(math-2280 math-2250 math-1220 math-1210 cs-1400 cee-1400)
 			:add-list '(cee-2450))
 		(make-op :action 'take-cee-2620
-			:preconds '(biol-1010 chem-1220)
+			:preconds '(chem-1220 biol-1010)
 			:add-list '(cee-2620))
 		(make-op :action 'take-cee-2890
 			:add-list '(cee-2890))
 		(make-op :action 'take-cee-3020
 			:add-list '(cee-3020))
 		(make-op :action 'take-cee-3080
-			:preconds '(cee-3160 cee-3020)
+			:preconds '(cee-3020 cee-3160)
 			:add-list '(cee-3080))
 		(make-op :action 'take-cee-3160
 			:preconds '(engr-2140)
 			:add-list '(cee-3160))
 		(make-op :action 'take-cee-3165
-			:preconds '(engr-2140 cee-3160)
+			:preconds '(cee-3160 engr-2140)
 			:add-list '(cee-3165))
 		(make-op :action 'take-cee-3210
 			:add-list '(cee-3210))
@@ -2489,22 +2439,22 @@
 			:preconds '(cee-3500)
 			:add-list '(cee-3430))
 		(make-op :action 'take-cee-3500
-			:preconds '(math-1220 math-2210 math-2250 engr-2010 engr-2030)
+			:preconds '(engr-2030 engr-2010 math-2250 math-2210 math-1220)
 			:add-list '(cee-3500))
 		(make-op :action 'take-cee-3510
 			:preconds '(cee-3500)
 			:add-list '(cee-3510))
 		(make-op :action 'take-cee-3610
-			:preconds '(chem-1210 math-1210 pubh-3610)
+			:preconds '(pubh-3610 math-1210 chem-1210)
 			:add-list '(cee-3610))
 		(make-op :action 'take-cee-3640
-			:preconds '(cee-3610 pubh-3610)
+			:preconds '(pubh-3610 cee-3610)
 			:add-list '(cee-3640))
 		(make-op :action 'take-cee-3650
-			:preconds '(cee-3610 pubh-3610)
+			:preconds '(pubh-3610 cee-3610)
 			:add-list '(cee-3650))
 		(make-op :action 'take-cee-3670
-			:preconds '(beng-2400 mae-2300)
+			:preconds '(mae-2300 beng-2400)
 			:add-list '(cee-3670))
 		(make-op :action 'take-cee-3780
 			:add-list '(cee-3780))
@@ -2512,7 +2462,7 @@
 			:preconds '(engr-3080)
 			:add-list '(cee-3880))
 		(make-op :action 'take-cee-3890
-			:preconds '(cee-3610 pubh-3610 cee-3640 cee-3670 beng-3670)
+			:preconds '(beng-3670 cee-3670 cee-3640 pubh-3610 cee-3610)
 			:add-list '(cee-3890))
 		(make-op :action 'take-cee-4200
 			:add-list '(cee-4200))
@@ -2532,142 +2482,133 @@
 			:preconds '(cee-4790 cee-4790)
 			:add-list '(cee-4890))
 		(make-op :action 'take-cee-5000
-			:preconds '(cee-3430 cee-3500 cee-6000)
+			:preconds '(cee-3500 cee-3430)
 			:add-list '(cee-5000))
 		(make-op :action 'take-cee-5001
-			:preconds '(cee-3430 cee-3500 psc-4700 cee-6001)
+			:preconds '(psc-4700 cee-3500 cee-3430)
 			:add-list '(cee-5001))
 		(make-op :action 'take-cee-5003
-			:preconds '(cee-2450 psc-5003 cee-6003)
+			:preconds '(psc-5003 cee-2450)
 			:add-list '(cee-5003))
 		(make-op :action 'take-cee-5005
-			:preconds '(cee-3430 cee-3500 psc-4700 cee-6005)
+			:preconds '(psc-4700 cee-3500 cee-3430)
 			:add-list '(cee-5005))
 		(make-op :action 'take-cee-5006
-			:preconds '(cee-5001 psc-4700 cee-6006)
+			:preconds '(psc-4700 cee-5001)
 			:add-list '(cee-5006))
 		(make-op :action 'take-cee-5007
-			:preconds '(cee-6007)
 			:add-list '(cee-5007))
 		(make-op :action 'take-cee-5008
-			:preconds '(cee-3510 cee-5001 psc-4700 cee-6008)
+			:preconds '(psc-4700 cee-5001 cee-3510)
 			:add-list '(cee-5008))
 		(make-op :action 'take-cee-5009
-			:preconds '(cee-5000 cee-6000 cee-6009)
+			:preconds '(cee-5000)
 			:add-list '(cee-5009))
 		(make-op :action 'take-cee-5010
 			:preconds '(cee-3020)
 			:add-list '(cee-5010))
 		(make-op :action 'take-cee-5015
-			:preconds '(cee-6015)
 			:add-list '(cee-5015))
 		(make-op :action 'take-cee-5020
-			:preconds '(mae-3040 mae-5020)
+			:preconds '(mae-5020 mae-3040)
 			:add-list '(cee-5020))
 		(make-op :action 'take-cee-5050
 			:preconds '(cee-3020)
 			:add-list '(cee-5050))
 		(make-op :action 'take-cee-5060
-			:preconds '(cee-3020 mae-3040 mae-5060)
+			:preconds '(mae-5060 mae-3040 cee-3020)
 			:add-list '(cee-5060))
 		(make-op :action 'take-cee-5070
-			:preconds '(cee-3020 cee-3080)
+			:preconds '(cee-3080 cee-3020)
 			:add-list '(cee-5070))
 		(make-op :action 'take-cee-5080
-			:preconds '(cee-3020 cee-6080)
+			:preconds '(cee-3020)
 			:add-list '(cee-5080))
 		(make-op :action 'take-cee-5100
-			:preconds '(cee-3080 cee-5070)
+			:preconds '(cee-5070 cee-3080)
 			:add-list '(cee-5100))
 		(make-op :action 'take-cee-5190
-			:preconds '(cee-6190)
 			:add-list '(cee-5190))
 		(make-op :action 'take-cee-5220
-			:preconds '(cee-3210 cee-6220)
+			:preconds '(cee-3210)
 			:add-list '(cee-5220))
 		(make-op :action 'take-cee-5230
-			:preconds '(cee-3210 cee-6230)
+			:preconds '(cee-3210)
 			:add-list '(cee-5230))
 		(make-op :action 'take-cee-5240
-			:preconds '(cee-3210 cee-6240)
+			:preconds '(cee-3210)
 			:add-list '(cee-5240))
 		(make-op :action 'take-cee-5250
 			:add-list '(cee-5250))
 		(make-op :action 'take-cee-5255
-			:preconds '(cee-3210 cee-6255)
+			:preconds '(cee-3210)
 			:add-list '(cee-5255))
 		(make-op :action 'take-cee-5350
-			:preconds '(cee-4300 cee-6350)
+			:preconds '(cee-4300)
 			:add-list '(cee-5350))
 		(make-op :action 'take-cee-5380
-			:preconds '(cee-4300 cee-6380)
+			:preconds '(cee-4300)
 			:add-list '(cee-5380))
 		(make-op :action 'take-cee-5410
-			:preconds '(cee-6410)
 			:add-list '(cee-5410))
 		(make-op :action 'take-cee-5430
-			:preconds '(cee-3430 cee-6430)
+			:preconds '(cee-3430)
 			:add-list '(cee-5430))
 		(make-op :action 'take-cee-5450
-			:preconds '(cee-3430 cee-6450)
+			:preconds '(cee-3430)
 			:add-list '(cee-5450))
 		(make-op :action 'take-cee-5470
-			:preconds '(cee-3500 cee-6470)
+			:preconds '(cee-3500)
 			:add-list '(cee-5470))
 		(make-op :action 'take-cee-5490
-			:preconds '(cee-6490)
 			:add-list '(cee-5490))
 		(make-op :action 'take-cee-5500
-			:preconds '(cee-3500 cee-3510 cee-6500)
+			:preconds '(cee-3510 cee-3500)
 			:add-list '(cee-5500))
 		(make-op :action 'take-cee-5540
-			:preconds '(cee-3500 cee-3510 cee-6540)
+			:preconds '(cee-3510 cee-3500)
 			:add-list '(cee-5540))
 		(make-op :action 'take-cee-5550
-			:preconds '(cee-3500 cee-3510 cee-6550)
+			:preconds '(cee-3510 cee-3500)
 			:add-list '(cee-5550))
 		(make-op :action 'take-cee-5600
-			:preconds '(cee-6600)
 			:add-list '(cee-5600))
 		(make-op :action 'take-cee-5610
 			:preconds '(chem-1210)
 			:add-list '(cee-5610))
 		(make-op :action 'take-cee-5620
-			:preconds '(chem-1210 psc-5620)
+			:preconds '(psc-5620 chem-1210)
 			:add-list '(cee-5620))
 		(make-op :action 'take-cee-5635
-			:preconds '(cee-6635)
 			:add-list '(cee-5635))
 		(make-op :action 'take-cee-5655
-			:preconds '(cee-6655)
 			:add-list '(cee-5655))
 		(make-op :action 'take-cee-5670
-			:preconds '(chem-1210 pubh-5670)
+			:preconds '(pubh-5670 chem-1210)
 			:add-list '(cee-5670))
 		(make-op :action 'take-cee-5680
-			:preconds '(beng-5680 cee-6680)
 			:add-list '(cee-5680))
 		(make-op :action 'take-cee-5690
-			:preconds '(cee-3610 pubh-3610 cee-3500 cee-3510 cee-3640 cee-6690)
+			:preconds '(cee-3640 cee-3510 cee-3500 pubh-3610 cee-3610)
 			:add-list '(cee-5690))
 		(make-op :action 'take-cee-5710
 			:add-list '(cee-5710))
 		(make-op :action 'take-cee-5720
-			:preconds '(cee-5690 cee-6690 cee-6720)
+			:preconds '(cee-5690)
 			:add-list '(cee-5720))
 		(make-op :action 'take-cee-5730
-			:preconds '(chem-1210 chem-1215 pubh-5730 cee-6730)
+			:preconds '(pubh-5730 chem-1215 chem-1210)
 			:add-list '(cee-5730))
 		(make-op :action 'take-cee-5750
 			:add-list '(cee-5750))
 		(make-op :action 'take-cee-5790
-			:preconds '(chem-1220 pubh-5790)
+			:preconds '(pubh-5790 chem-1220)
 			:add-list '(cee-5790))
 		(make-op :action 'take-cee-5810
-			:preconds '(beng-3200 beng-3670 cee-3670 beng-3670 cee-3670 cee-3610 pubh-3610 cee-3640 beng-5810 cee-6810)
+			:preconds '(cee-3640 pubh-3610 cee-3610 cee-3670 beng-3670 cee-3670 beng-3670 beng-3200)
 			:add-list '(cee-5810))
 		(make-op :action 'take-cee-5830
-			:preconds '(beng-3670 cee-3670 beng-5830 cee-6830)
+			:preconds '(cee-3670 beng-3670)
 			:add-list '(cee-5830))
 		(make-op :action 'take-cee-5860
 			:preconds '(cee-3610)
@@ -2676,10 +2617,10 @@
 			:preconds '(cee-3780)
 			:add-list '(cee-5870))
 		(make-op :action 'take-cee-5880
-			:preconds '(cee-3780 cee-3610 pubh-3610)
+			:preconds '(pubh-3610 cee-3610 cee-3780)
 			:add-list '(cee-5880))
 		(make-op :action 'take-cee-5885
-			:preconds '(cee-3080 cee-6885)
+			:preconds '(cee-3080)
 			:add-list '(cee-5885))
 		(make-op :action 'take-cee-5900
 			:add-list '(cee-5900))
@@ -2696,13 +2637,13 @@
 			:preconds '(hist-3160)
 			:add-list '(clas-3160))
 		(make-op :action 'take-clas-3170
-			:preconds '(hist-3170 rels-3170)
+			:preconds '(rels-3170 hist-3170)
 			:add-list '(clas-3170))
 		(make-op :action 'take-clas-3210
-			:preconds '(arth-3210 engl-3210 hist-3210 rels-3210)
+			:preconds '(rels-3210 hist-3210 engl-3210)
 			:add-list '(clas-3210))
 		(make-op :action 'take-clas-3290
-			:preconds '(hist-3290 rels-3290)
+			:preconds '(rels-3290 hist-3290)
 			:add-list '(clas-3290))
 		(make-op :action 'take-tecd-1100
 			:add-list '(tecd-1100))
@@ -2763,7 +2704,7 @@
 		(make-op :action 'take-cmst-3610
 			:add-list '(cmst-3610))
 		(make-op :action 'take-cmst-3730
-			:preconds '(cmst-1020 cmst-1330 cmst-3330)
+			:preconds '(cmst-3330 cmst-1330 cmst-1020)
 			:add-list '(cmst-3730))
 		(make-op :action 'take-cmst-4200
 			:add-list '(cmst-4200))
@@ -2789,7 +2730,7 @@
 		(make-op :action 'take-cmst-4800
 			:add-list '(cmst-4800))
 		(make-op :action 'take-cmst-4810
-			:preconds '(cmst-2110 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 cmst-2110)
 			:add-list '(cmst-4810))
 		(make-op :action 'take-cmst-4820
 			:preconds '(cmst-1020)
@@ -2813,7 +2754,7 @@
 			:preconds '(cmst-3400)
 			:add-list '(cmst-5400))
 		(make-op :action 'take-cmst-5500
-			:preconds '(cmst-2120 cmst-3250)
+			:preconds '(cmst-3250 cmst-2120)
 			:add-list '(cmst-5500))
 		(make-op :action 'take-cmst-5600
 			:preconds '(cmst-3600)
@@ -2821,7 +2762,7 @@
 		(make-op :action 'take-cmst-5800
 			:add-list '(cmst-5800))
 		(make-op :action 'take-cmst-5950
-			:preconds '(cmst-1330 cmst-3330)
+			:preconds '(cmst-3330 cmst-1330)
 			:add-list '(cmst-5950))
 		(make-op :action 'take-comd-1030
 			:add-list '(comd-1030))
@@ -2845,12 +2786,12 @@
 			:preconds '(comd-3010)
 			:add-list '(comd-3080))
 		(make-op :action 'take-comd-3085
-			:preconds '(comd-3080 comd-3910)
+			:preconds '(comd-3910 comd-3080)
 			:add-list '(comd-3085))
 		(make-op :action 'take-comd-3100
 			:add-list '(comd-3100))
 		(make-op :action 'take-comd-3120
-			:preconds '(comd-3200 comd-3500)
+			:preconds '(comd-3500 comd-3200)
 			:add-list '(comd-3120))
 		(make-op :action 'take-comd-3200
 			:add-list '(comd-3200))
@@ -2873,10 +2814,10 @@
 			:preconds '(comd-3200)
 			:add-list '(comd-4200))
 		(make-op :action 'take-comd-4300
-			:preconds '(comd-3010 comd-3910 comd-4910 comd-4920 comd-4800)
+			:preconds '(comd-4800 comd-4920 comd-4910 comd-3910 comd-3010)
 			:add-list '(comd-4300))
 		(make-op :action 'take-comd-4400
-			:preconds '(comd-3400 comd-4700 comd-4200)
+			:preconds '(comd-4200 comd-4700 comd-3400)
 			:add-list '(comd-4400))
 		(make-op :action 'take-comd-4450
 			:preconds '(comd-3200)
@@ -2887,22 +2828,19 @@
 		(make-op :action 'take-comd-4600
 			:add-list '(comd-4600))
 		(make-op :action 'take-comd-4630
-			:preconds '(comd-6630)
 			:add-list '(comd-4630))
 		(make-op :action 'take-comd-4700
-			:preconds '(comd-3400 comd-3800)
+			:preconds '(comd-3800 comd-3400)
 			:add-list '(comd-4700))
 		(make-op :action 'take-comd-4750
-			:preconds '(comd-6750)
 			:add-list '(comd-4750))
 		(make-op :action 'take-comd-4760
-			:preconds '(comd-6760)
 			:add-list '(comd-4760))
 		(make-op :action 'take-comd-4780
-			:preconds '(comd-3010 comd-6780)
+			:preconds '(comd-3010)
 			:add-list '(comd-4780))
 		(make-op :action 'take-comd-4800
-			:preconds '(comd-3010 comd-3910 comd-4910 comd-4920 comd-4300)
+			:preconds '(comd-4920 comd-4910 comd-3910 comd-3010)
 			:add-list '(comd-4800))
 		(make-op :action 'take-comd-4810
 			:add-list '(comd-4810))
@@ -2923,10 +2861,10 @@
 			:preconds '(comd-4910)
 			:add-list '(comd-4920))
 		(make-op :action 'take-comd-5070
-			:preconds '(comd-3400 comd-3800 comd-3500)
+			:preconds '(comd-3500 comd-3800 comd-3400)
 			:add-list '(comd-5070))
 		(make-op :action 'take-comd-5200
-			:preconds '(comd-3200 comd-3600)
+			:preconds '(comd-3600 comd-3200)
 			:add-list '(comd-5200))
 		(make-op :action 'take-comd-5210
 			:add-list '(comd-5210))
@@ -2939,7 +2877,7 @@
 			:preconds '(comd-3400)
 			:add-list '(comd-5330))
 		(make-op :action 'take-comd-5600
-			:preconds '(comd-3010 comd-3910 comd-4910)
+			:preconds '(comd-4910 comd-3910 comd-3010)
 			:add-list '(comd-5600))
 		(make-op :action 'take-comd-5610
 			:preconds '(comd-3010)
@@ -2953,10 +2891,10 @@
 			:preconds '(comd-4810)
 			:add-list '(comd-5640))
 		(make-op :action 'take-comd-5720
-			:preconds '(comd-4750 comd-4810)
+			:preconds '(comd-4810 comd-4750)
 			:add-list '(comd-5720))
 		(make-op :action 'take-comd-5740
-			:preconds '(comd-3910 comd-6740)
+			:preconds '(comd-3910)
 			:add-list '(comd-5740))
 		(make-op :action 'take-comd-5750
 			:add-list '(comd-5750))
@@ -2964,13 +2902,10 @@
 			:preconds '(comd-5850)
 			:add-list '(comd-5840))
 		(make-op :action 'take-comd-5850
-			:preconds '(comd-5840)
 			:add-list '(comd-5850))
 		(make-op :action 'take-comd-5860
-			:preconds '(comd-6860)
 			:add-list '(comd-5860))
 		(make-op :action 'take-comd-5870
-			:preconds '(comd-6870)
 			:add-list '(comd-5870))
 		(make-op :action 'take-comd-5880
 			:add-list '(comd-5880))
@@ -3003,7 +2938,7 @@
 			:preconds '(cs-1410)
 			:add-list '(cs-2410))
 		(make-op :action 'take-cs-2420
-			:preconds '(cs-1410 ece-1410)
+			:preconds '(ece-1410 cs-1410)
 			:add-list '(cs-2420))
 		(make-op :action 'take-cs-2610
 			:preconds '(cs-1410)
@@ -3020,13 +2955,13 @@
 			:preconds '(cs-2410)
 			:add-list '(cs-3200))
 		(make-op :action 'take-cs-3430
-			:preconds '(cs-1410 math-1210 math-2270)
+			:preconds '(math-2270 math-1210 cs-1410)
 			:add-list '(cs-3430))
 		(make-op :action 'take-cs-3450
-			:preconds '(cs-2420 cs-2610)
+			:preconds '(cs-2610 cs-2420)
 			:add-list '(cs-3450))
 		(make-op :action 'take-cs-3460
-			:preconds '(cs-1440 cs-2420)
+			:preconds '(cs-2420 cs-1440)
 			:add-list '(cs-3460))
 		(make-op :action 'take-cs-4250
 			:add-list '(cs-4250))
@@ -3037,7 +2972,7 @@
 			:preconds '(cs-1030)
 			:add-list '(cs-4350))
 		(make-op :action 'take-cs-4460
-			:preconds '(cs-2420 cs-3100)
+			:preconds '(cs-3100 cs-2420)
 			:add-list '(cs-4460))
 		(make-op :action 'take-cs-4610
 			:preconds '(cs-2610)
@@ -3055,10 +2990,10 @@
 			:preconds '(cs-2420)
 			:add-list '(cs-5000))
 		(make-op :action 'take-cs-5030
-			:preconds '(cs-2420 cs-6030)
+			:preconds '(cs-2420)
 			:add-list '(cs-5030))
 		(make-op :action 'take-cs-5040
-			:preconds '(cs-2420 cs-6040)
+			:preconds '(cs-2420)
 			:add-list '(cs-5040))
 		(make-op :action 'take-cs-5050
 			:preconds '(cs-2420)
@@ -3067,69 +3002,68 @@
 			:preconds '(cs-2420)
 			:add-list '(cs-5060))
 		(make-op :action 'take-cs-5080
-			:preconds '(cs-2420 cs-6080)
+			:preconds '(cs-2420)
 			:add-list '(cs-5080))
 		(make-op :action 'take-cs-5110
-			:preconds '(cs-2420 cs-6110)
+			:preconds '(cs-2420)
 			:add-list '(cs-5110))
 		(make-op :action 'take-cs-5140
 			:add-list '(cs-5140))
 		(make-op :action 'take-cs-5250
-			:preconds '(cs-2420 cs-5260)
+			:preconds '(cs-5260 cs-2420)
 			:add-list '(cs-5250))
 		(make-op :action 'take-cs-5260
-			:preconds '(cs-5250)
 			:add-list '(cs-5260))
 		(make-op :action 'take-cs-5300
 			:preconds '(cs-2810)
 			:add-list '(cs-5300))
 		(make-op :action 'take-cs-5400
-			:preconds '(cs-2420 math-2250 math-2270)
+			:preconds '(math-2270 math-2250 cs-2420)
 			:add-list '(cs-5400))
 		(make-op :action 'take-cs-5410
-			:preconds '(cs-2420 cs-3100)
+			:preconds '(cs-3100 cs-2420)
 			:add-list '(cs-5410))
 		(make-op :action 'take-cs-5470
-			:preconds '(cs-2420 math-2250 math-2270 cs-6470)
+			:preconds '(math-2270 math-2250 cs-2420)
 			:add-list '(cs-5470))
 		(make-op :action 'take-cs-5510
-			:preconds '(cs-2420 cs-6510)
+			:preconds '(cs-2420)
 			:add-list '(cs-5510))
 		(make-op :action 'take-cs-5600
-			:preconds '(cs-2420 cs-6600)
+			:preconds '(cs-2420)
 			:add-list '(cs-5600))
 		(make-op :action 'take-cs-5620
-			:preconds '(cs-2420 cs-6620)
+			:preconds '(cs-2420)
 			:add-list '(cs-5620))
 		(make-op :action 'take-cs-5640
-			:preconds '(cs-2420 cs-6640)
+			:preconds '(cs-2420)
 			:add-list '(cs-5640))
 		(make-op :action 'take-cs-5665
 			:preconds '(cs-2420)
 			:add-list '(cs-5665))
 		(make-op :action 'take-cs-5680
-			:preconds '(cs-2420 math-2270 stat-2300 stat-3000 math-5710 cs-6680)
+			:preconds '(math-5710 stat-3000 stat-2300 math-2270 cs-2420)
 			:add-list '(cs-5680))
 		(make-op :action 'take-cs-5700
 			:preconds '(cs-3450)
 			:add-list '(cs-5700))
 		(make-op :action 'take-cs-5750
-			:preconds '(stat-2300 stat-3000 cs-6750)
+			:preconds '(stat-3000 stat-2300)
 			:add-list '(cs-5750))
 		(make-op :action 'take-cs-5800
 			:preconds '(cs-2420)
 			:add-list '(cs-5800))
 		(make-op :action 'take-cs-5820
-			:preconds '(cs-2420 cs-6820)
+			:preconds '(cs-2420)
 			:add-list '(cs-5820))
 		(make-op :action 'take-cs-5830
-			:preconds '(cs-2420 cs-6830)
+			:preconds '(cs-2420)
 			:add-list '(cs-5830))
 		(make-op :action 'take-cs-5840
-			:preconds '(cs-2420 math-2270 cs-5665 cs-6840)
+			:preconds '(cs-5665 math-2270 cs-2420)
 			:add-list '(cs-5840))
 		(make-op :action 'take-cs-5850
-			:preconds '(cs-2420 cs-6850)
+			:preconds '(cs-2420)
 			:add-list '(cs-5850))
 		(make-op :action 'take-cs-5890
 			:preconds '(cs-2420)
@@ -3255,40 +3189,40 @@
 		(make-op :action 'take-cj-1905
 			:add-list '(cj-1905))
 		(make-op :action 'take-cj-1910
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905 cj-1912 cj-1913 cj-1914 cj-1915)
+			:preconds '(cj-1915 cj-1914 cj-1913 cj-1912 cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1910))
 		(make-op :action 'take-cj-1912
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905)
+			:preconds '(cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1912))
 		(make-op :action 'take-cj-1913
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905)
+			:preconds '(cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1913))
 		(make-op :action 'take-cj-1914
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905)
+			:preconds '(cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1914))
 		(make-op :action 'take-cj-1915
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905)
+			:preconds '(cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1915))
 		(make-op :action 'take-cj-1920
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905 cj-1921 cj-1922 cj-1923 cj-1924 cj-1925 cj-1926)
+			:preconds '(cj-1926 cj-1925 cj-1924 cj-1923 cj-1922 cj-1921 cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1920))
 		(make-op :action 'take-cj-1921
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905 cj-1920 cj-1922 cj-1923 cj-1924 cj-1925 cj-1926)
+			:preconds '(cj-1926 cj-1925 cj-1924 cj-1923 cj-1922 cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1921))
 		(make-op :action 'take-cj-1922
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905)
+			:preconds '(cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1922))
 		(make-op :action 'take-cj-1923
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905)
+			:preconds '(cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1923))
 		(make-op :action 'take-cj-1924
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905)
+			:preconds '(cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1924))
 		(make-op :action 'take-cj-1925
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905)
+			:preconds '(cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1925))
 		(make-op :action 'take-cj-1926
-			:preconds '(cj-1900 cj-1901 cj-1902 cj-1903 cj-1904 cj-1905)
+			:preconds '(cj-1905 cj-1904 cj-1903 cj-1902 cj-1901 cj-1900)
 			:add-list '(cj-1926))
 		(make-op :action 'take-cj-2110
 			:add-list '(cj-2110))
@@ -3326,13 +3260,13 @@
 			:preconds '(teit-1210)
 			:add-list '(teit-1200))
 		(make-op :action 'take-teit-1210
-			:preconds '(teit-1200)
 			:add-list '(teit-1210))
 		(make-op :action 'take-teit-1290
 			:add-list '(teit-1290))
 		(make-op :action 'take-teit-1300
 			:add-list '(teit-1300))
 		(make-op :action 'take-teit-1310
+			:preconds '(teel-1110)
 			:add-list '(teit-1310))
 		(make-op :action 'take-teit-1340
 			:add-list '(teit-1340))
@@ -3429,13 +3363,12 @@
 			:preconds '(data-2100)
 			:add-list '(data-1100))
 		(make-op :action 'take-data-2100
-			:preconds '(data-1100)
 			:add-list '(data-2100))
 		(make-op :action 'take-data-3100
-			:preconds '(data-2100 data-2100 math-1050 math-1100)
+			:preconds '(math-1100 math-1050 data-2100 data-2100)
 			:add-list '(data-3100))
 		(make-op :action 'take-data-3300
-			:preconds '(data-3100 stat-1040 stat-1045 stat-2000 stat-2300 stat-3000)
+			:preconds '(stat-3000 stat-2300 stat-2000 stat-1045 stat-1040 data-3100)
 			:add-list '(data-3300))
 		(make-op :action 'take-data-3330
 			:add-list '(data-3330))
@@ -3447,43 +3380,41 @@
 			:preconds '(data-3330)
 			:add-list '(data-4330))
 		(make-op :action 'take-data-5330
-			:preconds '(data-3330 data-3500 data-6330)
+			:preconds '(data-3500 data-3330)
 			:add-list '(data-5330))
 		(make-op :action 'take-data-5350
 			:preconds '(data-2100)
 			:add-list '(data-5350))
 		(make-op :action 'take-data-5360
-			:preconds '(data-3330 data-6360)
+			:preconds '(data-3330)
 			:add-list '(data-5360))
 		(make-op :action 'take-data-5400
-			:preconds '(data-6400)
 			:add-list '(data-5400))
 		(make-op :action 'take-data-5420
-			:preconds '(data-3300 data-3500 cs-1400 data-3100 stat-1040 stat-1045 stat-2000 stat-2300 stat-3000 data-6420)
+			:preconds '(stat-3000 stat-2300 stat-2000 stat-1045 stat-1040 data-3100 cs-1400 data-3500 data-3300)
 			:add-list '(data-5420))
 		(make-op :action 'take-data-5480
-			:preconds '(data-6480)
 			:add-list '(data-5480))
 		(make-op :action 'take-data-5500
-			:preconds '(data-3500 data-6500)
+			:preconds '(data-3500)
 			:add-list '(data-5500))
 		(make-op :action 'take-data-5570
-			:preconds '(data-3500 cs-1400 data-6570)
+			:preconds '(cs-1400 data-3500)
 			:add-list '(data-5570))
 		(make-op :action 'take-data-5600
-			:preconds '(data-3100 data-3500)
+			:preconds '(data-3500 data-3100)
 			:add-list '(data-5600))
 		(make-op :action 'take-data-5610
-			:preconds '(data-5600 data-6610)
+			:preconds '(data-5600)
 			:add-list '(data-5610))
 		(make-op :action 'take-data-5630
-			:preconds '(data-3500 cs-1400 data-5600 ecn-4330 stat-5100 data-6630)
+			:preconds '(stat-5100 ecn-4330 data-5600 cs-1400 data-3500)
 			:add-list '(data-5630))
 		(make-op :action 'take-data-5690
-			:preconds '(data-3100 stat-3000 data-3500 cs-1400 fin-3200 cee-4200 data-5500 cs-2420 data-6690)
+			:preconds '(cs-2420 data-5500 cee-4200 fin-3200 cs-1400 data-3500 stat-3000 data-3100)
 			:add-list '(data-5690))
 		(make-op :action 'take-data-5695
-			:preconds '(data-5690 data-6695)
+			:preconds '(data-5690)
 			:add-list '(data-5695))
 		(make-op :action 'take-dsme-1000
 			:add-list '(dsme-1000))
@@ -3522,13 +3453,13 @@
 		(make-op :action 'take-ecn-1500
 			:add-list '(ecn-1500))
 		(make-op :action 'take-ecn-2010
-			:preconds '(ecn-1500 apec-1600)
+			:preconds '(apec-1600 ecn-1500)
 			:add-list '(ecn-2010))
 		(make-op :action 'take-ecn-3000
 			:preconds '(math-1050)
 			:add-list '(ecn-3000))
 		(make-op :action 'take-ecn-3010
-			:preconds '(ecn-2010 apec-2010 math-1100 stat-2300)
+			:preconds '(stat-2300 math-1100 apec-2010 ecn-2010)
 			:add-list '(ecn-3010))
 		(make-op :action 'take-ecn-3170
 			:preconds '(pols-3170)
@@ -3537,26 +3468,26 @@
 			:preconds '(msle-3300)
 			:add-list '(ecn-3300))
 		(make-op :action 'take-ecn-3400
-			:preconds '(ecn-2010 apec-2010)
+			:preconds '(apec-2010 ecn-2010)
 			:add-list '(ecn-3400))
 		(make-op :action 'take-ecn-3500
 			:add-list '(ecn-3500))
 		(make-op :action 'take-ecn-3600
 			:add-list '(ecn-3600))
 		(make-op :action 'take-ecn-4010
-			:preconds '(ecn-2010 apec-2010 math-1100 stat-2300 data-3100)
+			:preconds '(data-3100 stat-2300 math-1100 apec-2010 ecn-2010)
 			:add-list '(ecn-4010))
 		(make-op :action 'take-ecn-4020
-			:preconds '(ecn-1500 ecn-2010 math-1100 math-1210)
+			:preconds '(math-1210 math-1100 ecn-2010 ecn-1500)
 			:add-list '(ecn-4020))
 		(make-op :action 'take-ecn-4250
-			:preconds '(ecn-1500 ecn-2010)
+			:preconds '(ecn-2010 ecn-1500)
 			:add-list '(ecn-4250))
 		(make-op :action 'take-ecn-4310
-			:preconds '(ecn-2010 apec-2010 math-1100 math-1210)
+			:preconds '(math-1210 math-1100 apec-2010 ecn-2010)
 			:add-list '(ecn-4310))
 		(make-op :action 'take-ecn-4330
-			:preconds '(ecn-1500 ecn-2010 data-3100 stat-2000 stat-2300 stat-3000)
+			:preconds '(stat-3000 stat-2300 stat-2000 data-3100 ecn-2010 ecn-1500)
 			:add-list '(ecn-4330))
 		(make-op :action 'take-ecn-4500
 			:add-list '(ecn-4500))
@@ -3568,7 +3499,7 @@
 			:preconds '(ecn-4020)
 			:add-list '(ecn-5000))
 		(make-op :action 'take-ecn-5020
-			:preconds '(ecn-4010 ecn-4020 ecn-6020)
+			:preconds '(ecn-4020 ecn-4010)
 			:add-list '(ecn-5020))
 		(make-op :action 'take-ecn-5030
 			:preconds '(ecn-4330)
@@ -3577,40 +3508,39 @@
 			:preconds '(ecn-2010)
 			:add-list '(ecn-5050))
 		(make-op :action 'take-ecn-5090
-			:preconds '(ecn-6090)
 			:add-list '(ecn-5090))
 		(make-op :action 'take-ecn-5100
-			:preconds '(ecn-2010 apec-2010)
+			:preconds '(apec-2010 ecn-2010)
 			:add-list '(ecn-5100))
 		(make-op :action 'take-ecn-5110
-			:preconds '(ecn-2010 apec-2010)
+			:preconds '(apec-2010 ecn-2010)
 			:add-list '(ecn-5110))
 		(make-op :action 'take-ecn-5150
-			:preconds '(ecn-2010 apec-2010)
+			:preconds '(apec-2010 ecn-2010)
 			:add-list '(ecn-5150))
 		(make-op :action 'take-ecn-5160
-			:preconds '(ecn-4010 ecn-4020 ecn-4330)
+			:preconds '(ecn-4330 ecn-4020 ecn-4010)
 			:add-list '(ecn-5160))
 		(make-op :action 'take-ecn-5200
 			:preconds '(ecn-4020)
 			:add-list '(ecn-5200))
 		(make-op :action 'take-ecn-5300
-			:preconds '(ecn-4020 ecn-4010 apec-4010)
+			:preconds '(apec-4010 ecn-4010 ecn-4020)
 			:add-list '(ecn-5300))
 		(make-op :action 'take-ecn-5320
-			:preconds '(ecn-4310 ecn-6320)
+			:preconds '(ecn-4310)
 			:add-list '(ecn-5320))
 		(make-op :action 'take-ecn-5400
-			:preconds '(ecn-4020 ecn-4010 apec-4010)
+			:preconds '(apec-4010 ecn-4010 ecn-4020)
 			:add-list '(ecn-5400))
 		(make-op :action 'take-ecn-5500
 			:preconds '(ecn-4010)
 			:add-list '(ecn-5500))
 		(make-op :action 'take-ecn-5700
-			:preconds '(ecn-2010 apec-2010)
+			:preconds '(apec-2010 ecn-2010)
 			:add-list '(ecn-5700))
 		(make-op :action 'take-ecn-5800
-			:preconds '(ecn-4020 ecn-4010 apec-4010)
+			:preconds '(apec-4010 ecn-4010 ecn-4020)
 			:add-list '(ecn-5800))
 		(make-op :action 'take-ecn-5900
 			:preconds '(ecn-4330)
@@ -3646,7 +3576,7 @@
 		(make-op :action 'take-educ-5000
 			:add-list '(educ-5000))
 		(make-op :action 'take-educ-5560
-			:preconds '(teal-5560 educ-6560)
+			:preconds '(teal-5560)
 			:add-list '(educ-5560))
 		(make-op :action 'take-teel-1110
 			:add-list '(teel-1110))
@@ -3666,9 +3596,6 @@
 		(make-op :action 'take-teel-1420
 			:preconds '(teel-1110)
 			:add-list '(teel-1420))
-		(make-op :action 'take-teit-1310
-			:preconds '(teel-1110)
-			:add-list '(teit-1310))
 		(make-op :action 'take-ece-1400
 			:preconds '(math-1050)
 			:add-list '(ece-1400))
@@ -3678,16 +3605,16 @@
 		(make-op :action 'take-ece-2250
 			:add-list '(ece-2250))
 		(make-op :action 'take-ece-2290
-			:preconds '(ece-2250 engr-2210 math-2250 math-2280)
+			:preconds '(math-2280 math-2250 engr-2210 ece-2250)
 			:add-list '(ece-2290))
 		(make-op :action 'take-ece-2700
 			:preconds '(ece-1400)
 			:add-list '(ece-2700))
 		(make-op :action 'take-ece-3410
-			:preconds '(ece-2290 ece-3620)
+			:preconds '(ece-3620 ece-2290)
 			:add-list '(ece-3410))
 		(make-op :action 'take-ece-3620
-			:preconds '(ece-1400 ece-2290 engr-2210 math-2250 math-2280)
+			:preconds '(math-2280 math-2250 engr-2210 ece-2290 ece-1400)
 			:add-list '(ece-3620))
 		(make-op :action 'take-ece-3640
 			:preconds '(ece-3620)
@@ -3696,111 +3623,111 @@
 			:preconds '(ece-2700)
 			:add-list '(ece-3700))
 		(make-op :action 'take-ece-3710
-			:preconds '(ece-1400 engr-2210 ece-2250 ece-2700)
+			:preconds '(ece-2700 ece-2250 engr-2210 ece-1400)
 			:add-list '(ece-3710))
 		(make-op :action 'take-ece-3810
 			:preconds '(engr-3080)
 			:add-list '(ece-3810))
 		(make-op :action 'take-ece-3870
-			:preconds '(ece-2290 math-2210 phys-2220 math-2250 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2250 phys-2220 math-2210 ece-2290)
 			:add-list '(ece-3870))
 		(make-op :action 'take-ece-4250
 			:add-list '(ece-4250))
 		(make-op :action 'take-ece-4820
-			:preconds '(ece-3410 ece-3710 ece-3810 ece-4830)
+			:preconds '(ece-4830 ece-3810 ece-3710 ece-3410)
 			:add-list '(ece-4820))
 		(make-op :action 'take-ece-4830
-			:preconds '(ece-3410 ece-3710 ece-3810 ece-4820)
+			:preconds '(ece-3810 ece-3710 ece-3410)
 			:add-list '(ece-4830))
 		(make-op :action 'take-ece-4840
-			:preconds '(ece-4820 ece-4820 ece-4850)
+			:preconds '(ece-4850 ece-4820 ece-4820)
 			:add-list '(ece-4840))
 		(make-op :action 'take-ece-4850
-			:preconds '(ece-4830 ece-4840)
+			:preconds '(ece-4830)
 			:add-list '(ece-4850))
 		(make-op :action 'take-ece-5110
 			:preconds '(ece-2250)
 			:add-list '(ece-5110))
 		(make-op :action 'take-ece-5120
-			:preconds '(ece-3410 ece-3620 ece-6120)
+			:preconds '(ece-3620 ece-3410)
 			:add-list '(ece-5120))
 		(make-op :action 'take-ece-5150
-			:preconds '(ece-3410 ece-3620 ece-3870 ece-6150)
+			:preconds '(ece-3870 ece-3620 ece-3410)
 			:add-list '(ece-5150))
 		(make-op :action 'take-ece-5160
-			:preconds '(ece-3710 ece-5120 ece-6120 ece-5150 ece-6150 ece-6160)
+			:preconds '(ece-5150 ece-5120 ece-3710)
 			:add-list '(ece-5160))
 		(make-op :action 'take-ece-5210
-			:preconds '(phys-3600 ece-3870 phys-5210)
+			:preconds '(phys-5210 ece-3870 phys-3600)
 			:add-list '(ece-5210))
 		(make-op :action 'take-ece-5230
-			:preconds '(ece-2290 engr-2210 math-2250 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2250 engr-2210 ece-2290)
 			:add-list '(ece-5230))
 		(make-op :action 'take-ece-5240
-			:preconds '(ece-5230 mae-5520 mae-5530)
+			:preconds '(mae-5530 mae-5520 ece-5230)
 			:add-list '(ece-5240))
 		(make-op :action 'take-ece-5250
-			:preconds '(phys-4650 phys-4600 ece-5800 phys-5250)
+			:preconds '(phys-5250 ece-5800 phys-4600 phys-4650)
 			:add-list '(ece-5250))
 		(make-op :action 'take-ece-5310
 			:preconds '(ece-3620)
 			:add-list '(ece-5310))
 		(make-op :action 'take-ece-5320
-			:preconds '(ece-5310 mae-5310 mae-5320)
+			:preconds '(mae-5320 mae-5310 ece-5310)
 			:add-list '(ece-5320))
 		(make-op :action 'take-ece-5330
-			:preconds '(ece-5310 mae-5310 mae-5330)
+			:preconds '(mae-5330 mae-5310 ece-5310)
 			:add-list '(ece-5330))
 		(make-op :action 'take-ece-5340
-			:preconds '(ece-1410 cs-1410 math-2250 math-2280 mae-5340)
+			:preconds '(mae-5340 math-2280 math-2250 cs-1410 ece-1410)
 			:add-list '(ece-5340))
 		(make-op :action 'take-ece-5345
-			:preconds '(ece-1410 cs-1410)
+			:preconds '(cs-1410 ece-1410)
 			:add-list '(ece-5345))
 		(make-op :action 'take-ece-5420
 			:preconds '(ece-3410)
 			:add-list '(ece-5420))
 		(make-op :action 'take-ece-5460
-			:preconds '(ece-1400 ece-2700 ece-6460)
+			:preconds '(ece-2700 ece-1400)
 			:add-list '(ece-5460))
 		(make-op :action 'take-ece-5470
-			:preconds '(ece-5460 ece-6460 ece-6470)
+			:preconds '(ece-5460)
 			:add-list '(ece-5470))
 		(make-op :action 'take-ece-5480
-			:preconds '(ece-2700 ece-6480)
+			:preconds '(ece-2700)
 			:add-list '(ece-5480))
 		(make-op :action 'take-ece-5600
-			:preconds '(ece-3620 math-5710 stat-3000)
+			:preconds '(stat-3000 math-5710 ece-3620)
 			:add-list '(ece-5600))
 		(make-op :action 'take-ece-5630
 			:preconds '(ece-3640)
 			:add-list '(ece-5630))
 		(make-op :action 'take-ece-5640
-			:preconds '(ece-3640 ece-3710)
+			:preconds '(ece-3710 ece-3640)
 			:add-list '(ece-5640))
 		(make-op :action 'take-ece-5660
-			:preconds '(ece-3640 math-5710)
+			:preconds '(math-5710 ece-3640)
 			:add-list '(ece-5660))
 		(make-op :action 'take-ece-5700
-			:preconds '(phys-2210 phys-2310 phys-2215 phys-2220 phys-2320 phys-2225 beng-5700 mae-5700 phys-5700)
+			:preconds '(phys-5700 mae-5700 phys-2225 phys-2320 phys-2220 phys-2215 phys-2310 phys-2210)
 			:add-list '(ece-5700))
 		(make-op :action 'take-ece-5710
-			:preconds '(beng-5700 ece-5700 mae-5700 phys-5700 beng-5710 phys-5710)
+			:preconds '(phys-5710 phys-5700 mae-5700 ece-5700 beng-5700)
 			:add-list '(ece-5710))
 		(make-op :action 'take-ece-5720
-			:preconds '(ece-2700 ece-3710)
+			:preconds '(ece-3710 ece-2700)
 			:add-list '(ece-5720))
 		(make-op :action 'take-ece-5730
-			:preconds '(ece-2700 ece-3710 ece-6730)
+			:preconds '(ece-3710 ece-2700)
 			:add-list '(ece-5730))
 		(make-op :action 'take-ece-5750
-			:preconds '(ece-5720 ece-6750)
+			:preconds '(ece-5720)
 			:add-list '(ece-5750))
 		(make-op :action 'take-ece-5780
-			:preconds '(ece-3710 ece-6780)
+			:preconds '(ece-3710)
 			:add-list '(ece-5780))
 		(make-op :action 'take-ece-5790
-			:preconds '(math-3310 cs-2420 ece-6790)
+			:preconds '(cs-2420 math-3310)
 			:add-list '(ece-5790))
 		(make-op :action 'take-ece-5800
 			:preconds '(ece-3870)
@@ -3849,7 +3776,7 @@
 			:preconds '(elet-1200)
 			:add-list '(elet-2150))
 		(make-op :action 'take-elet-2160
-			:preconds '(elet-1200 elet-1210)
+			:preconds '(elet-1210 elet-1200)
 			:add-list '(elet-2160))
 		(make-op :action 'take-elet-2210
 			:add-list '(elet-2210))
@@ -3883,26 +3810,26 @@
 		(make-op :action 'take-eled-1010
 			:add-list '(eled-1010))
 		(make-op :action 'take-eled-2480
-			:preconds '(eled-1010 hdfs-1500)
+			:preconds '(hdfs-1500 eled-1010)
 			:add-list '(eled-2480))
 		(make-op :action 'take-eled-3000
-			:preconds '(eled-3002 eled-3100)
+			:preconds '(eled-3100 eled-3002)
 			:add-list '(eled-3000))
 		(make-op :action 'take-eled-3001
 			:add-list '(eled-3001))
 		(make-op :action 'take-eled-3002
-			:preconds '(eled-3000 eled-3100)
+			:preconds '(eled-3100)
 			:add-list '(eled-3002))
 		(make-op :action 'take-eled-3003
-			:preconds '(eled-3001 eled-3101)
+			:preconds '(eled-3101 eled-3001)
 			:add-list '(eled-3003))
 		(make-op :action 'take-eled-3010
 			:add-list '(eled-3010))
 		(make-op :action 'take-eled-3100
-			:preconds '(eled-1010 teal-1010 hdfs-1500 eled-3000 eled-3001)
+			:preconds '(eled-3001 hdfs-1500 teal-1010 eled-1010)
 			:add-list '(eled-3100))
 		(make-op :action 'take-eled-3101
-			:preconds '(eled-3001 eled-3003)
+			:preconds '(eled-3001)
 			:add-list '(eled-3101))
 		(make-op :action 'take-eled-3200
 			:preconds '(eled-3100)
@@ -3912,60 +3839,58 @@
 		(make-op :action 'take-eled-4010
 			:add-list '(eled-4010))
 		(make-op :action 'take-eled-4020
-			:preconds '(eled-4050 eled-4062 eled-4056)
+			:preconds '(eled-4056 eled-4062 eled-4050)
 			:add-list '(eled-4020))
 		(make-op :action 'take-eled-4021
-			:preconds '(eled-3000 eled-3001 eled-4031 eled-4051 eled-4063 eled-4065)
+			:preconds '(eled-4065 eled-4063 eled-4051 eled-4031 eled-3001 eled-3000)
 			:add-list '(eled-4021))
 		(make-op :action 'take-eled-4030
-			:preconds '(eled-3100 eled-4020 eled-4050 eled-4056 eled-4062)
+			:preconds '(eled-4062 eled-4056 eled-4050 eled-4020 eled-3100)
 			:add-list '(eled-4030))
 		(make-op :action 'take-eled-4031
-			:preconds '(eled-3000 eled-3002 eled-3100 eled-4021 eled-4051 eled-4063 eled-4065)
+			:preconds '(eled-4065 eled-4063 eled-4051 eled-3100 eled-3002 eled-3000)
 			:add-list '(eled-4031))
 		(make-op :action 'take-eled-4040
-			:preconds '(eled-3100 eled-4042)
+			:preconds '(eled-4042 eled-3100)
 			:add-list '(eled-4040))
 		(make-op :action 'take-eled-4041
-			:preconds '(eled-3000 eled-3002 eled-3100 eled-4043)
+			:preconds '(eled-4043 eled-3100 eled-3002 eled-3000)
 			:add-list '(eled-4041))
 		(make-op :action 'take-eled-4042
-			:preconds '(eled-4040)
 			:add-list '(eled-4042))
 		(make-op :action 'take-eled-4043
-			:preconds '(eled-3100 eled-4041)
+			:preconds '(eled-3100)
 			:add-list '(eled-4043))
 		(make-op :action 'take-eled-4050
-			:preconds '(eled-4020 eled-4030 eled-4030 eled-4056 eled-4062)
+			:preconds '(eled-4062 eled-4056)
 			:add-list '(eled-4050))
 		(make-op :action 'take-eled-4051
-			:preconds '(eled-3000 eled-3001 eled-4021 eled-4031 eled-4063 eled-4065)
+			:preconds '(eled-4065 eled-4063 eled-3001 eled-3000)
 			:add-list '(eled-4051))
 		(make-op :action 'take-eled-4056
-			:preconds '(eled-4020 eled-4030 eled-4050 eled-4062)
+			:preconds '(eled-4062)
 			:add-list '(eled-4056))
 		(make-op :action 'take-eled-4060
 			:add-list '(eled-4060))
 		(make-op :action 'take-eled-4061
-			:preconds '(math-2010 math-2020)
+			:preconds '(math-2020 math-2010)
 			:add-list '(eled-4061))
 		(make-op :action 'take-eled-4062
-			:preconds '(eled-4061 sped-5340 eled-4020 eled-4030 eled-4050 eled-4056)
+			:preconds '(sped-5340 eled-4061)
 			:add-list '(eled-4062))
 		(make-op :action 'take-eled-4063
-			:preconds '(eled-4064 eled-4021 eled-4031 eled-4051 eled-4065)
+			:preconds '(eled-4065 eled-4064)
 			:add-list '(eled-4063))
 		(make-op :action 'take-eled-4064
-			:preconds '(math-1050 math-2010 math-2020)
+			:preconds '(math-2020 math-2010 math-1050)
 			:add-list '(eled-4064))
 		(make-op :action 'take-eled-4065
-			:preconds '(eled-4021 eled-4031 eled-4051 eled-4063)
 			:add-list '(eled-4065))
 		(make-op :action 'take-eled-4150
-			:preconds '(eled-3000 eled-3001)
+			:preconds '(eled-3001 eled-3000)
 			:add-list '(eled-4150))
 		(make-op :action 'take-eled-4151
-			:preconds '(eled-3000 eled-3001)
+			:preconds '(eled-3001 eled-3000)
 			:add-list '(eled-4151))
 		(make-op :action 'take-eled-4250
 			:add-list '(eled-4250))
@@ -3986,7 +3911,7 @@
 			:preconds '(eled-5250)
 			:add-list '(eled-5240))
 		(make-op :action 'take-eled-5250
-			:preconds '(eled-5050 eled-5150 eled-5240)
+			:preconds '(eled-5150)
 			:add-list '(eled-5250))
 		(make-op :action 'take-eled-5300
 			:add-list '(eled-5300))
@@ -4001,24 +3926,24 @@
 		(make-op :action 'take-engr-1500
 			:add-list '(engr-1500))
 		(make-op :action 'take-engr-1510
-			:preconds '(math-1050 math-1060)
+			:preconds '(math-1060 math-1050)
 			:add-list '(engr-1510))
 		(make-op :action 'take-engr-1940
 			:add-list '(engr-1940))
 		(make-op :action 'take-engr-2010
-			:preconds '(math-1210 math-1220 phys-2210)
+			:preconds '(phys-2210 math-1220 math-1210)
 			:add-list '(engr-2010))
 		(make-op :action 'take-engr-2030
-			:preconds '(engr-2010 math-1210 math-1220)
+			:preconds '(math-1220 math-1210 engr-2010)
 			:add-list '(engr-2030))
 		(make-op :action 'take-engr-2140
 			:preconds '(engr-2010)
 			:add-list '(engr-2140))
 		(make-op :action 'take-engr-2210
-			:preconds '(math-1210 math-1220)
+			:preconds '(math-1220 math-1210)
 			:add-list '(engr-2210))
 		(make-op :action 'take-engr-2450
-			:preconds '(math-1220 math-2250 math-2280 math-2250 math-2280)
+			:preconds '(math-2280 math-2250 math-2280 math-2250 math-1220)
 			:add-list '(engr-2450))
 		(make-op :action 'take-engr-2455
 			:add-list '(engr-2455))
@@ -4105,7 +4030,7 @@
 		(make-op :action 'take-engl-2200
 			:add-list '(engl-2200))
 		(make-op :action 'take-engl-2210
-			:preconds '(anth-2210 hist-2210)
+			:preconds '(hist-2210)
 			:add-list '(engl-2210))
 		(make-op :action 'take-engl-2220
 			:add-list '(engl-2220))
@@ -4140,7 +4065,7 @@
 		(make-op :action 'take-engl-2640
 			:add-list '(engl-2640))
 		(make-op :action 'take-engl-2720
-			:preconds '(anth-2720 hist-2720)
+			:preconds '(hist-2720)
 			:add-list '(engl-2720))
 		(make-op :action 'take-engl-2977
 			:add-list '(engl-2977))
@@ -4164,7 +4089,7 @@
 		(make-op :action 'take-engl-3085
 			:add-list '(engl-3085))
 		(make-op :action 'take-engl-3210
-			:preconds '(arth-3210 clas-3210 hist-3210 rels-3210)
+			:preconds '(rels-3210 hist-3210)
 			:add-list '(engl-3210))
 		(make-op :action 'take-engl-3300
 			:add-list '(engl-3300))
@@ -4219,12 +4144,12 @@
 			:preconds '(hist-3700)
 			:add-list '(engl-3700))
 		(make-op :action 'take-engl-3710
-			:preconds '(anth-3710 hist-3710 rels-3710)
+			:preconds '(rels-3710 hist-3710)
 			:add-list '(engl-3710))
 		(make-op :action 'take-engl-3720
 			:add-list '(engl-3720))
 		(make-op :action 'take-engl-3830
-			:preconds '(hist-3830 kin-3830 rels-3830)
+			:preconds '(rels-3830 kin-3830 hist-3830)
 			:add-list '(engl-3830))
 		(make-op :action 'take-engl-4200
 			:add-list '(engl-4200))
@@ -4235,7 +4160,7 @@
 		(make-op :action 'take-engl-4230
 			:add-list '(engl-4230))
 		(make-op :action 'take-engl-4250
-			:preconds '(thea-1713 thea-4760)
+			:preconds '(thea-4760 thea-1713)
 			:add-list '(engl-4250))
 		(make-op :action 'take-engl-4260
 			:add-list '(engl-4260))
@@ -4264,13 +4189,13 @@
 		(make-op :action 'take-engl-4380
 			:add-list '(engl-4380))
 		(make-op :action 'take-engl-4420
-			:preconds '(engl-3420 engl-3430 engl-3440)
+			:preconds '(engl-3440 engl-3430 engl-3420)
 			:add-list '(engl-4420))
 		(make-op :action 'take-engl-4430
-			:preconds '(engl-3430 engl-3420 engl-3440)
+			:preconds '(engl-3440 engl-3420 engl-3430)
 			:add-list '(engl-4430))
 		(make-op :action 'take-engl-4440
-			:preconds '(engl-3440 engl-3420 engl-3430)
+			:preconds '(engl-3430 engl-3420 engl-3440)
 			:add-list '(engl-4440))
 		(make-op :action 'take-engl-4500
 			:add-list '(engl-4500))
@@ -4292,7 +4217,6 @@
 		(make-op :action 'take-engl-4640
 			:add-list '(engl-4640))
 		(make-op :action 'take-engl-4650
-			:preconds '(anth-4650)
 			:add-list '(engl-4650))
 		(make-op :action 'take-engl-4700
 			:preconds '(hist-4700)
@@ -4322,13 +4246,13 @@
 			:preconds '(engl-2600)
 			:add-list '(engl-5340))
 		(make-op :action 'take-engl-5450
-			:preconds '(engl-4420 engl-4430 engl-4440)
+			:preconds '(engl-4440 engl-4430 engl-4420)
 			:add-list '(engl-5450))
 		(make-op :action 'take-engl-5690
 			:preconds '(hist-5690)
 			:add-list '(engl-5690))
 		(make-op :action 'take-engl-5700
-			:preconds '(anth-5700 hist-5700)
+			:preconds '(hist-5700)
 			:add-list '(engl-5700))
 		(make-op :action 'take-engl-5900
 			:add-list '(engl-5900))
@@ -4402,7 +4326,7 @@
 		(make-op :action 'take-envs-1350
 			:add-list '(envs-1350))
 		(make-op :action 'take-envs-2000
-			:preconds '(wats-2000 wild-2000)
+			:preconds '(wild-2000 wats-2000)
 			:add-list '(envs-2000))
 		(make-op :action 'take-envs-2100
 			:add-list '(envs-2100))
@@ -4419,14 +4343,13 @@
 		(make-op :action 'take-envs-3300
 			:add-list '(envs-3300))
 		(make-op :action 'take-envs-3320
-			:preconds '(anth-3320)
 			:add-list '(envs-3320))
 		(make-op :action 'take-envs-3330
 			:add-list '(envs-3330))
 		(make-op :action 'take-envs-3400
 			:add-list '(envs-3400))
 		(make-op :action 'take-envs-3500
-			:preconds '(stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040)
 			:add-list '(envs-3500))
 		(make-op :action 'take-envs-3600
 			:add-list '(envs-3600))
@@ -4436,39 +4359,33 @@
 			:preconds '(engl-2010)
 			:add-list '(envs-4020))
 		(make-op :action 'take-envs-4030
-			:preconds '(envs-6030)
 			:add-list '(envs-4030))
 		(make-op :action 'take-envs-4100
-			:preconds '(envs-2340 envs-3500)
+			:preconds '(envs-3500 envs-2340)
 			:add-list '(envs-4100))
 		(make-op :action 'take-envs-4110
-			:preconds '(envs-6110)
 			:add-list '(envs-4110))
 		(make-op :action 'take-envs-4130
 			:add-list '(envs-4130))
 		(make-op :action 'take-envs-4200
 			:add-list '(envs-4200))
 		(make-op :action 'take-envs-4210
-			:preconds '(anth-4210)
 			:add-list '(envs-4210))
 		(make-op :action 'take-envs-4250
 			:add-list '(envs-4250))
 		(make-op :action 'take-envs-4350
-			:preconds '(envs-6350)
 			:add-list '(envs-4350))
 		(make-op :action 'take-envs-4500
-			:preconds '(engl-2010 envs-3300)
+			:preconds '(envs-3300 engl-2010)
 			:add-list '(envs-4500))
 		(make-op :action 'take-envs-4550
-			:preconds '(envs-3300 stat-1040 stat-1045 stat-2000)
+			:preconds '(stat-2000 stat-1045 stat-1040 envs-3300)
 			:add-list '(envs-4550))
 		(make-op :action 'take-envs-4600
 			:add-list '(envs-4600))
 		(make-op :action 'take-envs-4610
-			:preconds '(envs-6610)
 			:add-list '(envs-4610))
 		(make-op :action 'take-envs-4620
-			:preconds '(envs-6620)
 			:add-list '(envs-4620))
 		(make-op :action 'take-envs-4700
 			:preconds '(engl-2010)
@@ -4488,7 +4405,6 @@
 		(make-op :action 'take-envs-5300
 			:add-list '(envs-5300))
 		(make-op :action 'take-envs-5550
-			:preconds '(envs-6550)
 			:add-list '(envs-5550))
 		(make-op :action 'take-envs-5820
 			:add-list '(envs-5820))
@@ -4501,10 +4417,10 @@
 		(make-op :action 'take-fcse-1350
 			:add-list '(fcse-1350))
 		(make-op :action 'take-fcse-2040
-			:preconds '(fcse-1040 fcse-1140)
+			:preconds '(fcse-1140 fcse-1040)
 			:add-list '(fcse-2040))
 		(make-op :action 'take-fcse-2350
-			:preconds '(fcse-1350 hdfs-3350)
+			:preconds '(hdfs-3350 fcse-1350)
 			:add-list '(fcse-2350))
 		(make-op :action 'take-fcse-2510
 			:add-list '(fcse-2510))
@@ -4528,7 +4444,6 @@
 			:preconds '(fcse-3400)
 			:add-list '(fcse-3300))
 		(make-op :action 'take-fcse-3400
-			:preconds '(fcse-3300)
 			:add-list '(fcse-3400))
 		(make-op :action 'take-fcse-3790
 			:preconds '(fcse-2700)
@@ -4545,30 +4460,30 @@
 			:preconds '(fcse-3030)
 			:add-list '(fcse-4140))
 		(make-op :action 'take-fcse-4210
-			:preconds '(aste-4210 bsed-4210 tee-4210)
+			:preconds '(tee-4210)
 			:add-list '(fcse-4210))
 		(make-op :action 'take-fcse-4250
 			:add-list '(fcse-4250))
 		(make-op :action 'take-fcse-4300
-			:preconds '(fcse-3300 fcse-3400)
+			:preconds '(fcse-3400 fcse-3300)
 			:add-list '(fcse-4300))
 		(make-op :action 'take-fcse-4400
-			:preconds '(fcse-3300 fcse-3400)
+			:preconds '(fcse-3400 fcse-3300)
 			:add-list '(fcse-4400))
 		(make-op :action 'take-fcse-4900
 			:add-list '(fcse-4900))
 		(make-op :action 'take-fcse-5500
-			:preconds '(fcse-4300 fcse-4400 fcse-5630)
+			:preconds '(fcse-5630 fcse-4400 fcse-4300)
 			:add-list '(fcse-5500))
 		(make-op :action 'take-fcse-5550
 			:add-list '(fcse-5550))
 		(make-op :action 'take-fcse-5630
-			:preconds '(fcse-4300 fcse-4400 fcse-5500)
+			:preconds '(fcse-4400 fcse-4300)
 			:add-list '(fcse-5630))
 		(make-op :action 'take-film-1010
 			:add-list '(film-1010))
 		(make-op :action 'take-film-3220
-			:preconds '(arth-2710 arth-2720)
+			:preconds '(arth-2720 arth-2710)
 			:add-list '(film-3220))
 		(make-op :action 'take-film-3300
 			:add-list '(film-3300))
@@ -4634,10 +4549,10 @@
 			:preconds '(fin-3200)
 			:add-list '(fin-4470))
 		(make-op :action 'take-fin-4475
-			:preconds '(fin-3200 fin-4470)
+			:preconds '(fin-4470 fin-3200)
 			:add-list '(fin-4475))
 		(make-op :action 'take-fin-4480
-			:preconds '(fin-3200 math-1050 stat-1040 stat-2000 stat-2300 stat-3000 data-3100 psy-3010)
+			:preconds '(psy-3010 data-3100 stat-3000 stat-2300 stat-2000 stat-1040 math-1050 fin-3200)
 			:add-list '(fin-4480))
 		(make-op :action 'take-fin-4490
 			:preconds '(fin-3200)
@@ -4649,10 +4564,10 @@
 			:preconds '(fin-3500)
 			:add-list '(fin-4530))
 		(make-op :action 'take-fin-4540
-			:preconds '(fin-3200 fin-3500)
+			:preconds '(fin-3500 fin-3200)
 			:add-list '(fin-4540))
 		(make-op :action 'take-fin-4550
-			:preconds '(fin-3200 fin-3500)
+			:preconds '(fin-3500 fin-3200)
 			:add-list '(fin-4550))
 		(make-op :action 'take-fin-4560
 			:preconds '(fin-3200)
@@ -4665,28 +4580,27 @@
 			:preconds '(fin-3300)
 			:add-list '(fin-5000))
 		(make-op :action 'take-fin-5050
-			:preconds '(fin-3300 fin-6050)
+			:preconds '(fin-3300)
 			:add-list '(fin-5050))
 		(make-op :action 'take-fin-5060
-			:preconds '(fin-6060)
 			:add-list '(fin-5060))
 		(make-op :action 'take-fin-5070
-			:preconds '(acct-3520 fin-5060 fin-6070)
+			:preconds '(fin-5060 acct-3520)
 			:add-list '(fin-5070))
 		(make-op :action 'take-fin-5080
-			:preconds '(acct-3520 fin-5060 fin-6080)
+			:preconds '(fin-5060 acct-3520)
 			:add-list '(fin-5080))
 		(make-op :action 'take-fin-5090
-			:preconds '(acct-3520 fin-5060 fin-6090)
+			:preconds '(fin-5060 acct-3520)
 			:add-list '(fin-5090))
 		(make-op :action 'take-fin-5095
-			:preconds '(ecn-5090 ecn-6090 fin-6095)
+			:preconds '(ecn-5090)
 			:add-list '(fin-5095))
 		(make-op :action 'take-fin-5100
 			:preconds '(fin-3300)
 			:add-list '(fin-5100))
 		(make-op :action 'take-fin-5110
-			:preconds '(fin-3300 fin-6110)
+			:preconds '(fin-3300)
 			:add-list '(fin-5110))
 		(make-op :action 'take-fin-5120
 			:preconds '(fin-3300)
@@ -4695,13 +4609,13 @@
 			:preconds '(fin-4410)
 			:add-list '(fin-5250))
 		(make-op :action 'take-fin-5300
-			:preconds '(fin-4410 fin-4460 fin-6300)
+			:preconds '(fin-4460 fin-4410)
 			:add-list '(fin-5300))
 		(make-op :action 'take-fin-5320
-			:preconds '(ecn-4330 fin-6320)
+			:preconds '(ecn-4330)
 			:add-list '(fin-5320))
 		(make-op :action 'take-fin-5330
-			:preconds '(ecn-4330 fin-6330)
+			:preconds '(ecn-4330)
 			:add-list '(fin-5330))
 		(make-op :action 'take-fin-5350
 			:preconds '(fin-3200)
@@ -4712,7 +4626,7 @@
 			:preconds '(fin-4200)
 			:add-list '(fin-5440))
 		(make-op :action 'take-fin-5470
-			:preconds '(fin-3200 fin-3300 fin-5300)
+			:preconds '(fin-5300 fin-3300 fin-3200)
 			:add-list '(fin-5470))
 		(make-op :action 'take-fin-5475
 			:preconds '(fin-5470)
@@ -4729,7 +4643,7 @@
 			:preconds '(fin-3200)
 			:add-list '(fin-5700))
 		(make-op :action 'take-fin-5750
-			:preconds '(fin-3300 ecn-3000 data-3100 stat-2300)
+			:preconds '(stat-2300 data-3100 ecn-3000 fin-3300)
 			:add-list '(fin-5750))
 		(make-op :action 'take-fin-5800
 			:add-list '(fin-5800))
@@ -4739,12 +4653,12 @@
 			:preconds '(fren-1010)
 			:add-list '(fren-1020))
 		(make-op :action 'take-fren-1030
-			:preconds '(fren-1010 fren-1020)
+			:preconds '(fren-1020 fren-1010)
 			:add-list '(fren-1030))
 		(make-op :action 'take-fren-1050
 			:add-list '(fren-1050))
 		(make-op :action 'take-fren-1150
-			:preconds '(fren-1010 fren-1050)
+			:preconds '(fren-1050 fren-1010)
 			:add-list '(fren-1150))
 		(make-op :action 'take-fren-1820
 			:add-list '(fren-1820))
@@ -4755,18 +4669,18 @@
 			:preconds '(fren-2010)
 			:add-list '(fren-2020))
 		(make-op :action 'take-fren-2030
-			:preconds '(fren-2010 fren-2020)
+			:preconds '(fren-2020 fren-2010)
 			:add-list '(fren-2030))
 		(make-op :action 'take-fren-2050
 			:preconds '(fren-1020)
 			:add-list '(fren-2050))
 		(make-op :action 'take-fren-2150
-			:preconds '(fren-2010 fren-2050)
+			:preconds '(fren-2050 fren-2010)
 			:add-list '(fren-2150))
 		(make-op :action 'take-fren-2820
 			:add-list '(fren-2820))
 		(make-op :action 'take-fren-2880
-			:preconds '(fren-2010 fren-2020)
+			:preconds '(fren-2020 fren-2010)
 			:add-list '(fren-2880))
 		(make-op :action 'take-fren-2988
 			:add-list '(fren-2988))
@@ -4861,7 +4775,6 @@
 		(make-op :action 'take-geog-1400
 			:add-list '(geog-1400))
 		(make-op :action 'take-geog-2340
-			:preconds '(envs-2340)
 			:add-list '(geog-2340))
 		(make-op :action 'take-geog-2800
 			:add-list '(geog-2800))
@@ -4869,34 +4782,33 @@
 			:preconds '(engl-2010)
 			:add-list '(geog-3100))
 		(make-op :action 'take-geog-3430
-			:preconds '(pols-2100 pols-2200 pols-2300 pols-2400 pols-3430)
+			:preconds '(pols-3430 pols-2400 pols-2300 pols-2200 pols-2100)
 			:add-list '(geog-3430))
 		(make-op :action 'take-geog-3800
-			:preconds '(geog-2800 wild-2800)
+			:preconds '(wild-2800 geog-2800)
 			:add-list '(geog-3800))
 		(make-op :action 'take-geog-4120
-			:preconds '(engl-2010 geog-6120)
+			:preconds '(engl-2010)
 			:add-list '(geog-4120))
 		(make-op :action 'take-geog-4210
 			:add-list '(geog-4210))
 		(make-op :action 'take-geog-4220
 			:add-list '(geog-4220))
 		(make-op :action 'take-geog-4400
-			:preconds '(geog-6400)
 			:add-list '(geog-4400))
 		(make-op :action 'take-geog-4850
 			:add-list '(geog-4850))
 		(make-op :action 'take-geog-4860
-			:preconds '(geog-2800 wild-2800)
+			:preconds '(wild-2800 geog-2800)
 			:add-list '(geog-4860))
 		(make-op :action 'take-geog-4870
-			:preconds '(geog-2800 wild-2800 wats-2800 stat-1080 envs-3500 data-3500 geog-4860 stat-1080 geog-6870)
+			:preconds '(stat-1080 geog-4860 data-3500 envs-3500 stat-1080 wats-2800 wild-2800 geog-2800)
 			:add-list '(geog-4870))
 		(make-op :action 'take-geog-4910
-			:preconds '(geog-2800 wild-2800 wats-4930 geog-4860 geog-4870)
+			:preconds '(geog-4870 geog-4860 wats-4930 wild-2800 geog-2800)
 			:add-list '(geog-4910))
 		(make-op :action 'take-geog-4920
-			:preconds '(geog-2800 wild-2800)
+			:preconds '(wild-2800 geog-2800)
 			:add-list '(geog-4920))
 		(make-op :action 'take-geog-4950
 			:add-list '(geog-4950))
@@ -4910,7 +4822,7 @@
 			:preconds '(geo-1115 geo-1115)
 			:add-list '(geo-1110))
 		(make-op :action 'take-geo-1115
-			:preconds '(geo-1010 geo-1060 geo-1360 geo-1110)
+			:preconds '(geo-1360 geo-1060 geo-1010)
 			:add-list '(geo-1115))
 		(make-op :action 'take-geo-1220
 			:add-list '(geo-1220))
@@ -4923,18 +4835,18 @@
 		(make-op :action 'take-geo-1650
 			:add-list '(geo-1650))
 		(make-op :action 'take-geo-2200
-			:preconds '(geo-1010 geo-1110)
+			:preconds '(geo-1110 geo-1010)
 			:add-list '(geo-2200))
 		(make-op :action 'take-geo-2205
 			:preconds '(geo-2200 geo-2200)
 			:add-list '(geo-2205))
 		(make-op :action 'take-geo-2500
-			:preconds '(geo-1010 geo-1060 geo-1110 geo-1360)
+			:preconds '(geo-1360 geo-1110 geo-1060 geo-1010)
 			:add-list '(geo-2500))
 		(make-op :action 'take-geo-2700
 			:add-list '(geo-2700))
 		(make-op :action 'take-geo-2800
-			:preconds '(geo-1110 math-1060 math-1210 chem-1210)
+			:preconds '(chem-1210 math-1210 math-1060 geo-1110)
 			:add-list '(geo-2800))
 		(make-op :action 'take-geo-2988
 			:add-list '(geo-2988))
@@ -4948,25 +4860,25 @@
 		(make-op :action 'take-geo-3300
 			:add-list '(geo-3300))
 		(make-op :action 'take-geo-3400
-			:preconds '(geo-1110 geo-2200 geo-2200)
+			:preconds '(geo-2200 geo-2200 geo-1110)
 			:add-list '(geo-3400))
 		(make-op :action 'take-geo-3550
-			:preconds '(geo-2200 math-1060 math-1210)
+			:preconds '(math-1210 math-1060 geo-2200)
 			:add-list '(geo-3550))
 		(make-op :action 'take-geo-3600
-			:preconds '(math-1060 math-1100 math-1210 phys-2210 wats-3600)
+			:preconds '(wats-3600 phys-2210 math-1210 math-1100 math-1060)
 			:add-list '(geo-3600))
 		(make-op :action 'take-geo-3700
-			:preconds '(geo-3550 phys-2210 phys-2215)
+			:preconds '(phys-2215 phys-2210 geo-3550)
 			:add-list '(geo-3700))
 		(make-op :action 'take-geo-3800
-			:preconds '(geo-2200 geo-2800)
+			:preconds '(geo-2800 geo-2200)
 			:add-list '(geo-3800))
 		(make-op :action 'take-geo-4500
 			:preconds '(geo-2800)
 			:add-list '(geo-4500))
 		(make-op :action 'take-geo-4700
-			:preconds '(geo-3600 geo-3700)
+			:preconds '(geo-3700 geo-3600)
 			:add-list '(geo-4700))
 		(make-op :action 'take-geo-4800
 			:add-list '(geo-4800))
@@ -4975,91 +4887,89 @@
 		(make-op :action 'take-geo-4900
 			:add-list '(geo-4900))
 		(make-op :action 'take-geo-5150
-			:preconds '(wats-5150 geo-6150)
+			:preconds '(wats-5150)
 			:add-list '(geo-5150))
 		(make-op :action 'take-geo-5200
-			:preconds '(geo-2800 geo-3550 geo-3600 geo-3700 geo-4700)
+			:preconds '(geo-4700 geo-3700 geo-3600 geo-3550 geo-2800)
 			:add-list '(geo-5200))
 		(make-op :action 'take-geo-5210
-			:preconds '(geo-3800 geo-4500 geo-4700)
+			:preconds '(geo-4700 geo-4500 geo-3800)
 			:add-list '(geo-5210))
 		(make-op :action 'take-geo-5360
-			:preconds '(geo-6360)
 			:add-list '(geo-5360))
 		(make-op :action 'take-geo-5390
-			:preconds '(geo-2800 geo-6390)
+			:preconds '(geo-2800)
 			:add-list '(geo-5390))
 		(make-op :action 'take-geo-5410
-			:preconds '(geo-3550 geo-6410)
+			:preconds '(geo-3550)
 			:add-list '(geo-5410))
 		(make-op :action 'take-geo-5420
-			:preconds '(geo-2800 geo-4500 geo-6420)
+			:preconds '(geo-4500 geo-2800)
 			:add-list '(geo-5420))
 		(make-op :action 'take-geo-5430
-			:preconds '(geo-2200 geo-6430)
+			:preconds '(geo-2200)
 			:add-list '(geo-5430))
 		(make-op :action 'take-geo-5440
-			:preconds '(geo-6440)
 			:add-list '(geo-5440))
 		(make-op :action 'take-geo-5460
-			:preconds '(geo-2800 geo-3550 geo-6460)
+			:preconds '(geo-3550 geo-2800)
 			:add-list '(geo-5460))
 		(make-op :action 'take-geo-5470
-			:preconds '(geo-2800 geo-3550 geo-6470)
+			:preconds '(geo-3550 geo-2800)
 			:add-list '(geo-5470))
 		(make-op :action 'take-geo-5480
-			:preconds '(geo-2800 geo-3550 geo-6480)
+			:preconds '(geo-3550 geo-2800)
 			:add-list '(geo-5480))
 		(make-op :action 'take-geo-5490
-			:preconds '(geo-3550 geo-6490)
+			:preconds '(geo-3550)
 			:add-list '(geo-5490))
 		(make-op :action 'take-geo-5500
-			:preconds '(geo-4500 geo-6500)
+			:preconds '(geo-4500)
 			:add-list '(geo-5500))
 		(make-op :action 'take-geo-5510
-			:preconds '(geo-1110 math-1210 geo-3600 wats-3600)
+			:preconds '(wats-3600 geo-3600 math-1210 geo-1110)
 			:add-list '(geo-5510))
 		(make-op :action 'take-geo-5520
-			:preconds '(geo-5510 geo-6520)
+			:preconds '(geo-5510)
 			:add-list '(geo-5520))
 		(make-op :action 'take-geo-5530
-			:preconds '(geo-3550 geo-3700)
+			:preconds '(geo-3700 geo-3550)
 			:add-list '(geo-5530))
 		(make-op :action 'take-geo-5540
-			:preconds '(geo-3550 geo-3600 math-1210 geo-6540)
+			:preconds '(math-1210 geo-3600 geo-3550)
 			:add-list '(geo-5540))
 		(make-op :action 'take-geo-5550
-			:preconds '(chem-1210 geo-6550)
+			:preconds '(chem-1210)
 			:add-list '(geo-5550))
 		(make-op :action 'take-geo-5560
-			:preconds '(geo-3550 geo-3700 geo-6560)
+			:preconds '(geo-3700 geo-3550)
 			:add-list '(geo-5560))
 		(make-op :action 'take-geo-5570
-			:preconds '(geo-1110 math-1210)
+			:preconds '(math-1210 geo-1110)
 			:add-list '(geo-5570))
 		(make-op :action 'take-geo-5600
-			:preconds '(chem-1210 chem-1220 geo-2800 math-1210)
+			:preconds '(math-1210 geo-2800 chem-1220 chem-1210)
 			:add-list '(geo-5600))
 		(make-op :action 'take-geo-5610
-			:preconds '(geo-3700 geo-6610)
+			:preconds '(geo-3700)
 			:add-list '(geo-5610))
 		(make-op :action 'take-geo-5620
-			:preconds '(geo-3700 phys-2220 geo-6620)
+			:preconds '(phys-2220 geo-3700)
 			:add-list '(geo-5620))
 		(make-op :action 'take-geo-5630
-			:preconds '(geo-3600 geo-3700)
+			:preconds '(geo-3700 geo-3600)
 			:add-list '(geo-5630))
 		(make-op :action 'take-geo-5640
 			:add-list '(geo-5640))
 		(make-op :action 'take-geo-5650
 			:add-list '(geo-5650))
 		(make-op :action 'take-geo-5660
-			:preconds '(geo-6660 math-1210 phys-2210 phys-2220 geo-6660)
+			:preconds '(phys-2220 phys-2210 math-1210)
 			:add-list '(geo-5660))
 		(make-op :action 'take-geo-5670
 			:add-list '(geo-5670))
 		(make-op :action 'take-geo-5680
-			:preconds '(geo-3600 wats-3600 psc-5680 wats-5680 geo-6680)
+			:preconds '(wats-5680 psc-5680 wats-3600 geo-3600)
 			:add-list '(geo-5680))
 		(make-op :action 'take-geo-5690
 			:add-list '(geo-5690))
@@ -5151,7 +5061,7 @@
 		(make-op :action 'take-germ-4920
 			:add-list '(germ-4920))
 		(make-op :action 'take-grk-1010
-			:preconds '(latn-1010 latn-1020)
+			:preconds '(latn-1020 latn-1010)
 			:add-list '(grk-1010))
 		(make-op :action 'take-grk-1020
 			:preconds '(grk-1010)
@@ -5163,7 +5073,7 @@
 			:preconds '(grk-3300)
 			:add-list '(grk-3330))
 		(make-op :action 'take-grk-4300
-			:preconds '(grk-3300 grk-3330)
+			:preconds '(grk-3330 grk-3300)
 			:add-list '(grk-4300))
 		(make-op :action 'take-grk-4930
 			:add-list '(grk-4930))
@@ -5247,29 +5157,29 @@
 			:preconds '(hep-2500)
 			:add-list '(hep-4100))
 		(make-op :action 'take-hep-4200
-			:preconds '(math-1030 math-1050 math-1051 stat-1040 stat-1045 ram-4200)
+			:preconds '(ram-4200 stat-1045 stat-1040 math-1051 math-1050 math-1030)
 			:add-list '(hep-4200))
 		(make-op :action 'take-hep-4205
-			:preconds '(hep-4200 ram-4205)
+			:preconds '(ram-4205 hep-4200)
 			:add-list '(hep-4205))
 		(make-op :action 'take-hep-4250
 			:add-list '(hep-4250))
 		(make-op :action 'take-hep-4300
 			:add-list '(hep-4300))
 		(make-op :action 'take-hep-4400
-			:preconds '(hep-2500 hep-3600)
+			:preconds '(hep-3600 hep-2500)
 			:add-list '(hep-4400))
 		(make-op :action 'take-hep-4500
 			:add-list '(hep-4500))
 		(make-op :action 'take-hep-4600
-			:preconds '(hep-3600 hep-4100 hep-4200)
+			:preconds '(hep-4200 hep-4100 hep-3600)
 			:add-list '(hep-4600))
 		(make-op :action 'take-hep-4700
 			:add-list '(hep-4700))
 		(make-op :action 'take-hep-4800
 			:add-list '(hep-4800))
 		(make-op :action 'take-hep-5000
-			:preconds '(engl-2010 hep-2500 hep-4100)
+			:preconds '(hep-4100 hep-2500 engl-2010)
 			:add-list '(hep-5000))
 		(make-op :action 'take-hep-5250
 			:add-list '(hep-5250))
@@ -5291,10 +5201,10 @@
 		(make-op :action 'take-hep-5950
 			:add-list '(hep-5950))
 		(make-op :action 'take-ram-4200
-			:preconds '(math-1030 math-1050 math-1051 stat-1040 stat-1045 hep-4200)
+			:preconds '(stat-1045 stat-1040 math-1051 math-1050 math-1030)
 			:add-list '(ram-4200))
 		(make-op :action 'take-ram-4205
-			:preconds '(hep-4200 hep-4205)
+			:preconds '(hep-4200)
 			:add-list '(ram-4205))
 		(make-op :action 'take-hetr-1610
 			:add-list '(hetr-1610))
@@ -5348,7 +5258,6 @@
 		(make-op :action 'take-hist-1110
 			:add-list '(hist-1110))
 		(make-op :action 'take-hist-1120
-			:preconds '(clas-1120)
 			:add-list '(hist-1120))
 		(make-op :action 'take-hist-1500
 			:add-list '(hist-1500))
@@ -5363,14 +5272,12 @@
 		(make-op :action 'take-hist-2018
 			:add-list '(hist-2018))
 		(make-op :action 'take-hist-2210
-			:preconds '(anth-2210 engl-2210)
 			:add-list '(hist-2210))
 		(make-op :action 'take-hist-2700
 			:add-list '(hist-2700))
 		(make-op :action 'take-hist-2710
 			:add-list '(hist-2710))
 		(make-op :action 'take-hist-2720
-			:preconds '(anth-2720 engl-2720)
 			:add-list '(hist-2720))
 		(make-op :action 'take-hist-2730
 			:add-list '(hist-2730))
@@ -5379,7 +5286,7 @@
 		(make-op :action 'take-hist-2988
 			:add-list '(hist-2988))
 		(make-op :action 'take-hist-3000
-			:preconds '(hist-4990 hist-1700)
+			:preconds '(hist-1700 hist-4990)
 			:add-list '(hist-3000))
 		(make-op :action 'take-hist-3005
 			:add-list '(hist-3005))
@@ -5399,26 +5306,23 @@
 			:preconds '(rels-3060)
 			:add-list '(hist-3060))
 		(make-op :action 'take-hist-3070
-			:preconds '(engl-3070)
 			:add-list '(hist-3070))
 		(make-op :action 'take-hist-3080
 			:preconds '(rels-3080)
 			:add-list '(hist-3080))
 		(make-op :action 'take-hist-3110
-			:preconds '(arth-3110)
 			:add-list '(hist-3110))
 		(make-op :action 'take-hist-3130
 			:add-list '(hist-3130))
 		(make-op :action 'take-hist-3150
 			:add-list '(hist-3150))
 		(make-op :action 'take-hist-3160
-			:preconds '(clas-3160)
 			:add-list '(hist-3160))
 		(make-op :action 'take-hist-3170
-			:preconds '(clas-3170 rels-3170)
+			:preconds '(rels-3170)
 			:add-list '(hist-3170))
 		(make-op :action 'take-hist-3210
-			:preconds '(arth-3210 clas-3210 engl-3210 rels-3210)
+			:preconds '(rels-3210)
 			:add-list '(hist-3210))
 		(make-op :action 'take-hist-3220
 			:preconds '(rels-3220)
@@ -5437,7 +5341,7 @@
 		(make-op :action 'take-hist-3280
 			:add-list '(hist-3280))
 		(make-op :action 'take-hist-3290
-			:preconds '(clas-3290 rels-3290)
+			:preconds '(rels-3290)
 			:add-list '(hist-3290))
 		(make-op :action 'take-hist-3320
 			:add-list '(hist-3320))
@@ -5448,7 +5352,6 @@
 		(make-op :action 'take-hist-3350
 			:add-list '(hist-3350))
 		(make-op :action 'take-hist-3390
-			:preconds '(anth-3390)
 			:add-list '(hist-3390))
 		(make-op :action 'take-hist-3410
 			:preconds '(rels-3410)
@@ -5492,10 +5395,9 @@
 		(make-op :action 'take-hist-3670
 			:add-list '(hist-3670))
 		(make-op :action 'take-hist-3700
-			:preconds '(engl-3700)
 			:add-list '(hist-3700))
 		(make-op :action 'take-hist-3710
-			:preconds '(anth-3710 engl-3710 rels-3710)
+			:preconds '(rels-3710)
 			:add-list '(hist-3710))
 		(make-op :action 'take-hist-3720
 			:add-list '(hist-3720))
@@ -5515,7 +5417,7 @@
 			:preconds '(teal-3780)
 			:add-list '(hist-3780))
 		(make-op :action 'take-hist-3830
-			:preconds '(engl-3830 kin-3830 rels-3830)
+			:preconds '(rels-3830 kin-3830)
 			:add-list '(hist-3830))
 		(make-op :action 'take-hist-3840
 			:add-list '(hist-3840))
@@ -5551,7 +5453,7 @@
 			:preconds '(hist-1110)
 			:add-list '(hist-4330))
 		(make-op :action 'take-hist-4350
-			:preconds '(clas-3210 rels-4350)
+			:preconds '(rels-4350 clas-3210)
 			:add-list '(hist-4350))
 		(make-op :action 'take-hist-4390
 			:add-list '(hist-4390))
@@ -5580,7 +5482,6 @@
 		(make-op :action 'take-hist-4610
 			:add-list '(hist-4610))
 		(make-op :action 'take-hist-4620
-			:preconds '(engl-4620)
 			:add-list '(hist-4620))
 		(make-op :action 'take-hist-4625
 			:add-list '(hist-4625))
@@ -5593,7 +5494,6 @@
 		(make-op :action 'take-hist-4660
 			:add-list '(hist-4660))
 		(make-op :action 'take-hist-4700
-			:preconds '(engl-4700)
 			:add-list '(hist-4700))
 		(make-op :action 'take-hist-4710
 			:add-list '(hist-4710))
@@ -5605,7 +5505,6 @@
 			:preconds '(rels-4730)
 			:add-list '(hist-4730))
 		(make-op :action 'take-hist-4750
-			:preconds '(engl-4750)
 			:add-list '(hist-4750))
 		(make-op :action 'take-hist-4760
 			:add-list '(hist-4760))
@@ -5647,19 +5546,14 @@
 		(make-op :action 'take-hist-4940
 			:add-list '(hist-4940))
 		(make-op :action 'take-hist-4945
-			:preconds '(hist-6840)
 			:add-list '(hist-4945))
 		(make-op :action 'take-hist-4990
-			:preconds '(hist-3000)
 			:add-list '(hist-4990))
 		(make-op :action 'take-hist-5690
-			:preconds '(engl-5690)
 			:add-list '(hist-5690))
 		(make-op :action 'take-hist-5700
-			:preconds '(anth-5700 engl-5700)
 			:add-list '(hist-5700))
 		(make-op :action 'take-msl-4810
-			:preconds '(hist-4810)
 			:add-list '(msl-4810))
 		(make-op :action 'take-honr-1300
 			:add-list '(honr-1300))
@@ -5724,21 +5618,20 @@
 			:preconds '(hdfs-2630)
 			:add-list '(hdfs-2600))
 		(make-op :action 'take-hdfs-2630
-			:preconds '(hdfs-2600)
 			:add-list '(hdfs-2630))
 		(make-op :action 'take-hdfs-2660
 			:add-list '(hdfs-2660))
 		(make-op :action 'take-hdfs-3100
-			:preconds '(hdfs-1500 hdfs-2400)
+			:preconds '(hdfs-2400 hdfs-1500)
 			:add-list '(hdfs-3100))
 		(make-op :action 'take-hdfs-3110
-			:preconds '(hdfs-1500 hdfs-2400)
+			:preconds '(hdfs-2400 hdfs-1500)
 			:add-list '(hdfs-3110))
 		(make-op :action 'take-hdfs-3130
-			:preconds '(stat-1040 stat-1045 psy-3010 soc-3120)
+			:preconds '(soc-3120 psy-3010 stat-1045 stat-1040)
 			:add-list '(hdfs-3130))
 		(make-op :action 'take-hdfs-3210
-			:preconds '(hdfs-1500 hdfs-2400)
+			:preconds '(hdfs-2400 hdfs-1500)
 			:add-list '(hdfs-3210))
 		(make-op :action 'take-hdfs-3350
 			:add-list '(hdfs-3350))
@@ -5781,7 +5674,7 @@
 		(make-op :action 'take-hdfs-4250
 			:add-list '(hdfs-4250))
 		(make-op :action 'take-hdfs-4260
-			:preconds '(hdfs-1500 hdfs-2400)
+			:preconds '(hdfs-2400 hdfs-1500)
 			:add-list '(hdfs-4260))
 		(make-op :action 'take-hdfs-4270
 			:add-list '(hdfs-4270))
@@ -5809,7 +5702,7 @@
 			:preconds '(hdfs-4550)
 			:add-list '(hdfs-4960))
 		(make-op :action 'take-hdfs-4970
-			:preconds '(hdfs-3540 hdfs-4240)
+			:preconds '(hdfs-4240 hdfs-3540)
 			:add-list '(hdfs-4970))
 		(make-op :action 'take-hdfs-4980
 			:preconds '(hdfs-4900)
@@ -5828,7 +5721,7 @@
 		(make-op :action 'take-hdfs-5560
 			:add-list '(hdfs-5560))
 		(make-op :action 'take-hdfs-5950
-			:preconds '(hdfs-4460 hdfs-5340 hdfs-5330)
+			:preconds '(hdfs-5330 hdfs-5340 hdfs-4460)
 			:add-list '(hdfs-5950))
 		(make-op :action 'take-chss-1100
 			:add-list '(chss-1100))
@@ -5859,55 +5752,51 @@
 		(make-op :action 'take-is-3600
 			:add-list '(is-3600))
 		(make-op :action 'take-is-3700
-			:preconds '(data-2100 oss-2450)
+			:preconds '(oss-2450 data-2100)
 			:add-list '(is-3700))
 		(make-op :action 'take-is-3800
 			:add-list '(is-3800))
 		(make-op :action 'take-is-4250
-			:preconds '(data-3330 data-3500)
+			:preconds '(data-3500 data-3330)
 			:add-list '(is-4250))
 		(make-op :action 'take-is-4830
-			:preconds '(is-6830)
 			:add-list '(is-4830))
 		(make-op :action 'take-is-4950
 			:add-list '(is-4950))
 		(make-op :action 'take-is-5100
-			:preconds '(data-3500 cs-1400 is-6100)
+			:preconds '(cs-1400 data-3500)
 			:add-list '(is-5100))
 		(make-op :action 'take-is-5150
-			:preconds '(data-3330 data-3500)
+			:preconds '(data-3500 data-3330)
 			:add-list '(is-5150))
 		(make-op :action 'take-is-5170
-			:preconds '(is-6170)
 			:add-list '(is-5170))
 		(make-op :action 'take-is-5700
-			:preconds '(data-3330 is-3700 cs-1400 data-3500 is-6700)
+			:preconds '(data-3500 cs-1400 is-3700 data-3330)
 			:add-list '(is-5700))
 		(make-op :action 'take-is-5750
-			:preconds '(is-5700 is-6750)
+			:preconds '(is-5700)
 			:add-list '(is-5750))
 		(make-op :action 'take-is-5800
-			:preconds '(data-3330 is-3800 is-4830 cs-1400 data-3500)
+			:preconds '(data-3500 cs-1400 is-4830 is-3800 data-3330)
 			:add-list '(is-5800))
 		(make-op :action 'take-is-5820
-			:preconds '(is-6820)
 			:add-list '(is-5820))
 		(make-op :action 'take-is-5850
 			:preconds '(is-5800)
 			:add-list '(is-5850))
 		(make-op :action 'take-is-5880
-			:preconds '(is-6880)
 			:add-list '(is-5880))
 		(make-op :action 'take-is-5900
-			:preconds '(data-2100 is-3800 data-3500 cs-1400 is-5910)
+			:preconds '(is-5910 cs-1400 data-3500 is-3800 data-2100)
 			:add-list '(is-5900))
 		(make-op :action 'take-is-5910
-			:preconds '(is-5900 data-2100 data-3330 is-3800 data-3500 cs-1400 is-5900)
+			:preconds '(cs-1400 data-3500 is-3800 data-3330 data-2100)
 			:add-list '(is-5910))
 		(make-op :action 'take-is-5950
 			:add-list '(is-5950))
 		(make-op :action 'take-iogp-4850
-			:preconds '(cmst-1330 cmst-2110 pols-1100 pols-2100 pols-2200 pols-2400 pols-4850)
+			:preconds '(pols-4850 pols-2400 pols-2200 pols-2100 pols-1100 cmst-2110 cmst-1330)
 			:add-list '(iogp-4850))
 		(make-op :action 'take-iogp-5900
 			:add-list '(iogp-5900))
@@ -5960,44 +5849,33 @@
 		(make-op :action 'take-itls-4205
 			:add-list '(itls-4205))
 		(make-op :action 'take-itls-4210
-			:preconds '(itls-6210)
 			:add-list '(itls-4210))
 		(make-op :action 'take-itls-4215
-			:preconds '(itls-6215)
 			:add-list '(itls-4215))
 		(make-op :action 'take-itls-4220
-			:preconds '(itls-4215 itls-6215 itls-6220)
+			:preconds '(itls-4215)
 			:add-list '(itls-4220))
 		(make-op :action 'take-itls-4225
 			:add-list '(itls-4225))
 		(make-op :action 'take-itls-4230
-			:preconds '(itls-6230)
 			:add-list '(itls-4230))
 		(make-op :action 'take-itls-4240
-			:preconds '(itls-6240)
 			:add-list '(itls-4240))
 		(make-op :action 'take-itls-4245
-			:preconds '(itls-6245)
 			:add-list '(itls-4245))
 		(make-op :action 'take-itls-4260
-			:preconds '(itls-6260)
 			:add-list '(itls-4260))
 		(make-op :action 'take-itls-4265
-			:preconds '(itls-6265)
 			:add-list '(itls-4265))
 		(make-op :action 'take-itls-4270
-			:preconds '(itls-6270)
 			:add-list '(itls-4270))
 		(make-op :action 'take-itls-4275
-			:preconds '(itls-6275)
 			:add-list '(itls-4275))
 		(make-op :action 'take-itls-4285
-			:preconds '(itls-6285)
 			:add-list '(itls-4285))
 		(make-op :action 'take-itls-4300
 			:add-list '(itls-4300))
 		(make-op :action 'take-itls-4320
-			:preconds '(itls-6320)
 			:add-list '(itls-4320))
 		(make-op :action 'take-itls-4410
 			:add-list '(itls-4410))
@@ -6026,10 +5904,9 @@
 		(make-op :action 'take-itls-5040
 			:add-list '(itls-5040))
 		(make-op :action 'take-itls-5220
-			:preconds '(itls-4215 itls-6215)
+			:preconds '(itls-4215)
 			:add-list '(itls-5220))
 		(make-op :action 'take-itls-5230
-			:preconds '(itls-6230)
 			:add-list '(itls-5230))
 		(make-op :action 'take-itls-5500
 			:add-list '(itls-5500))
@@ -6121,7 +5998,7 @@
 			:preconds '(iad-2730)
 			:add-list '(iad-3730))
 		(make-op :action 'take-iad-3740
-			:preconds '(iad-3730 iad-3760)
+			:preconds '(iad-3760 iad-3730)
 			:add-list '(iad-3740))
 		(make-op :action 'take-iad-3760
 			:preconds '(iad-2730)
@@ -6134,7 +6011,7 @@
 		(make-op :action 'take-iad-4700
 			:add-list '(iad-4700))
 		(make-op :action 'take-iad-4710
-			:preconds '(iad-3710 iad-3760 iad-3770)
+			:preconds '(iad-3770 iad-3760)
 			:add-list '(iad-4710))
 		(make-op :action 'take-iad-4730
 			:add-list '(iad-4730))
@@ -6142,7 +6019,7 @@
 			:preconds '(iad-4710)
 			:add-list '(iad-4740))
 		(make-op :action 'take-iad-4750
-			:preconds '(iad-3770 iad-4790)
+			:preconds '(iad-4790 iad-3770)
 			:add-list '(iad-4750))
 		(make-op :action 'take-iad-4760
 			:preconds '(iad-4750)
@@ -6163,7 +6040,6 @@
 		(make-op :action 'take-igs-3010
 			:add-list '(igs-3010))
 		(make-op :action 'take-igs-3040
-			:preconds '(hist-3040)
 			:add-list '(igs-3040))
 		(make-op :action 'take-igs-5900
 			:add-list '(igs-5900))
@@ -6203,7 +6079,7 @@
 		(make-op :action 'take-japn-2988
 			:add-list '(japn-2988))
 		(make-op :action 'take-japn-3000
-			:preconds '(japn-3010 japn-2020)
+			:preconds '(japn-2020 japn-3010)
 			:add-list '(japn-3000))
 		(make-op :action 'take-japn-3010
 			:preconds '(japn-2020)
@@ -6212,12 +6088,11 @@
 			:preconds '(japn-3010)
 			:add-list '(japn-3020))
 		(make-op :action 'take-japn-3050
-			:preconds '(art-3050)
 			:add-list '(japn-3050))
 		(make-op :action 'take-japn-3090
 			:add-list '(japn-3090))
 		(make-op :action 'take-japn-3100
-			:preconds '(japn-3010 japn-3020)
+			:preconds '(japn-3020 japn-3010)
 			:add-list '(japn-3100))
 		(make-op :action 'take-japn-3510
 			:preconds '(japn-3020)
@@ -6225,7 +6100,7 @@
 		(make-op :action 'take-japn-3560
 			:add-list '(japn-3560))
 		(make-op :action 'take-japn-4250
-			:preconds '(japn-3010 japn-3020 japn-3510)
+			:preconds '(japn-3510 japn-3020 japn-3010)
 			:add-list '(japn-4250))
 		(make-op :action 'take-japn-4920
 			:add-list '(japn-4920))
@@ -6250,7 +6125,7 @@
 		(make-op :action 'take-jcom-2010
 			:add-list '(jcom-2010))
 		(make-op :action 'take-jcom-2020
-			:preconds '(stat-1040 stat-1045 stat-2000 stat-2300 jcom-1500 jcom-2010)
+			:preconds '(jcom-2010 jcom-1500 stat-2300 stat-2000 stat-1045 stat-1040)
 			:add-list '(jcom-2020))
 		(make-op :action 'take-jcom-2030
 			:add-list '(jcom-2030))
@@ -6259,7 +6134,7 @@
 		(make-op :action 'take-jcom-2080
 			:add-list '(jcom-2080))
 		(make-op :action 'take-jcom-2160
-			:preconds '(jcom-1130 jcom-1500 jcom-2010)
+			:preconds '(jcom-2010 jcom-1500 jcom-1130)
 			:add-list '(jcom-2160))
 		(make-op :action 'take-jcom-2180
 			:add-list '(jcom-2180))
@@ -6280,39 +6155,35 @@
 		(make-op :action 'take-jcom-3030
 			:add-list '(jcom-3030))
 		(make-op :action 'take-jcom-3050
-			:preconds '(aste-3050)
 			:add-list '(jcom-3050))
 		(make-op :action 'take-jcom-3090
-			:preconds '(aste-3090)
 			:add-list '(jcom-3090))
 		(make-op :action 'take-jcom-3100
-			:preconds '(jcom-1130 jcom-1500 jcom-2010)
+			:preconds '(jcom-2010 jcom-1500 jcom-1130)
 			:add-list '(jcom-3100))
 		(make-op :action 'take-jcom-3110
 			:add-list '(jcom-3110))
 		(make-op :action 'take-jcom-3120
-			:preconds '(jcom-2020 jcom-3100 jcom-3200 jcom-3310)
+			:preconds '(jcom-3310 jcom-3200 jcom-3100 jcom-2020)
 			:add-list '(jcom-3120))
 		(make-op :action 'take-jcom-3140
 			:add-list '(jcom-3140))
 		(make-op :action 'take-jcom-3200
-			:preconds '(jcom-1130 jcom-1500 jcom-2010)
+			:preconds '(jcom-2010 jcom-1500 jcom-1130)
 			:add-list '(jcom-3200))
 		(make-op :action 'take-jcom-3310
-			:preconds '(jcom-1130 jcom-1500 jcom-2010 jcom-2300)
+			:preconds '(jcom-2300 jcom-2010 jcom-1500 jcom-1130)
 			:add-list '(jcom-3310))
 		(make-op :action 'take-jcom-3320
-			:preconds '(jcom-2020 jcom-2300 jcom-3310)
+			:preconds '(jcom-3310 jcom-2300 jcom-2020)
 			:add-list '(jcom-3320))
 		(make-op :action 'take-jcom-3410
 			:add-list '(jcom-3410))
 		(make-op :action 'take-jcom-4010
-			:preconds '(jcom-6440)
 			:add-list '(jcom-4010))
 		(make-op :action 'take-jcom-4020
 			:add-list '(jcom-4020))
 		(make-op :action 'take-jcom-4030
-			:preconds '(jcom-6430)
 			:add-list '(jcom-4030))
 		(make-op :action 'take-jcom-4040
 			:preconds '(jcom-2030)
@@ -6321,7 +6192,7 @@
 			:preconds '(jcom-3110)
 			:add-list '(jcom-4100))
 		(make-op :action 'take-jcom-4110
-			:preconds '(jcom-3100 jcom-3200 jcom-3310)
+			:preconds '(jcom-3310 jcom-3200 jcom-3100)
 			:add-list '(jcom-4110))
 		(make-op :action 'take-jcom-4120
 			:add-list '(jcom-4120))
@@ -6331,24 +6202,22 @@
 			:preconds '(jcom-2180)
 			:add-list '(jcom-4150))
 		(make-op :action 'take-jcom-4210
-			:preconds '(jcom-2020 jcom-2220 jcom-3200)
+			:preconds '(jcom-3200 jcom-2220 jcom-2020)
 			:add-list '(jcom-4210))
 		(make-op :action 'take-jcom-4220
-			:preconds '(jcom-3200 jcom-4210)
+			:preconds '(jcom-4210 jcom-3200)
 			:add-list '(jcom-4220))
 		(make-op :action 'take-jcom-4230
-			:preconds '(jcom-1130 jcom-1500 jcom-2010 jcom-2020 jcom-2220)
+			:preconds '(jcom-2220 jcom-2020 jcom-2010 jcom-1500 jcom-1130)
 			:add-list '(jcom-4230))
 		(make-op :action 'take-jcom-4300
 			:add-list '(jcom-4300))
 		(make-op :action 'take-jcom-4340
-			:preconds '(jcom-1130 jcom-2300)
+			:preconds '(jcom-2300 jcom-1130)
 			:add-list '(jcom-4340))
 		(make-op :action 'take-jcom-4400
-			:preconds '(jcom-6400 jcom-6400)
 			:add-list '(jcom-4400))
 		(make-op :action 'take-jcom-4410
-			:preconds '(jcom-6410)
 			:add-list '(jcom-4410))
 		(make-op :action 'take-jcom-4500
 			:add-list '(jcom-4500))
@@ -6366,45 +6235,37 @@
 		(make-op :action 'take-jcom-4770
 			:add-list '(jcom-4770))
 		(make-op :action 'take-jcom-5010
-			:preconds '(jcom-6010)
 			:add-list '(jcom-5010))
 		(make-op :action 'take-jcom-5020
-			:preconds '(jcom-6020)
 			:add-list '(jcom-5020))
 		(make-op :action 'take-jcom-5030
-			:preconds '(jcom-6030)
 			:add-list '(jcom-5030))
 		(make-op :action 'take-jcom-5040
 			:add-list '(jcom-5040))
 		(make-op :action 'take-jcom-5110
-			:preconds '(jcom-6110)
 			:add-list '(jcom-5110))
 		(make-op :action 'take-jcom-5210
-			:preconds '(jcom-6210)
 			:add-list '(jcom-5210))
 		(make-op :action 'take-jcom-5220
-			:preconds '(jcom-4220 jcom-4230 jcom-6220)
+			:preconds '(jcom-4230 jcom-4220)
 			:add-list '(jcom-5220))
 		(make-op :action 'take-jcom-5230
-			:preconds '(jcom-2220 jcom-2030 jcom-6230)
+			:preconds '(jcom-2030 jcom-2220)
 			:add-list '(jcom-5230))
 		(make-op :action 'take-jcom-5300
-			:preconds '(jcom-3320 jcom-6300)
+			:preconds '(jcom-3320)
 			:add-list '(jcom-5300))
 		(make-op :action 'take-jcom-5310
-			:preconds '(jcom-6310)
 			:add-list '(jcom-5310))
 		(make-op :action 'take-jcom-5320
-			:preconds '(jcom-6320)
 			:add-list '(jcom-5320))
 		(make-op :action 'take-jcom-5400
-			:preconds '(jcom-2020 jcom-4040)
+			:preconds '(jcom-4040 jcom-2020)
 			:add-list '(jcom-5400))
 		(make-op :action 'take-jcom-5410
-			:preconds '(jcom-6060)
 			:add-list '(jcom-5410))
 		(make-op :action 'take-jcom-5420
-			:preconds '(pols-5420 jcom-6420)
+			:preconds '(pols-5420)
 			:add-list '(jcom-5420))
 		(make-op :action 'take-kin-1900
 			:add-list '(kin-1900))
@@ -6467,7 +6328,6 @@
 		(make-op :action 'take-kin-3650
 			:add-list '(kin-3650))
 		(make-op :action 'take-kin-3830
-			:preconds '(engl-3830 hist-3830)
 			:add-list '(kin-3830))
 		(make-op :action 'take-kin-4000
 			:preconds '(psy-4000)
@@ -6475,13 +6335,13 @@
 		(make-op :action 'take-kin-4015
 			:add-list '(kin-4015))
 		(make-op :action 'take-kin-4100
-			:preconds '(biol-2320 biol-2420 math-1050 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 math-1050 biol-2420 biol-2320)
 			:add-list '(kin-4100))
 		(make-op :action 'take-kin-4150
 			:preconds '(kin-3100)
 			:add-list '(kin-4150))
 		(make-op :action 'take-kin-4200
-			:preconds '(biol-2320 biol-2420 kin-3250 math-1050 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 math-1050 kin-3250 biol-2420 biol-2320)
 			:add-list '(kin-4200))
 		(make-op :action 'take-kin-4250
 			:add-list '(kin-4250))
@@ -6490,15 +6350,15 @@
 		(make-op :action 'take-kin-4350
 			:add-list '(kin-4350))
 		(make-op :action 'take-kin-4400
-			:preconds '(kin-2000 kin-2020)
+			:preconds '(kin-2020 kin-2000)
 			:add-list '(kin-4400))
 		(make-op :action 'take-kin-4500
 			:add-list '(kin-4500))
 		(make-op :action 'take-kin-4570
-			:preconds '(biol-2320 biol-2420 kin-3100 kin-3250)
+			:preconds '(kin-3250 kin-3100 biol-2420 biol-2320)
 			:add-list '(kin-4570))
 		(make-op :action 'take-kin-4580
-			:preconds '(biol-2320 biol-2420 kin-3100 kin-3250)
+			:preconds '(kin-3250 kin-3100 biol-2420 biol-2320)
 			:add-list '(kin-4580))
 		(make-op :action 'take-kin-4600
 			:preconds '(kin-4500)
@@ -6512,12 +6372,12 @@
 		(make-op :action 'take-kin-4850
 			:add-list '(kin-4850))
 		(make-op :action 'take-kin-4900
-			:preconds '(kin-2000 kin-3300 kin-4300)
+			:preconds '(kin-4300 kin-3300 kin-2000)
 			:add-list '(kin-4900))
 		(make-op :action 'take-kin-4950
 			:add-list '(kin-4950))
 		(make-op :action 'take-kin-5050
-			:preconds '(psy-5050 kin-6050)
+			:preconds '(psy-5050)
 			:add-list '(kin-5050))
 		(make-op :action 'take-kin-5070
 			:add-list '(kin-5070))
@@ -6525,7 +6385,7 @@
 			:preconds '(kin-4100)
 			:add-list '(kin-5100))
 		(make-op :action 'take-kin-5150
-			:preconds '(biol-2320 biol-2420)
+			:preconds '(biol-2420 biol-2320)
 			:add-list '(kin-5150))
 		(make-op :action 'take-kin-5200
 			:add-list '(kin-5200))
@@ -6540,7 +6400,6 @@
 			:preconds '(kin-4900)
 			:add-list '(kin-5630))
 		(make-op :action 'take-kin-5700
-			:preconds '(kin-6700)
 			:add-list '(kin-5700))
 		(make-op :action 'take-kin-5900
 			:add-list '(kin-5900))
@@ -6596,7 +6455,7 @@
 		(make-op :action 'take-laep-2700
 			:add-list '(laep-2700))
 		(make-op :action 'take-laep-2720
-			:preconds '(laep-1350 laep-2700)
+			:preconds '(laep-2700 laep-1350)
 			:add-list '(laep-2720))
 		(make-op :action 'take-laep-2900
 			:add-list '(laep-2900))
@@ -6616,7 +6475,6 @@
 		(make-op :action 'take-laep-3700
 			:add-list '(laep-3700))
 		(make-op :action 'take-laep-4040
-			:preconds '(laep-6060)
 			:add-list '(laep-4040))
 		(make-op :action 'take-laep-4100
 			:add-list '(laep-4100))
@@ -6625,28 +6483,24 @@
 		(make-op :action 'take-laep-4120
 			:add-list '(laep-4120))
 		(make-op :action 'take-laep-4200
-			:preconds '(laep-6200)
 			:add-list '(laep-4200))
 		(make-op :action 'take-laep-4210
-			:preconds '(laep-6210)
 			:add-list '(laep-4210))
 		(make-op :action 'take-laep-4250
 			:add-list '(laep-4250))
 		(make-op :action 'take-laep-4350
-			:preconds '(laep-6550)
 			:add-list '(laep-4350))
 		(make-op :action 'take-laep-4700
 			:add-list '(laep-4700))
 		(make-op :action 'take-laep-4900
 			:add-list '(laep-4900))
 		(make-op :action 'take-laep-4910
-			:preconds '(laep-6160)
 			:add-list '(laep-4910))
 		(make-op :action 'take-laep-4911
-			:preconds '(laep-4910 laep-6160 laep-6911)
+			:preconds '(laep-4910)
 			:add-list '(laep-4911))
 		(make-op :action 'take-laep-5090
-			:preconds '(psc-5090 laep-6090)
+			:preconds '(psc-5090)
 			:add-list '(laep-5090))
 		(make-op :action 'take-lang-1050
 			:add-list '(lang-1050))
@@ -6654,7 +6508,6 @@
 			:preconds '(ling-2100)
 			:add-list '(lang-2100))
 		(make-op :action 'take-lang-2420
-			:preconds '(ieli-2420)
 			:add-list '(lang-2420))
 		(make-op :action 'take-lang-3100
 			:add-list '(lang-3100))
@@ -6663,7 +6516,7 @@
 		(make-op :action 'take-lang-3120
 			:add-list '(lang-3120))
 		(make-op :action 'take-lang-3150
-			:preconds '(lang-3100 lang-3110)
+			:preconds '(lang-3110 lang-3100)
 			:add-list '(lang-3150))
 		(make-op :action 'take-lang-3550
 			:add-list '(lang-3550))
@@ -6680,7 +6533,7 @@
 		(make-op :action 'take-lang-4822
 			:add-list '(lang-4822))
 		(make-op :action 'take-lang-5950
-			:preconds '(cmst-1330 cmst-3330)
+			:preconds '(cmst-3330 cmst-1330)
 			:add-list '(lang-5950))
 		(make-op :action 'take-latn-1010
 			:add-list '(latn-1010))
@@ -6694,17 +6547,16 @@
 			:preconds '(latn-3100)
 			:add-list '(latn-3130))
 		(make-op :action 'take-latn-4100
-			:preconds '(latn-3100 latn-3130)
+			:preconds '(latn-3130 latn-3100)
 			:add-list '(latn-4100))
 		(make-op :action 'take-latn-4860
-			:preconds '(latn-3100 latn-3130)
+			:preconds '(latn-3130 latn-3100)
 			:add-list '(latn-4860))
 		(make-op :action 'take-latn-4930
 			:add-list '(latn-4930))
 		(make-op :action 'take-lats-2200
 			:add-list '(lats-2200))
 		(make-op :action 'take-ling-2100
-			:preconds '(lang-2100)
 			:add-list '(ling-2100))
 		(make-op :action 'take-ling-2250
 			:add-list '(ling-2250))
@@ -6715,28 +6567,24 @@
 		(make-op :action 'take-ling-3200
 			:add-list '(ling-3200))
 		(make-op :action 'take-ling-3300
-			:preconds '(ling-5400 ling-6400)
+			:preconds '(ling-5400)
 			:add-list '(ling-3300))
 		(make-op :action 'take-ling-4100
-			:preconds '(anth-4100)
 			:add-list '(ling-4100))
 		(make-op :action 'take-ling-4250
 			:add-list '(ling-4250))
 		(make-op :action 'take-ling-4300
-			:preconds '(ling-5400 ling-6400)
+			:preconds '(ling-5400)
 			:add-list '(ling-4300))
 		(make-op :action 'take-ling-4520
-			:preconds '(ling-6520)
 			:add-list '(ling-4520))
 		(make-op :action 'take-ling-4700
-			:preconds '(ling-6700)
 			:add-list '(ling-4700))
 		(make-op :action 'take-ling-4900
 			:add-list '(ling-4900))
 		(make-op :action 'take-ling-4920
 			:add-list '(ling-4920))
 		(make-op :action 'take-ling-5400
-			:preconds '(ling-3300 ling-4300)
 			:add-list '(ling-5400))
 		(make-op :action 'take-ling-5410
 			:preconds '(ling-5400)
@@ -6780,10 +6628,10 @@
 		(make-op :action 'take-mgt-3400
 			:add-list '(mgt-3400))
 		(make-op :action 'take-mgt-3600
-			:preconds '(data-3100 stat-2000 stat-2300 stat-3000)
+			:preconds '(stat-3000 stat-2300 stat-2000 data-3100)
 			:add-list '(mgt-3600))
 		(make-op :action 'take-mgt-3700
-			:preconds '(data-3100 psy-3010 stat-2000 stat-2300 stat-3000)
+			:preconds '(stat-3000 stat-2300 stat-2000 psy-3010 data-3100)
 			:add-list '(mgt-3700))
 		(make-op :action 'take-mgt-3710
 			:preconds '(msle-3710)
@@ -6860,7 +6708,6 @@
 		(make-op :action 'take-msle-3110
 			:add-list '(msle-3110))
 		(make-op :action 'take-msle-3300
-			:preconds '(ecn-3300)
 			:add-list '(msle-3300))
 		(make-op :action 'take-msle-3500
 			:add-list '(msle-3500))
@@ -6899,7 +6746,7 @@
 		(make-op :action 'take-msle-3880
 			:add-list '(msle-3880))
 		(make-op :action 'take-msle-3890
-			:preconds '(acct-2020 msle-3500 fin-3400 fin-3300)
+			:preconds '(fin-3300 fin-3400 msle-3500 acct-2020)
 			:add-list '(msle-3890))
 		(make-op :action 'take-msle-4000
 			:add-list '(msle-4000))
@@ -6907,10 +6754,10 @@
 			:preconds '(msle-3500)
 			:add-list '(msle-4050))
 		(make-op :action 'take-msle-4200
-			:preconds '(mgt-3100 mgt-3600 msle-4532)
+			:preconds '(msle-4532 mgt-3600 mgt-3100)
 			:add-list '(msle-4200))
 		(make-op :action 'take-msle-4250
-			:preconds '(msle-3500 msle-3800 mgt-3700)
+			:preconds '(mgt-3700 msle-3800 msle-3500)
 			:add-list '(msle-4250))
 		(make-op :action 'take-msle-4510
 			:preconds '(msle-3500)
@@ -6921,16 +6768,16 @@
 		(make-op :action 'take-msle-4525
 			:add-list '(msle-4525))
 		(make-op :action 'take-msle-4531
-			:preconds '(msle-3500 stat-1040 stat-1045 stat-2000 stat-2300 stat-3000 psy-3010 data-3100)
+			:preconds '(data-3100 psy-3010 stat-3000 stat-2300 stat-2000 stat-1045 stat-1040 msle-3500)
 			:add-list '(msle-4531))
 		(make-op :action 'take-msle-4532
-			:preconds '(msle-3500 stat-1040 stat-1045 stat-2000 stat-2300 stat-3000 psy-3010 data-3100)
+			:preconds '(data-3100 psy-3010 stat-3000 stat-2300 stat-2000 stat-1045 stat-1040 msle-3500)
 			:add-list '(msle-4532))
 		(make-op :action 'take-msle-4533
-			:preconds '(msle-3500 stat-1040 stat-1045 stat-2000 stat-2300 stat-3000 psy-3010 data-3100)
+			:preconds '(data-3100 psy-3010 stat-3000 stat-2300 stat-2000 stat-1045 stat-1040 msle-3500)
 			:add-list '(msle-4533))
 		(make-op :action 'take-msle-4534
-			:preconds '(msle-3500 stat-1040 stat-1045 stat-2000 stat-2300 stat-3000 psy-3010 data-3100)
+			:preconds '(data-3100 psy-3010 stat-3000 stat-2300 stat-2000 stat-1045 stat-1040 msle-3500)
 			:add-list '(msle-4534))
 		(make-op :action 'take-msle-4535
 			:preconds '(msle-3500)
@@ -6949,18 +6796,18 @@
 			:preconds '(msle-3500)
 			:add-list '(msle-4550))
 		(make-op :action 'take-msle-4555
-			:preconds '(msle-3500 stat-1040 stat-1045 stat-2000 stat-2300 stat-3000 psy-3010 data-3100)
+			:preconds '(data-3100 psy-3010 stat-3000 stat-2300 stat-2000 stat-1045 stat-1040 msle-3500)
 			:add-list '(msle-4555))
 		(make-op :action 'take-msle-4560
 			:add-list '(msle-4560))
 		(make-op :action 'take-msle-4562
-			:preconds '(msle-3500 msle-4560)
+			:preconds '(msle-4560 msle-3500)
 			:add-list '(msle-4562))
 		(make-op :action 'take-msle-4565
 			:preconds '(msle-3500)
 			:add-list '(msle-4565))
 		(make-op :action 'take-msle-4570
-			:preconds '(msle-3500 psy-3010 stat-1040 stat-1045 stat-2000 stat-2300 stat-3000 data-3100)
+			:preconds '(data-3100 stat-3000 stat-2300 stat-2000 stat-1045 stat-1040 psy-3010 msle-3500)
 			:add-list '(msle-4570))
 		(make-op :action 'take-msle-4575
 			:preconds '(msle-4560)
@@ -6974,10 +6821,10 @@
 		(make-op :action 'take-msle-4800
 			:add-list '(msle-4800))
 		(make-op :action 'take-msle-4890
-			:preconds '(fin-3400 mgt-3700 msle-3500 msle-3890)
+			:preconds '(msle-3890 msle-3500 mgt-3700 fin-3400)
 			:add-list '(msle-4890))
 		(make-op :action 'take-msle-4895
-			:preconds '(mgt-3600 msle-4532)
+			:preconds '(msle-4532 mgt-3600)
 			:add-list '(msle-4895))
 		(make-op :action 'take-msle-4950
 			:add-list '(msle-4950))
@@ -6995,16 +6842,16 @@
 			:preconds '(math-1050)
 			:add-list '(math-1100))
 		(make-op :action 'take-math-1210
-			:preconds '(math-1050 math-1060)
+			:preconds '(math-1060 math-1050)
 			:add-list '(math-1210))
 		(make-op :action 'take-math-1220
 			:preconds '(math-1210)
 			:add-list '(math-1220))
 		(make-op :action 'take-math-2010
-			:preconds '(math-1050 math-1051)
+			:preconds '(math-1051 math-1050)
 			:add-list '(math-2010))
 		(make-op :action 'take-math-2020
-			:preconds '(math-1050 math-1051 math-2010)
+			:preconds '(math-2010 math-1051 math-1050)
 			:add-list '(math-2020))
 		(make-op :action 'take-math-2210
 			:preconds '(math-1220)
@@ -7018,50 +6865,50 @@
 			:preconds '(math-1210)
 			:add-list '(math-2270))
 		(make-op :action 'take-math-2280
-			:preconds '(math-1220 math-2270)
+			:preconds '(math-2270 math-1220)
 			:add-list '(math-2280))
 		(make-op :action 'take-math-2910
 			:add-list '(math-2910))
 		(make-op :action 'take-math-2977
 			:add-list '(math-2977))
 		(make-op :action 'take-math-3010
-			:preconds '(math-2250 math-2270 math-1210 math-2010 math-2020)
+			:preconds '(math-2020 math-2010 math-1210 math-2270 math-2250)
 			:add-list '(math-3010))
 		(make-op :action 'take-math-3110
-			:preconds '(math-1220 math-1210 math-2020)
+			:preconds '(math-2020 math-1210 math-1220)
 			:add-list '(math-3110))
 		(make-op :action 'take-math-3300
 			:add-list '(math-3300))
 		(make-op :action 'take-math-3310
-			:preconds '(math-1210 math-1220)
+			:preconds '(math-1220 math-1210)
 			:add-list '(math-3310))
 		(make-op :action 'take-math-4200
-			:preconds '(math-2210 math-3310 math-2250 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2250 math-3310 math-2210)
 			:add-list '(math-4200))
 		(make-op :action 'take-math-4230
-			:preconds '(math-2280 math-2270 math-2250 biol-4230)
+			:preconds '(math-2250 math-2270 math-2280)
 			:add-list '(math-4230))
 		(make-op :action 'take-math-4250
 			:add-list '(math-4250))
 		(make-op :action 'take-math-4300
 			:add-list '(math-4300))
 		(make-op :action 'take-math-4310
-			:preconds '(math-2210 math-3310 math-2270 math-2280 math-2250)
+			:preconds '(math-2250 math-2280 math-2270 math-3310 math-2210)
 			:add-list '(math-4310))
 		(make-op :action 'take-math-4400
-			:preconds '(math-4200 math-4310 math-3110 math-3110)
+			:preconds '(math-3110 math-3110 math-4310 math-4200)
 			:add-list '(math-4400))
 		(make-op :action 'take-math-4410
-			:preconds '(math-2270 math-3310)
+			:preconds '(math-3310 math-2270)
 			:add-list '(math-4410))
 		(make-op :action 'take-math-4500
-			:preconds '(math-6500 math-6500 math-3110 math-4200 math-4310 math-6500)
+			:preconds '(math-4310 math-4200 math-3110)
 			:add-list '(math-4500))
 		(make-op :action 'take-math-4610
-			:preconds '(math-1220 math-2250 math-2270)
+			:preconds '(math-2270 math-2250 math-1220)
 			:add-list '(math-4610))
 		(make-op :action 'take-math-4700
-			:preconds '(math-2210 math-2250 math-2280)
+			:preconds '(math-2280 math-2250 math-2210)
 			:add-list '(math-4700))
 		(make-op :action 'take-math-4910
 			:add-list '(math-4910))
@@ -7071,42 +6918,42 @@
 		(make-op :action 'take-math-5020
 			:add-list '(math-5020))
 		(make-op :action 'take-math-5110
-			:preconds '(math-2210 math-2270 math-4200 math-4310 math-5340)
+			:preconds '(math-5340 math-4310 math-4200 math-2270 math-2210)
 			:add-list '(math-5110))
 		(make-op :action 'take-math-5210
-			:preconds '(math-4200 math-5510)
+			:preconds '(math-5510 math-4200)
 			:add-list '(math-5210))
 		(make-op :action 'take-math-5220
 			:preconds '(math-5210 math-5210)
 			:add-list '(math-5220))
 		(make-op :action 'take-math-5270
-			:preconds '(math-2210 math-2250 math-2210 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2210 math-2250 math-2210)
 			:add-list '(math-5270))
 		(make-op :action 'take-math-5310
 			:preconds '(math-4310 math-4310)
 			:add-list '(math-5310))
 		(make-op :action 'take-math-5340
-			:preconds '(math-2270 math-4310)
+			:preconds '(math-4310 math-2270)
 			:add-list '(math-5340))
 		(make-op :action 'take-math-5410
 			:add-list '(math-5410))
 		(make-op :action 'take-math-5420
-			:preconds '(math-2250 math-2280)
+			:preconds '(math-2280 math-2250)
 			:add-list '(math-5420))
 		(make-op :action 'take-math-5460
-			:preconds '(math-2250 math-2280)
+			:preconds '(math-2280 math-2250)
 			:add-list '(math-5460))
 		(make-op :action 'take-math-5470
-			:preconds '(math-2250 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2250)
 			:add-list '(math-5470))
 		(make-op :action 'take-math-5510
 			:preconds '(math-4200)
 			:add-list '(math-5510))
 		(make-op :action 'take-math-5560
-			:preconds '(math-1220 stat-3000)
+			:preconds '(stat-3000 math-1220)
 			:add-list '(math-5560))
 		(make-op :action 'take-math-5570
-			:preconds '(math-5710 stat-3000)
+			:preconds '(stat-3000 math-5710)
 			:add-list '(math-5570))
 		(make-op :action 'take-math-5580
 			:preconds '(math-5570 math-5570)
@@ -7115,10 +6962,10 @@
 			:preconds '(math-4610)
 			:add-list '(math-5610))
 		(make-op :action 'take-math-5620
-			:preconds '(math-4610 math-2250 math-2280)
+			:preconds '(math-2280 math-2250 math-4610)
 			:add-list '(math-5620))
 		(make-op :action 'take-math-5645
-			:preconds '(math-1210 stat-3000 math-5710 math-1220 math-2270 stat-5645 math-6645)
+			:preconds '(stat-5645 math-2270 math-1220 math-5710 stat-3000 math-1210)
 			:add-list '(math-5645))
 		(make-op :action 'take-math-5710
 			:preconds '(math-1220)
@@ -7144,28 +6991,28 @@
 			:preconds '(math-1060)
 			:add-list '(mae-1200))
 		(make-op :action 'take-mae-2160
-			:preconds '(chem-1210 math-1220)
+			:preconds '(math-1220 chem-1210)
 			:add-list '(mae-2160))
 		(make-op :action 'take-mae-2165
 			:preconds '(mae-2160)
 			:add-list '(mae-2165))
 		(make-op :action 'take-mae-2300
-			:preconds '(math-1220 math-2210)
+			:preconds '(math-2210 math-1220)
 			:add-list '(mae-2300))
 		(make-op :action 'take-mae-2450
-			:preconds '(cs-1400 ece-1400 math-2210 math-2250 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2250 math-2210 ece-1400 cs-1400)
 			:add-list '(mae-2450))
 		(make-op :action 'take-mae-3040
-			:preconds '(engr-2140 math-2250 math-2270 math-2280 mae-2160 cee-3160)
+			:preconds '(cee-3160 mae-2160 math-2280 math-2270 math-2250 engr-2140)
 			:add-list '(mae-3040))
 		(make-op :action 'take-mae-3340
-			:preconds '(engr-2140 engr-2210 ece-2250)
+			:preconds '(ece-2250 engr-2210 engr-2140)
 			:add-list '(mae-3340))
 		(make-op :action 'take-mae-3420
-			:preconds '(engr-2030 mae-2300 cs-1400 ece-1400 math-2250 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2250 ece-1400 cs-1400 mae-2300 engr-2030)
 			:add-list '(mae-3420))
 		(make-op :action 'take-mae-3440
-			:preconds '(mae-2300 mae-3420)
+			:preconds '(mae-3420 mae-2300)
 			:add-list '(mae-3440))
 		(make-op :action 'take-mae-3600
 			:add-list '(mae-3600))
@@ -7173,10 +7020,10 @@
 			:preconds '(mae-3040)
 			:add-list '(mae-4300))
 		(make-op :action 'take-mae-4400
-			:preconds '(mae-3340 mae-3440)
+			:preconds '(mae-3440 mae-3340)
 			:add-list '(mae-4400))
 		(make-op :action 'take-mae-4800
-			:preconds '(mae-3440 mae-4300 engr-3080)
+			:preconds '(engr-3080 mae-4300 mae-3440)
 			:add-list '(mae-4800))
 		(make-op :action 'take-mae-4810
 			:preconds '(mae-4800)
@@ -7185,61 +7032,61 @@
 			:preconds '(mae-3040)
 			:add-list '(mae-5020))
 		(make-op :action 'take-mae-5040
-			:preconds '(mae-3040 mae-3340)
+			:preconds '(mae-3340 mae-3040)
 			:add-list '(mae-5040))
 		(make-op :action 'take-mae-5050
-			:preconds '(mae-2160 mae-2165 mae-5060)
+			:preconds '(mae-5060 mae-2165 mae-2160)
 			:add-list '(mae-5050))
 		(make-op :action 'take-mae-5060
-			:preconds '(cee-3020 mae-3040 cee-5060)
+			:preconds '(mae-3040 cee-3020)
 			:add-list '(mae-5060))
 		(make-op :action 'take-mae-5300
-			:preconds '(engr-2030 engr-2140 math-2250 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2250 engr-2140 engr-2030)
 			:add-list '(mae-5300))
 		(make-op :action 'take-mae-5310
-			:preconds '(math-2250 math-2270 math-2280 mae-3340)
+			:preconds '(mae-3340 math-2280 math-2270 math-2250)
 			:add-list '(mae-5310))
 		(make-op :action 'take-mae-5320
-			:preconds '(ece-5310 mae-5310 ece-5320)
+			:preconds '(mae-5310 ece-5310)
 			:add-list '(mae-5320))
 		(make-op :action 'take-mae-5330
-			:preconds '(ece-5310 mae-5310 ece-5330)
+			:preconds '(mae-5310 ece-5310)
 			:add-list '(mae-5330))
 		(make-op :action 'take-mae-5340
-			:preconds '(ece-1410 cs-1410 math-2250 math-2280 ece-5340)
+			:preconds '(math-2280 math-2250 cs-1410 ece-1410)
 			:add-list '(mae-5340))
 		(make-op :action 'take-mae-5350
-			:preconds '(engr-2030 math-2250 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2250 engr-2030)
 			:add-list '(mae-5350))
 		(make-op :action 'take-mae-5360
-			:preconds '(engr-2030 math-2250 math-2270 math-2280)
+			:preconds '(math-2280 math-2270 math-2250 engr-2030)
 			:add-list '(mae-5360))
 		(make-op :action 'take-mae-5370
 			:preconds '(mae-2450)
 			:add-list '(mae-5370))
 		(make-op :action 'take-mae-5420
-			:preconds '(mae-2300 mae-3420)
+			:preconds '(mae-3420 mae-2300)
 			:add-list '(mae-5420))
 		(make-op :action 'take-mae-5430
 			:preconds '(mae-3440)
 			:add-list '(mae-5430))
 		(make-op :action 'take-mae-5440
-			:preconds '(mae-2450 mae-3420)
+			:preconds '(mae-3420 mae-2450)
 			:add-list '(mae-5440))
 		(make-op :action 'take-mae-5450
 			:preconds '(mae-3440)
 			:add-list '(mae-5450))
 		(make-op :action 'take-mae-5500
-			:preconds '(mae-2450 mae-3420)
+			:preconds '(mae-3420 mae-2450)
 			:add-list '(mae-5500))
 		(make-op :action 'take-mae-5510
 			:preconds '(mae-5500)
 			:add-list '(mae-5510))
 		(make-op :action 'take-mae-5520
-			:preconds '(mae-5360 phys-3550 ece-2290 ece-2700)
+			:preconds '(ece-2700 ece-2290 phys-3550 mae-5360)
 			:add-list '(mae-5520))
 		(make-op :action 'take-mae-5530
-			:preconds '(ece-5230 mae-5520 ece-5240)
+			:preconds '(mae-5520 ece-5230)
 			:add-list '(mae-5530))
 		(make-op :action 'take-mae-5540
 			:preconds '(mae-5420)
@@ -7250,38 +7097,38 @@
 		(make-op :action 'take-mae-5560
 			:add-list '(mae-5560))
 		(make-op :action 'take-mae-5700
-			:preconds '(phys-2210 phys-2310 phys-2215 phys-2220 phys-2320 phys-2225 beng-5700 ece-5700 phys-5700)
+			:preconds '(phys-5700 phys-2225 phys-2320 phys-2220 phys-2215 phys-2310 phys-2210)
 			:add-list '(mae-5700))
 		(make-op :action 'take-mae-5900
 			:add-list '(mae-5900))
 		(make-op :action 'take-mae-5930
 			:add-list '(mae-5930))
 		(make-op :action 'take-mlt-1010
-			:preconds '(chem-1010 chem-1015 engl-1010 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 engl-1010 chem-1015 chem-1010)
 			:add-list '(mlt-1010))
 		(make-op :action 'take-mlt-2230
-			:preconds '(chem-1010 chem-1015 engl-1010 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 engl-1010 chem-1015 chem-1010)
 			:add-list '(mlt-2230))
 		(make-op :action 'take-mlt-2240
-			:preconds '(chem-1010 chem-1015 engl-1010 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 engl-1010 chem-1015 chem-1010)
 			:add-list '(mlt-2240))
 		(make-op :action 'take-mlt-2270
-			:preconds '(chem-1010 chem-1015 engl-1010 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 engl-1010 chem-1015 chem-1010)
 			:add-list '(mlt-2270))
 		(make-op :action 'take-mlt-2280
 			:add-list '(mlt-2280))
 		(make-op :action 'take-mlt-2430
-			:preconds '(chem-1010 chem-1015 engl-1010 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 engl-1010 chem-1015 chem-1010)
 			:add-list '(mlt-2430))
 		(make-op :action 'take-mlt-2450
 			:add-list '(mlt-2450))
 		(make-op :action 'take-mlt-2550
 			:add-list '(mlt-2550))
 		(make-op :action 'take-mlt-2570
-			:preconds '(chem-1010 chem-1015 engl-1010 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 engl-1010 chem-1015 chem-1010)
 			:add-list '(mlt-2570))
 		(make-op :action 'take-mlt-2580
-			:preconds '(chem-1010 chem-1015 engl-1010 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 engl-1010 chem-1015 chem-1010)
 			:add-list '(mlt-2580))
 		(make-op :action 'take-msl-1010
 			:add-list '(msl-1010))
@@ -7302,7 +7149,7 @@
 		(make-op :action 'take-msl-2400
 			:add-list '(msl-2400))
 		(make-op :action 'take-msl-2420
-			:preconds '(msl-1010 msl-4020)
+			:preconds '(msl-4020 msl-1010)
 			:add-list '(msl-2420))
 		(make-op :action 'take-msl-2430
 			:add-list '(msl-2430))
@@ -7311,12 +7158,12 @@
 		(make-op :action 'take-msl-2510
 			:add-list '(msl-2510))
 		(make-op :action 'take-msl-3010
-			:preconds '(msl-1010 msl-1020 msl-2010 msl-2020)
+			:preconds '(msl-2020 msl-2010 msl-1020 msl-1010)
 			:add-list '(msl-3010))
 		(make-op :action 'take-msl-3015
 			:add-list '(msl-3015))
 		(make-op :action 'take-msl-3020
-			:preconds '(msl-1010 msl-1020 msl-2010 msl-2020 msl-3010)
+			:preconds '(msl-3010 msl-2020 msl-2010 msl-1020 msl-1010)
 			:add-list '(msl-3020))
 		(make-op :action 'take-msl-3025
 			:add-list '(msl-3025))
@@ -7325,12 +7172,12 @@
 		(make-op :action 'take-msl-3210
 			:add-list '(msl-3210))
 		(make-op :action 'take-msl-4010
-			:preconds '(msl-1010 msl-1020 msl-2010 msl-2020 msl-3010 msl-3020)
+			:preconds '(msl-3020 msl-3010 msl-2020 msl-2010 msl-1020 msl-1010)
 			:add-list '(msl-4010))
 		(make-op :action 'take-msl-4015
 			:add-list '(msl-4015))
 		(make-op :action 'take-msl-4020
-			:preconds '(msl-1010 msl-1020 msl-2010 msl-2020 msl-3010 msl-3020 msl-4010)
+			:preconds '(msl-4010 msl-3020 msl-3010 msl-2020 msl-2010 msl-1020 msl-1010)
 			:add-list '(msl-4020))
 		(make-op :action 'take-msl-4025
 			:add-list '(msl-4025))
@@ -7340,7 +7187,7 @@
 		(make-op :action 'take-msl-4510
 			:add-list '(msl-4510))
 		(make-op :action 'take-msl-4520
-			:preconds '(msl-3010 msl-3020 msl-4510)
+			:preconds '(msl-4510 msl-3020 msl-3010)
 			:add-list '(msl-4520))
 		(make-op :action 'take-mint-2210
 			:add-list '(mint-2210))
@@ -7398,7 +7245,7 @@
 			:preconds '(musc-1105)
 			:add-list '(musc-1170))
 		(make-op :action 'take-musc-1180
-			:preconds '(musc-1110 musc-1170)
+			:preconds '(musc-1170 musc-1110)
 			:add-list '(musc-1180))
 		(make-op :action 'take-musc-1185
 			:preconds '(musc-1180)
@@ -7526,7 +7373,7 @@
 			:preconds '(musc-1120)
 			:add-list '(musc-2110))
 		(make-op :action 'take-musc-2120
-			:preconds '(musc-2110 musc-3120)
+			:preconds '(musc-3120 musc-2110)
 			:add-list '(musc-2120))
 		(make-op :action 'take-musc-2130
 			:preconds '(musc-1140)
@@ -7544,13 +7391,13 @@
 		(make-op :action 'take-musc-2240
 			:add-list '(musc-2240))
 		(make-op :action 'take-musc-2265
-			:preconds '(musc-1360 musc-4930)
+			:preconds '(musc-4930 musc-1360)
 			:add-list '(musc-2265))
 		(make-op :action 'take-musc-2270
-			:preconds '(musc-1280 musc-2494)
+			:preconds '(musc-2494 musc-1280)
 			:add-list '(musc-2270))
 		(make-op :action 'take-musc-2275
-			:preconds '(musc-4930 musc-1360)
+			:preconds '(musc-1360 musc-4930)
 			:add-list '(musc-2275))
 		(make-op :action 'take-musc-2310
 			:add-list '(musc-2310))
@@ -7560,13 +7407,13 @@
 		(make-op :action 'take-musc-2350
 			:add-list '(musc-2350))
 		(make-op :action 'take-musc-2360
-			:preconds '(musc-1360 musc-4930)
+			:preconds '(musc-4930 musc-1360)
 			:add-list '(musc-2360))
 		(make-op :action 'take-musc-2370
-			:preconds '(musc-1360 musc-4930)
+			:preconds '(musc-4930 musc-1360)
 			:add-list '(musc-2370))
 		(make-op :action 'take-musc-2390
-			:preconds '(musc-1360 musc-4930)
+			:preconds '(musc-4930 musc-1360)
 			:add-list '(musc-2390))
 		(make-op :action 'take-musc-2410
 			:add-list '(musc-2410))
@@ -7733,7 +7580,7 @@
 			:preconds '(musc-2110)
 			:add-list '(musc-3170))
 		(make-op :action 'take-musc-3180
-			:preconds '(musc-1110 musc-1120 musc-2110 musc-2180)
+			:preconds '(musc-2180 musc-2110 musc-1120 musc-1110)
 			:add-list '(musc-3180))
 		(make-op :action 'take-musc-3190
 			:preconds '(musc-3120)
@@ -7742,12 +7589,12 @@
 			:preconds '(musc-2225)
 			:add-list '(musc-3210))
 		(make-op :action 'take-musc-3220
-			:preconds '(sced-3300 sced-4300)
+			:preconds '(sced-4300 sced-3300)
 			:add-list '(musc-3220))
 		(make-op :action 'take-musc-3230
 			:add-list '(musc-3230))
 		(make-op :action 'take-musc-3240
-			:preconds '(sced-3300 sced-4300)
+			:preconds '(sced-4300 sced-3300)
 			:add-list '(musc-3240))
 		(make-op :action 'take-musc-3260
 			:preconds '(musc-1010)
@@ -7880,7 +7727,7 @@
 		(make-op :action 'take-musc-3870
 			:add-list '(musc-3870))
 		(make-op :action 'take-musc-3900
-			:preconds '(musc-2110 musc-2130)
+			:preconds '(musc-2130 musc-2110)
 			:add-list '(musc-3900))
 		(make-op :action 'take-musc-3905
 			:preconds '(musc-3900)
@@ -7916,12 +7763,11 @@
 			:preconds '(musc-4330)
 			:add-list '(musc-4340))
 		(make-op :action 'take-musc-4410
-			:preconds '(musc-1430 musc-1440)
+			:preconds '(musc-1440 musc-1430)
 			:add-list '(musc-4410))
 		(make-op :action 'take-musc-4460
 			:add-list '(musc-4460))
 		(make-op :action 'take-musc-4470
-			:preconds '(musc-6470)
 			:add-list '(musc-4470))
 		(make-op :action 'take-musc-4500
 			:add-list '(musc-4500))
@@ -7955,7 +7801,6 @@
 			:preconds '(engl-2010)
 			:add-list '(musc-4730))
 		(make-op :action 'take-musc-4915
-			:preconds '(musc-6915)
 			:add-list '(musc-4915))
 		(make-op :action 'take-musc-4920
 			:add-list '(musc-4920))
@@ -7971,7 +7816,7 @@
 			:preconds '(musc-5261)
 			:add-list '(musc-5262))
 		(make-op :action 'take-musc-5263
-			:preconds '(musc-5261 musc-5262)
+			:preconds '(musc-5262 musc-5261)
 			:add-list '(musc-5263))
 		(make-op :action 'take-musc-5420
 			:add-list '(musc-5420))
@@ -7979,7 +7824,6 @@
 			:preconds '(musc-5630)
 			:add-list '(musc-5500))
 		(make-op :action 'take-musc-5630
-			:preconds '(musc-5500)
 			:add-list '(musc-5630))
 		(make-op :action 'take-musc-5980
 			:add-list '(musc-5980))
@@ -8054,7 +7898,7 @@
 		(make-op :action 'take-nurs-2250
 			:add-list '(nurs-2250))
 		(make-op :action 'take-nurs-2500
-			:preconds '(biol-2320 biol-2420)
+			:preconds '(biol-2420 biol-2320)
 			:add-list '(nurs-2500))
 		(make-op :action 'take-nurs-2988
 			:add-list '(nurs-2988))
@@ -8064,19 +7908,16 @@
 			:preconds '(nurs-3015)
 			:add-list '(nurs-3010))
 		(make-op :action 'take-nurs-3015
-			:preconds '(nurs-3010)
 			:add-list '(nurs-3015))
 		(make-op :action 'take-nurs-3020
 			:preconds '(nurs-3025)
 			:add-list '(nurs-3020))
 		(make-op :action 'take-nurs-3025
-			:preconds '(nurs-3020)
 			:add-list '(nurs-3025))
 		(make-op :action 'take-nurs-3030
 			:preconds '(nurs-3035)
 			:add-list '(nurs-3030))
 		(make-op :action 'take-nurs-3035
-			:preconds '(nurs-3030)
 			:add-list '(nurs-3035))
 		(make-op :action 'take-nurs-3040
 			:add-list '(nurs-3040))
@@ -8084,13 +7925,11 @@
 			:preconds '(nurs-3215)
 			:add-list '(nurs-3210))
 		(make-op :action 'take-nurs-3215
-			:preconds '(nurs-3210)
 			:add-list '(nurs-3215))
 		(make-op :action 'take-nurs-3220
 			:preconds '(nurs-3225)
 			:add-list '(nurs-3220))
 		(make-op :action 'take-nurs-3225
-			:preconds '(nurs-3220)
 			:add-list '(nurs-3225))
 		(make-op :action 'take-nurs-3230
 			:add-list '(nurs-3230))
@@ -8105,13 +7944,12 @@
 			:preconds '(nurs-3230)
 			:add-list '(nurs-4010))
 		(make-op :action 'take-nurs-4015
-			:preconds '(nurs-3230 nurs-4010)
+			:preconds '(nurs-4010 nurs-3230)
 			:add-list '(nurs-4015))
 		(make-op :action 'take-nurs-4020
 			:preconds '(nurs-4025)
 			:add-list '(nurs-4020))
 		(make-op :action 'take-nurs-4025
-			:preconds '(nurs-4020)
 			:add-list '(nurs-4025))
 		(make-op :action 'take-nurs-4100
 			:preconds '(nurs-3000)
@@ -8124,7 +7962,7 @@
 		(make-op :action 'take-nurs-4250
 			:add-list '(nurs-4250))
 		(make-op :action 'take-nurs-4300
-			:preconds '(nurs-3000 nurs-3230)
+			:preconds '(nurs-3230 nurs-3000)
 			:add-list '(nurs-4300))
 		(make-op :action 'take-ndfs-1000
 			:add-list '(ndfs-1000))
@@ -8166,7 +8004,7 @@
 			:preconds '(ndfs-3050 ndfs-3050)
 			:add-list '(ndfs-3060))
 		(make-op :action 'take-ndfs-3070
-			:preconds '(chem-1120 chem-2300 chem-2310)
+			:preconds '(chem-2310 chem-2300 chem-1120)
 			:add-list '(ndfs-3070))
 		(make-op :action 'take-ndfs-3080
 			:preconds '(ndfs-1020)
@@ -8176,15 +8014,15 @@
 		(make-op :action 'take-ndfs-3110
 			:add-list '(ndfs-3110))
 		(make-op :action 'take-ndfs-4020
-			:preconds '(ndfs-1020 chem-3700 biol-2420)
+			:preconds '(biol-2420 chem-3700 ndfs-1020)
 			:add-list '(ndfs-4020))
 		(make-op :action 'take-ndfs-4250
 			:add-list '(ndfs-4250))
 		(make-op :action 'take-ndfs-4420
-			:preconds '(stat-1040 math-1050)
+			:preconds '(math-1050 stat-1040)
 			:add-list '(ndfs-4420))
 		(make-op :action 'take-ndfs-4440
-			:preconds '(ndfs-2040 phys-2110)
+			:preconds '(phys-2110 ndfs-2040)
 			:add-list '(ndfs-4440))
 		(make-op :action 'take-ndfs-4450
 			:preconds '(ndfs-3040)
@@ -8198,7 +8036,7 @@
 			:preconds '(ndfs-3045)
 			:add-list '(ndfs-4560))
 		(make-op :action 'take-ndfs-4660
-			:preconds '(ndfs-3040 ndfs-4560)
+			:preconds '(ndfs-4560 ndfs-3040)
 			:add-list '(ndfs-4660))
 		(make-op :action 'take-ndfs-4710
 			:preconds '(ndfs-3070)
@@ -8219,16 +8057,14 @@
 		(make-op :action 'take-ndfs-4900
 			:add-list '(ndfs-4900))
 		(make-op :action 'take-ndfs-5010
-			:preconds '(ndfs-6010)
 			:add-list '(ndfs-5010))
 		(make-op :action 'take-ndfs-5020
-			:preconds '(ndfs-6020)
 			:add-list '(ndfs-5020))
 		(make-op :action 'take-ndfs-5030
-			:preconds '(ndfs-5110 ndfs-6110 ndfs-5560 ndfs-6560)
+			:preconds '(ndfs-5560 ndfs-5110)
 			:add-list '(ndfs-5030))
 		(make-op :action 'take-ndfs-5040
-			:preconds '(ndfs-5030 ndfs-6040)
+			:preconds '(ndfs-5030)
 			:add-list '(ndfs-5040))
 		(make-op :action 'take-ndfs-5050
 			:add-list '(ndfs-5050))
@@ -8239,85 +8075,82 @@
 		(make-op :action 'take-ndfs-5090
 			:add-list '(ndfs-5090))
 		(make-op :action 'take-ndfs-5100
-			:preconds '(stat-3000 stat-2000 ndfs-6100)
+			:preconds '(stat-2000 stat-3000)
 			:add-list '(ndfs-5100))
 		(make-op :action 'take-ndfs-5110
-			:preconds '(biol-2060 biol-3300)
+			:preconds '(biol-3300 biol-2060)
 			:add-list '(ndfs-5110))
 		(make-op :action 'take-ndfs-5111
 			:preconds '(ndfs-5110)
 			:add-list '(ndfs-5111))
 		(make-op :action 'take-ndfs-5150
-			:preconds '(ndfs-3040 ndfs-4560)
+			:preconds '(ndfs-4560 ndfs-3040)
 			:add-list '(ndfs-5150))
 		(make-op :action 'take-ndfs-5160
-			:preconds '(biol-5160 psc-5160)
+			:preconds '(psc-5160)
 			:add-list '(ndfs-5160))
 		(make-op :action 'take-ndfs-5200
-			:preconds '(stat-1040 stat-1045 ndfs-1020 ndfs-6200)
+			:preconds '(ndfs-1020 stat-1045 stat-1040)
 			:add-list '(ndfs-5200))
 		(make-op :action 'take-ndfs-5210
-			:preconds '(ndfs-4020 stat-1040 stat-1045 ndfs-6210)
+			:preconds '(stat-1045 stat-1040 ndfs-4020)
 			:add-list '(ndfs-5210))
 		(make-op :action 'take-ndfs-5220
-			:preconds '(chem-3700 advs-5220 biol-5220 ndfs-6220)
+			:preconds '(chem-3700)
 			:add-list '(ndfs-5220))
 		(make-op :action 'take-ndfs-5230
-			:preconds '(ndfs-1020 ndfs-6230)
+			:preconds '(ndfs-1020)
 			:add-list '(ndfs-5230))
 		(make-op :action 'take-ndfs-5250
 			:preconds '(ndfs-1020)
 			:add-list '(ndfs-5250))
 		(make-op :action 'take-ndfs-5260
-			:preconds '(chem-3700 chem-5710 biol-3060 advs-5260 biol-5260 psc-5260)
+			:preconds '(psc-5260 biol-3060 chem-5710 chem-3700)
 			:add-list '(ndfs-5260))
 		(make-op :action 'take-ndfs-5300
-			:preconds '(ndfs-4020 ndfs-6300)
+			:preconds '(ndfs-4020)
 			:add-list '(ndfs-5300))
 		(make-op :action 'take-ndfs-5310
-			:preconds '(ndfs-4020 ndfs-6310)
+			:preconds '(ndfs-4020)
 			:add-list '(ndfs-5310))
 		(make-op :action 'take-ndfs-5320
-			:preconds '(ndfs-2030 ndfs-4020 ndfs-6320)
+			:preconds '(ndfs-4020 ndfs-2030)
 			:add-list '(ndfs-5320))
 		(make-op :action 'take-ndfs-5370
 			:add-list '(ndfs-5370))
 		(make-op :action 'take-ndfs-5400
-			:preconds '(ndfs-1020 biol-2420 chem-3700 ndfs-6400)
+			:preconds '(chem-3700 biol-2420 ndfs-1020)
 			:add-list '(ndfs-5400))
 		(make-op :action 'take-ndfs-5410
-			:preconds '(chem-3700 ndfs-6410)
+			:preconds '(chem-3700)
 			:add-list '(ndfs-5410))
 		(make-op :action 'take-ndfs-5420
-			:preconds '(ndfs-6420)
 			:add-list '(ndfs-5420))
 		(make-op :action 'take-ndfs-5450
-			:preconds '(aste-5450)
 			:add-list '(ndfs-5450))
 		(make-op :action 'take-ndfs-5500
-			:preconds '(ndfs-5560 ndfs-6560 ndfs-6500)
+			:preconds '(ndfs-5560)
 			:add-list '(ndfs-5500))
 		(make-op :action 'take-ndfs-5510
 			:add-list '(ndfs-5510))
 		(make-op :action 'take-ndfs-5520
-			:preconds '(ndfs-1020 ndfs-6520)
+			:preconds '(ndfs-1020)
 			:add-list '(ndfs-5520))
 		(make-op :action 'take-ndfs-5560
-			:preconds '(chem-3700 chem-3710 ndfs-3070 ndfs-6560)
+			:preconds '(ndfs-3070 chem-3710 chem-3700)
 			:add-list '(ndfs-5560))
 		(make-op :action 'take-ndfs-5610
-			:preconds '(beng-3200 beng-5610 ndfs-6610)
+			:preconds '(beng-3200)
 			:add-list '(ndfs-5610))
 		(make-op :action 'take-ndfs-5750
 			:add-list '(ndfs-5750))
 		(make-op :action 'take-ndfs-5800
-			:preconds '(ndfs-2020 ndfs-2030 ndfs-3080 ndfs-6800)
+			:preconds '(ndfs-3080 ndfs-2030 ndfs-2020)
 			:add-list '(ndfs-5800))
 		(make-op :action 'take-ndfs-5830
-			:preconds '(ndfs-6830)
 			:add-list '(ndfs-5830))
 		(make-op :action 'take-ndfs-5920
-			:preconds '(ndfs-5100 ndfs-6100 ndfs-5110 ndfs-5560)
+			:preconds '(ndfs-5560 ndfs-5110 ndfs-5100)
 			:add-list '(ndfs-5920))
 		(make-op :action 'take-oss-1050
 			:add-list '(oss-1050))
@@ -8352,7 +8185,7 @@
 			:preconds '(oss-1400)
 			:add-list '(oss-2520))
 		(make-op :action 'take-oss-2600
-			:preconds '(oss-1550 oss-2520 bus-3200)
+			:preconds '(bus-3200 oss-2520 oss-1550)
 			:add-list '(oss-2600))
 		(make-op :action 'take-oss-2800
 			:add-list '(oss-2800))
@@ -8373,7 +8206,7 @@
 			:preconds '(tee-1010)
 			:add-list '(opdd-2420))
 		(make-op :action 'take-opdd-2430
-			:preconds '(tee-1200 tesy-1200 mae-1200 eddt-2620)
+			:preconds '(eddt-2620 mae-1200 tesy-1200 tee-1200)
 			:add-list '(opdd-2430))
 		(make-op :action 'take-opdd-3030
 			:add-list '(opdd-3030))
@@ -8415,24 +8248,23 @@
 			:preconds '(opdd-3030)
 			:add-list '(opdd-4900))
 		(make-op :action 'take-tept-1010
-			:preconds '(stat-1040 math-1050 engl-1010)
+			:preconds '(engl-1010 math-1050 stat-1040)
 			:add-list '(tept-1010))
 		(make-op :action 'take-tept-1100
-			:preconds '(stat-1040 math-1050 engl-1010)
+			:preconds '(engl-1010 math-1050 stat-1040)
 			:add-list '(tept-1100))
 		(make-op :action 'take-tept-1320
-			:preconds '(stat-1040 math-1050 engl-1010)
+			:preconds '(engl-1010 math-1050 stat-1040)
 			:add-list '(tept-1320))
 		(make-op :action 'take-tept-1620
 			:add-list '(tept-1620))
 		(make-op :action 'take-tept-1910
-			:preconds '(stat-1040 math-1050 engl-1010)
+			:preconds '(engl-1010 math-1050 stat-1040)
 			:add-list '(tept-1910))
 		(make-op :action 'take-teph-1860
 			:preconds '(teph-1865)
 			:add-list '(teph-1860))
 		(make-op :action 'take-teph-1865
-			:preconds '(teph-1860)
 			:add-list '(teph-1865))
 		(make-op :action 'take-phil-1000
 			:add-list '(phil-1000))
@@ -8445,7 +8277,7 @@
 		(make-op :action 'take-phil-1500
 			:add-list '(phil-1500))
 		(make-op :action 'take-phil-2200
-			:preconds '(math-1030 math-1050 stat-1040 stat-1045)
+			:preconds '(stat-1045 stat-1040 math-1050 math-1030)
 			:add-list '(phil-2200))
 		(make-op :action 'take-phil-2400
 			:add-list '(phil-2400))
@@ -8496,12 +8328,11 @@
 		(make-op :action 'take-phil-4500
 			:add-list '(phil-4500))
 		(make-op :action 'take-phil-4530
-			:preconds '(phil-6530)
 			:add-list '(phil-4530))
 		(make-op :action 'take-phil-4600
 			:add-list '(phil-4600))
 		(make-op :action 'take-phil-4900
-			:preconds '(phil-3010 phil-3020)
+			:preconds '(phil-3020 phil-3010)
 			:add-list '(phil-4900))
 		(make-op :action 'take-phil-4910
 			:add-list '(phil-4910))
@@ -8514,7 +8345,6 @@
 		(make-op :action 'take-phil-4990
 			:add-list '(phil-4990))
 		(make-op :action 'take-phil-5400
-			:preconds '(cai-5400)
 			:add-list '(phil-5400))
 		(make-op :action 'take-pe-1010
 			:add-list '(pe-1010))
@@ -8703,7 +8533,7 @@
 		(make-op :action 'take-pe-1547
 			:add-list '(pe-1547))
 		(make-op :action 'take-pe-1548
-			:preconds '(pe-1547 pe-1549)
+			:preconds '(pe-1549 pe-1547)
 			:add-list '(pe-1548))
 		(make-op :action 'take-pe-1549
 			:add-list '(pe-1549))
@@ -8796,10 +8626,10 @@
 			:preconds '(pe-2060)
 			:add-list '(pe-2061))
 		(make-op :action 'take-pe-2062
-			:preconds '(pe-2060 pe-2061)
+			:preconds '(pe-2061 pe-2060)
 			:add-list '(pe-2062))
 		(make-op :action 'take-pe-2063
-			:preconds '(pe-2060 pe-2061 pe-2062)
+			:preconds '(pe-2062 pe-2061 pe-2060)
 			:add-list '(pe-2063))
 		(make-op :action 'take-pe-2070
 			:add-list '(pe-2070))
@@ -8826,10 +8656,10 @@
 			:preconds '(pe-2120)
 			:add-list '(pe-2121))
 		(make-op :action 'take-pe-2122
-			:preconds '(pe-2120 pe-2121)
+			:preconds '(pe-2121 pe-2120)
 			:add-list '(pe-2122))
 		(make-op :action 'take-pe-2123
-			:preconds '(pe-2120 pe-2121 pe-2122)
+			:preconds '(pe-2122 pe-2121 pe-2120)
 			:add-list '(pe-2123))
 		(make-op :action 'take-pe-2130
 			:add-list '(pe-2130))
@@ -8837,10 +8667,10 @@
 			:preconds '(pe-2130)
 			:add-list '(pe-2131))
 		(make-op :action 'take-pe-2132
-			:preconds '(pe-2130 pe-2131)
+			:preconds '(pe-2131 pe-2130)
 			:add-list '(pe-2132))
 		(make-op :action 'take-pe-2133
-			:preconds '(pe-2130 pe-2131 pe-2132)
+			:preconds '(pe-2132 pe-2131 pe-2130)
 			:add-list '(pe-2133))
 		(make-op :action 'take-pe-2988
 			:add-list '(pe-2988))
@@ -8871,7 +8701,7 @@
 		(make-op :action 'take-phys-1200
 			:add-list '(phys-1200))
 		(make-op :action 'take-phys-1800
-			:preconds '(math-1050 math-1060)
+			:preconds '(math-1060 math-1050)
 			:add-list '(phys-1800))
 		(make-op :action 'take-phys-2010
 			:preconds '(math-1210)
@@ -8883,36 +8713,36 @@
 		(make-op :action 'take-phys-2025
 			:add-list '(phys-2025))
 		(make-op :action 'take-phys-2110
-			:preconds '(math-1060 math-1100 math-1210)
+			:preconds '(math-1210 math-1100 math-1060)
 			:add-list '(phys-2110))
 		(make-op :action 'take-phys-2120
-			:preconds '(phys-2110 math-1060 math-1100 math-1210)
+			:preconds '(math-1210 math-1100 math-1060 phys-2110)
 			:add-list '(phys-2120))
 		(make-op :action 'take-phys-2210
 			:preconds '(math-1210)
 			:add-list '(phys-2210))
 		(make-op :action 'take-phys-2215
-			:preconds '(phys-2210 phys-2310 phys-2210 phys-2310)
+			:preconds '(phys-2310 phys-2210 phys-2310 phys-2210)
 			:add-list '(phys-2215))
 		(make-op :action 'take-phys-2220
-			:preconds '(math-1220 phys-2210 phys-2310)
+			:preconds '(phys-2310 phys-2210 math-1220)
 			:add-list '(phys-2220))
 		(make-op :action 'take-phys-2225
-			:preconds '(phys-2220 phys-2320 phys-2320)
+			:preconds '(phys-2320 phys-2320 phys-2220)
 			:add-list '(phys-2225))
 		(make-op :action 'take-phys-2310
 			:preconds '(math-1210)
 			:add-list '(phys-2310))
 		(make-op :action 'take-phys-2320
-			:preconds '(math-1220 phys-2310 phys-2210)
+			:preconds '(phys-2210 phys-2310 math-1220)
 			:add-list '(phys-2320))
 		(make-op :action 'take-phys-2400
 			:add-list '(phys-2400))
 		(make-op :action 'take-phys-2500
-			:preconds '(phys-1800 phys-2110 phys-2210 phys-2310)
+			:preconds '(phys-2310 phys-2210 phys-2110 phys-1800)
 			:add-list '(phys-2500))
 		(make-op :action 'take-phys-2710
-			:preconds '(math-1220 phys-2220 phys-2320)
+			:preconds '(phys-2320 phys-2220 math-1220)
 			:add-list '(phys-2710))
 		(make-op :action 'take-phys-2977
 			:add-list '(phys-2977))
@@ -8932,22 +8762,22 @@
 			:preconds '(phys-2710)
 			:add-list '(phys-3500))
 		(make-op :action 'take-phys-3550
-			:preconds '(phys-2220 phys-2320 math-2210 math-2250 math-2280)
+			:preconds '(math-2280 math-2250 math-2210 phys-2320 phys-2220)
 			:add-list '(phys-3550))
 		(make-op :action 'take-phys-3600
-			:preconds '(phys-2710 phys-3550 math-2210 math-2250 math-2280)
+			:preconds '(math-2280 math-2250 math-2210 phys-3550 phys-2710)
 			:add-list '(phys-3600))
 		(make-op :action 'take-phys-3700
 			:preconds '(phys-2710)
 			:add-list '(phys-3700))
 		(make-op :action 'take-phys-3710
-			:preconds '(math-1220 phys-2220 phys-2320)
+			:preconds '(phys-2320 phys-2220 math-1220)
 			:add-list '(phys-3710))
 		(make-op :action 'take-phys-3750
-			:preconds '(math-2210 math-2250 math-2280 phys-2710 phys-3550)
+			:preconds '(phys-3550 phys-2710 math-2280 math-2250 math-2210)
 			:add-list '(phys-3750))
 		(make-op :action 'take-phys-3870
-			:preconds '(phys-2500 phys-2710)
+			:preconds '(phys-2710 phys-2500)
 			:add-list '(phys-3870))
 		(make-op :action 'take-phys-3880
 			:preconds '(phys-3870)
@@ -8960,16 +8790,16 @@
 			:preconds '(phys-2710)
 			:add-list '(phys-4250))
 		(make-op :action 'take-phys-4600
-			:preconds '(phys-3600 phys-3750)
+			:preconds '(phys-3750 phys-3600)
 			:add-list '(phys-4600))
 		(make-op :action 'take-phys-4650
-			:preconds '(phys-2710 math-2210 math-2250 math-2280 ece-3870 phys-6650)
+			:preconds '(ece-3870 math-2280 math-2250 math-2210 phys-2710)
 			:add-list '(phys-4650))
 		(make-op :action 'take-phys-4680
-			:preconds '(phys-4650 phys-6650 phys-6680)
+			:preconds '(phys-4650)
 			:add-list '(phys-4680))
 		(make-op :action 'take-phys-4700
-			:preconds '(phys-3600 phys-3750)
+			:preconds '(phys-3750 phys-3600)
 			:add-list '(phys-4700))
 		(make-op :action 'take-phys-4710
 			:preconds '(phys-4700 phys-4700)
@@ -8978,13 +8808,13 @@
 			:preconds '(phys-2710)
 			:add-list '(phys-4900))
 		(make-op :action 'take-phys-5210
-			:preconds '(phys-3600 ece-3870 ece-5210)
+			:preconds '(ece-3870 phys-3600)
 			:add-list '(phys-5210))
 		(make-op :action 'take-phys-5250
-			:preconds '(phys-4650 phys-4600 ece-5800 ece-5250)
+			:preconds '(ece-5800 phys-4600 phys-4650)
 			:add-list '(phys-5250))
 		(make-op :action 'take-phys-5330
-			:preconds '(phys-4600 phys-6330)
+			:preconds '(phys-4600)
 			:add-list '(phys-5330))
 		(make-op :action 'take-phys-5340
 			:add-list '(phys-5340))
@@ -8994,18 +8824,18 @@
 		(make-op :action 'take-phys-5500
 			:add-list '(phys-5500))
 		(make-op :action 'take-phys-5530
-			:preconds '(phys-3700 phys-4600 phys-4710 phys-6530)
+			:preconds '(phys-4710 phys-4600 phys-3700)
 			:add-list '(phys-5530))
 		(make-op :action 'take-phys-5700
-			:preconds '(phys-2210 phys-2310 phys-2215 phys-2220 phys-2320 phys-2225 beng-5700 ece-5700 mae-5700)
+			:preconds '(phys-2225 phys-2320 phys-2220 phys-2215 phys-2310 phys-2210)
 			:add-list '(phys-5700))
 		(make-op :action 'take-phys-5710
-			:preconds '(beng-5700 ece-5700 mae-5700 phys-5700 beng-5710 ece-5710)
+			:preconds '(phys-5700 mae-5700 ece-5700 beng-5700)
 			:add-list '(phys-5710))
 		(make-op :action 'take-phys-5800
 			:add-list '(phys-5800))
 		(make-op :action 'take-phys-5910
-			:preconds '(phys-3710 phys-4600 phys-6910)
+			:preconds '(phys-4600 phys-3710)
 			:add-list '(phys-5910))
 		(make-op :action 'take-psc-1050
 			:add-list '(psc-1050))
@@ -9032,14 +8862,14 @@
 		(make-op :action 'take-psc-2900
 			:add-list '(psc-2900))
 		(make-op :action 'take-psc-3000
-			:preconds '(chem-1110 math-1050)
+			:preconds '(math-1050 chem-1110)
 			:add-list '(psc-3000))
 		(make-op :action 'take-psc-3100
 			:add-list '(psc-3100))
 		(make-op :action 'take-psc-3200
 			:add-list '(psc-3200))
 		(make-op :action 'take-psc-3300
-			:preconds '(psc-2620 psc-2600)
+			:preconds '(psc-2600 psc-2620)
 			:add-list '(psc-3300))
 		(make-op :action 'take-psc-3400
 			:preconds '(psc-2620)
@@ -9047,7 +8877,7 @@
 		(make-op :action 'take-psc-3430
 			:add-list '(psc-3430))
 		(make-op :action 'take-psc-3500
-			:preconds '(biol-1010 biol-1610)
+			:preconds '(biol-1610 biol-1010)
 			:add-list '(psc-3500))
 		(make-op :action 'take-psc-3600
 			:add-list '(psc-3600))
@@ -9057,27 +8887,24 @@
 		(make-op :action 'take-psc-3800
 			:add-list '(psc-3800))
 		(make-op :action 'take-psc-3810
-			:preconds '(biol-1010 biol-1610)
+			:preconds '(biol-1610 biol-1010)
 			:add-list '(psc-3810))
 		(make-op :action 'take-psc-4050
 			:add-list '(psc-4050))
 		(make-op :action 'take-psc-4070
-			:preconds '(psc-3800 psc-3000 psc-3500 psc-6070)
+			:preconds '(psc-3500 psc-3000 psc-3800)
 			:add-list '(psc-4070))
 		(make-op :action 'take-psc-4080
-			:preconds '(psc-6080)
 			:add-list '(psc-4080))
 		(make-op :action 'take-psc-4100
-			:preconds '(psc-3810 psc-6100)
+			:preconds '(psc-3810)
 			:add-list '(psc-4100))
 		(make-op :action 'take-psc-4123
-			:preconds '(psc-6123)
 			:add-list '(psc-4123))
 		(make-op :action 'take-psc-4150
-			:preconds '(psc-6150)
 			:add-list '(psc-4150))
 		(make-op :action 'take-psc-4200
-			:preconds '(biol-1010 biol-1610)
+			:preconds '(biol-1610 biol-1010)
 			:add-list '(psc-4200))
 		(make-op :action 'take-psc-4250
 			:add-list '(psc-4250))
@@ -9092,10 +8919,10 @@
 		(make-op :action 'take-psc-4320
 			:add-list '(psc-4320))
 		(make-op :action 'take-psc-4400
-			:preconds '(biol-1010 biol-1610)
+			:preconds '(biol-1610 biol-1010)
 			:add-list '(psc-4400))
 		(make-op :action 'take-psc-4420
-			:preconds '(psc-2620 psc-6420)
+			:preconds '(psc-2620)
 			:add-list '(psc-4420))
 		(make-op :action 'take-psc-4500
 			:preconds '(psc-3000)
@@ -9109,33 +8936,32 @@
 			:preconds '(psc-3000)
 			:add-list '(psc-4700))
 		(make-op :action 'take-psc-4740
-			:preconds '(psc-2000 psc-4123 psc-6123 psc-4810)
+			:preconds '(psc-4810 psc-4123 psc-2000)
 			:add-list '(psc-4740))
 		(make-op :action 'take-psc-4750
-			:preconds '(geo-1110 math-1210 math-1220 psc-6750)
+			:preconds '(math-1220 math-1210 geo-1110)
 			:add-list '(psc-4750))
 		(make-op :action 'take-psc-4810
-			:preconds '(psc-6810)
 			:add-list '(psc-4810))
 		(make-op :action 'take-psc-4820
 			:preconds '(geo-5680)
 			:add-list '(psc-4820))
 		(make-op :action 'take-psc-4830
-			:preconds '(math-1210 psc-2000)
+			:preconds '(psc-2000 math-1210)
 			:add-list '(psc-4830))
 		(make-op :action 'take-psc-4840
-			:preconds '(math-2210 phys-2210 psc-2000)
+			:preconds '(psc-2000 phys-2210 math-2210)
 			:add-list '(psc-4840))
 		(make-op :action 'take-psc-4850
-			:preconds '(math-2210 phys-2210 psc-2000)
+			:preconds '(psc-2000 phys-2210 math-2210)
 			:add-list '(psc-4850))
 		(make-op :action 'take-psc-4860
-			:preconds '(math-2210 phys-2210 math-2250)
+			:preconds '(math-2250 phys-2210 math-2210)
 			:add-list '(psc-4860))
 		(make-op :action 'take-psc-4870
 			:add-list '(psc-4870))
 		(make-op :action 'take-psc-4880
-			:preconds '(math-1210 math-1220 psc-6880)
+			:preconds '(math-1220 math-1210)
 			:add-list '(psc-4880))
 		(make-op :action 'take-psc-4890
 			:add-list '(psc-4890))
@@ -9144,66 +8970,60 @@
 		(make-op :action 'take-psc-4970
 			:add-list '(psc-4970))
 		(make-op :action 'take-psc-5000
-			:preconds '(psc-6000)
 			:add-list '(psc-5000))
 		(make-op :action 'take-psc-5003
-			:preconds '(cee-2450 cee-5003 psc-6003)
+			:preconds '(cee-2450)
 			:add-list '(psc-5003))
 		(make-op :action 'take-psc-5050
-			:preconds '(chem-1110 math-1050 psc-6050)
+			:preconds '(math-1050 chem-1110)
 			:add-list '(psc-5050))
 		(make-op :action 'take-psc-5090
-			:preconds '(laep-5090 psc-6090)
 			:add-list '(psc-5090))
 		(make-op :action 'take-psc-5130
-			:preconds '(psc-3000 psc-6130)
+			:preconds '(psc-3000)
 			:add-list '(psc-5130))
 		(make-op :action 'take-psc-5160
-			:preconds '(advs-5160 biol-5160 ndfs-5160)
 			:add-list '(psc-5160))
 		(make-op :action 'take-psc-5260
-			:preconds '(chem-3700 chem-5710 biol-3060 advs-5260 biol-5260 ndfs-5260)
+			:preconds '(biol-3060 chem-5710 chem-3700)
 			:add-list '(psc-5260))
 		(make-op :action 'take-psc-5270
-			:preconds '(biol-4400 psc-3500 psc-6270)
+			:preconds '(psc-3500 biol-4400)
 			:add-list '(psc-5270))
 		(make-op :action 'take-psc-5280
-			:preconds '(biol-4400 psc-6280)
+			:preconds '(biol-4400)
 			:add-list '(psc-5280))
 		(make-op :action 'take-psc-5300
 			:preconds '(biol-3060)
 			:add-list '(psc-5300))
 		(make-op :action 'take-psc-5310
-			:preconds '(biol-1610 biol-1620 chem-2300 chem-2310 psc-3000 biol-5310)
+			:preconds '(psc-3000 chem-2310 chem-2300 biol-1620 biol-1610)
 			:add-list '(psc-5310))
 		(make-op :action 'take-psc-5350
-			:preconds '(chem-1110 psc-3000 wild-5350 psc-6350)
+			:preconds '(wild-5350 psc-3000 chem-1110)
 			:add-list '(psc-5350))
 		(make-op :action 'take-psc-5410
 			:add-list '(psc-5410))
 		(make-op :action 'take-psc-5430
-			:preconds '(psc-3500 biol-4400 psc-6430)
+			:preconds '(biol-4400 psc-3500)
 			:add-list '(psc-5430))
 		(make-op :action 'take-psc-5500
-			:preconds '(psc-6500)
 			:add-list '(psc-5500))
 		(make-op :action 'take-psc-5530
-			:preconds '(psc-3000 chem-1110 chem-1210 psc-6530)
+			:preconds '(chem-1210 chem-1110 psc-3000)
 			:add-list '(psc-5530))
 		(make-op :action 'take-psc-5550
-			:preconds '(psc-6550)
 			:add-list '(psc-5550))
 		(make-op :action 'take-psc-5560
-			:preconds '(psc-5050 psc-6050 psc-5530 psc-6530 psc-6560)
+			:preconds '(psc-5530 psc-5050)
 			:add-list '(psc-5560))
 		(make-op :action 'take-psc-5620
-			:preconds '(chem-1210 cee-5620)
+			:preconds '(chem-1210)
 			:add-list '(psc-5620))
 		(make-op :action 'take-psc-5670
-			:preconds '(psc-6670)
 			:add-list '(psc-5670))
 		(make-op :action 'take-psc-5680
-			:preconds '(geo-3600 wats-3600 geo-5680 wats-5680 psc-6680)
+			:preconds '(wats-5680 wats-3600 geo-3600)
 			:add-list '(psc-5680))
 		(make-op :action 'take-psc-5700
 			:preconds '(biol-1620)
@@ -9295,7 +9115,6 @@
 		(make-op :action 'take-pols-3150
 			:add-list '(pols-3150))
 		(make-op :action 'take-pols-3170
-			:preconds '(ecn-3170)
 			:add-list '(pols-3170))
 		(make-op :action 'take-pols-3180
 			:preconds '(pols-1100)
@@ -9326,10 +9145,10 @@
 		(make-op :action 'take-pols-3400
 			:add-list '(pols-3400))
 		(make-op :action 'take-pols-3410
-			:preconds '(pols-2100 pols-2200)
+			:preconds '(pols-2200 pols-2100)
 			:add-list '(pols-3410))
 		(make-op :action 'take-pols-3430
-			:preconds '(engl-2010 pols-2100 pols-2200 pols-2300 pols-2400 geog-3430)
+			:preconds '(pols-2400 pols-2300 pols-2200 pols-2100 engl-2010)
 			:add-list '(pols-3430))
 		(make-op :action 'take-pols-3700
 			:add-list '(pols-3700))
@@ -9381,17 +9200,17 @@
 			:preconds '(engl-2010)
 			:add-list '(pols-4460))
 		(make-op :action 'take-pols-4462
-			:preconds '(pols-1100 pols-2100)
+			:preconds '(pols-2100 pols-1100)
 			:add-list '(pols-4462))
 		(make-op :action 'take-pols-4463
-			:preconds '(pols-1100 pols-2100)
+			:preconds '(pols-2100 pols-1100)
 			:add-list '(pols-4463))
 		(make-op :action 'take-pols-4464
 			:add-list '(pols-4464))
 		(make-op :action 'take-pols-4470
 			:add-list '(pols-4470))
 		(make-op :action 'take-pols-4500
-			:preconds '(pols-1100 pols-2100 pols-2200 pols-2400 pols-2500)
+			:preconds '(pols-2500 pols-2400 pols-2200 pols-2100 pols-1100)
 			:add-list '(pols-4500))
 		(make-op :action 'take-pols-4800
 			:add-list '(pols-4800))
@@ -9400,7 +9219,7 @@
 		(make-op :action 'take-pols-4840
 			:add-list '(pols-4840))
 		(make-op :action 'take-pols-4850
-			:preconds '(cmst-1330 cmst-2110 pols-1100 pols-2100 pols-2200 pols-2400 iogp-4850)
+			:preconds '(pols-2400 pols-2200 pols-2100 pols-1100 cmst-2110 cmst-1330)
 			:add-list '(pols-4850))
 		(make-op :action 'take-pols-4890
 			:add-list '(pols-4890))
@@ -9416,7 +9235,7 @@
 		(make-op :action 'take-pols-5110
 			:add-list '(pols-5110))
 		(make-op :action 'take-pols-5120
-			:preconds '(apec-2010 ecn-2010)
+			:preconds '(ecn-2010 apec-2010)
 			:add-list '(pols-5120))
 		(make-op :action 'take-pols-5130
 			:add-list '(pols-5130))
@@ -9437,12 +9256,11 @@
 		(make-op :action 'take-pols-5400
 			:add-list '(pols-5400))
 		(make-op :action 'take-pols-5420
-			:preconds '(jcom-5420 pols-6420)
 			:add-list '(pols-5420))
 		(make-op :action 'take-pols-5480
 			:add-list '(pols-5480))
 		(make-op :action 'take-pols-5770
-			:preconds '(pols-2100 pols-2200)
+			:preconds '(pols-2200 pols-2100)
 			:add-list '(pols-5770))
 		(make-op :action 'take-pols-5890
 			:add-list '(pols-5890))
@@ -9541,10 +9359,10 @@
 			:preconds '(psy-1010)
 			:add-list '(psy-1100))
 		(make-op :action 'take-psy-1400
-			:preconds '(psy-1010 psy-1410)
+			:preconds '(psy-1410 psy-1010)
 			:add-list '(psy-1400))
 		(make-op :action 'take-psy-1410
-			:preconds '(psy-1400 psy-1010)
+			:preconds '(psy-1010)
 			:add-list '(psy-1410))
 		(make-op :action 'take-psy-2010
 			:preconds '(psy-1010)
@@ -9558,12 +9376,12 @@
 			:preconds '(psy-1010)
 			:add-list '(psy-2300))
 		(make-op :action 'take-psy-2400
-			:preconds '(psy-1010 psy-1400)
+			:preconds '(psy-1400 psy-1010)
 			:add-list '(psy-2400))
 		(make-op :action 'take-psy-3000
 			:add-list '(psy-3000))
 		(make-op :action 'take-psy-3010
-			:preconds '(stat-1040 stat-1045 stat-2000)
+			:preconds '(stat-2000 stat-1045 stat-1040)
 			:add-list '(psy-3010))
 		(make-op :action 'take-psy-3020
 			:preconds '(psy-2010)
@@ -9575,7 +9393,7 @@
 			:preconds '(psy-1010)
 			:add-list '(psy-3120))
 		(make-op :action 'take-psy-3400
-			:preconds '(psy-1400 psy-1400 psy-1410)
+			:preconds '(psy-1410 psy-1400 psy-1400)
 			:add-list '(psy-3400))
 		(make-op :action 'take-psy-3450
 			:preconds '(psy-1010)
@@ -9584,16 +9402,14 @@
 			:preconds '(psy-1010)
 			:add-list '(psy-3460))
 		(make-op :action 'take-psy-3500
-			:preconds '(psy-1010 engl-2010)
+			:preconds '(engl-2010 psy-1010)
 			:add-list '(psy-3500))
 		(make-op :action 'take-psy-3510
 			:preconds '(psy-1010)
 			:add-list '(psy-3510))
 		(make-op :action 'take-psy-3700
-			:preconds '(hdfs-3700)
 			:add-list '(psy-3700))
 		(make-op :action 'take-psy-4000
-			:preconds '(kin-4000)
 			:add-list '(psy-4000))
 		(make-op :action 'take-psy-4020
 			:preconds '(psy-2010)
@@ -9612,14 +9428,13 @@
 			:preconds '(psy-1010)
 			:add-list '(psy-4420))
 		(make-op :action 'take-psy-4460
-			:preconds '(psy-1010 psy-3460 biol-1610)
+			:preconds '(biol-1610 psy-3460 psy-1010)
 			:add-list '(psy-4460))
 		(make-op :action 'take-psy-4910
 			:add-list '(psy-4910))
 		(make-op :action 'take-psy-4920
 			:add-list '(psy-4920))
 		(make-op :action 'take-psy-4930
-			:preconds '(hdfs-4930)
 			:add-list '(psy-4930))
 		(make-op :action 'take-psy-4940
 			:add-list '(psy-4940))
@@ -9630,18 +9445,16 @@
 			:preconds '(psy-1010)
 			:add-list '(psy-4960))
 		(make-op :action 'take-psy-5050
-			:preconds '(kin-5050 psy-6050)
 			:add-list '(psy-5050))
 		(make-op :action 'take-psy-5100
-			:preconds '(psy-6100)
 			:add-list '(psy-5100))
 		(make-op :action 'take-psy-5200
 			:add-list '(psy-5200))
 		(make-op :action 'take-psy-5280
-			:preconds '(psy-1400 psy-1410)
+			:preconds '(psy-1410 psy-1400)
 			:add-list '(psy-5280))
 		(make-op :action 'take-psy-5330
-			:preconds '(psy-1010 psy-3010 psy-6330)
+			:preconds '(psy-3010 psy-1010)
 			:add-list '(psy-5330))
 		(make-op :action 'take-psy-5500
 			:add-list '(psy-5500))
@@ -9658,7 +9471,7 @@
 		(make-op :action 'take-pubh-3310
 			:add-list '(pubh-3310))
 		(make-op :action 'take-pubh-3610
-			:preconds '(biol-1610 chem-1210 math-1210 cee-3610)
+			:preconds '(math-1210 chem-1210 biol-1610)
 			:add-list '(pubh-3610))
 		(make-op :action 'take-pubh-3870
 			:preconds '(cee-3610)
@@ -9666,10 +9479,9 @@
 		(make-op :action 'take-pubh-4000
 			:add-list '(pubh-4000))
 		(make-op :action 'take-pubh-4030
-			:preconds '(biol-1610 biol-2060 biol-2420 biol-4030)
+			:preconds '(biol-2420 biol-2060 biol-1610)
 			:add-list '(pubh-4030))
 		(make-op :action 'take-pubh-4040
-			:preconds '(biol-4040)
 			:add-list '(pubh-4040))
 		(make-op :action 'take-pubh-4200
 			:add-list '(pubh-4200))
@@ -9682,32 +9494,32 @@
 			:preconds '(pubh-3310)
 			:add-list '(pubh-4320))
 		(make-op :action 'take-pubh-4330
-			:preconds '(pubh-3310 pubh-4310)
+			:preconds '(pubh-4310 pubh-3310)
 			:add-list '(pubh-4330))
 		(make-op :action 'take-pubh-4380
-			:preconds '(pubh-4300 pubh-4320 pubh-4330)
+			:preconds '(pubh-4330 pubh-4320 pubh-4300)
 			:add-list '(pubh-4380))
 		(make-op :action 'take-pubh-4410
 			:add-list '(pubh-4410))
 		(make-op :action 'take-pubh-4850
 			:add-list '(pubh-4850))
 		(make-op :action 'take-pubh-5330
-			:preconds '(math-1210 pubh-4310)
+			:preconds '(pubh-4310 math-1210)
 			:add-list '(pubh-5330))
 		(make-op :action 'take-pubh-5340
-			:preconds '(pubh-4320 pubh-4330)
+			:preconds '(pubh-4330 pubh-4320)
 			:add-list '(pubh-5340))
 		(make-op :action 'take-pubh-5400
-			:preconds '(chem-1220 biol-1620 chem-2300 advs-5400 biol-5400)
+			:preconds '(chem-2300 biol-1620 chem-1220)
 			:add-list '(pubh-5400))
 		(make-op :action 'take-pubh-5500
-			:preconds '(pubh-4000 pubh-4380)
+			:preconds '(pubh-4380 pubh-4000)
 			:add-list '(pubh-5500))
 		(make-op :action 'take-pubh-5670
 			:preconds '(chem-1210)
 			:add-list '(pubh-5670))
 		(make-op :action 'take-pubh-5730
-			:preconds '(chem-1210 chem-1215 cee-5730 pubh-6730)
+			:preconds '(chem-1215 chem-1210)
 			:add-list '(pubh-5730))
 		(make-op :action 'take-pubh-5790
 			:preconds '(chem-1220)
@@ -9754,13 +9566,13 @@
 		(make-op :action 'take-ram-3000
 			:add-list '(ram-3000))
 		(make-op :action 'take-ram-3075
-			:preconds '(ram-1000 ram-3000 ram-4000 ram-3200 ram-4500 ram-4600)
+			:preconds '(ram-4600 ram-4500 ram-3200 ram-4000 ram-3000 ram-1000)
 			:add-list '(ram-3075))
 		(make-op :action 'take-ram-3100
-			:preconds '(ram-1000 ram-2300)
+			:preconds '(ram-2300 ram-1000)
 			:add-list '(ram-3100))
 		(make-op :action 'take-ram-3200
-			:preconds '(ram-1000 ram-3000)
+			:preconds '(ram-3000 ram-1000)
 			:add-list '(ram-3200))
 		(make-op :action 'take-ram-3400
 			:add-list '(ram-3400))
@@ -9784,13 +9596,13 @@
 			:preconds '(ram-1000)
 			:add-list '(ram-4600))
 		(make-op :action 'take-ram-4700
-			:preconds '(ram-1000 ram-3000 ram-4000 ram-3200 ram-3075 ram-3900 ram-4100 ram-3200)
+			:preconds '(ram-3200 ram-4100 ram-3900 ram-3075 ram-3200 ram-4000 ram-3000 ram-1000)
 			:add-list '(ram-4700))
 		(make-op :action 'take-ram-4800
-			:preconds '(ram-1000 engl-2010)
+			:preconds '(engl-2010 ram-1000)
 			:add-list '(ram-4800))
 		(make-op :action 'take-ram-4900
-			:preconds '(ram-1000 ram-2250)
+			:preconds '(ram-2250 ram-1000)
 			:add-list '(ram-4900))
 		(make-op :action 'take-ram-4970
 			:add-list '(ram-4970))
@@ -9806,7 +9618,6 @@
 		(make-op :action 'take-rels-1070
 			:add-list '(rels-1070))
 		(make-op :action 'take-rels-1090
-			:preconds '(anth-1090)
 			:add-list '(rels-1090))
 		(make-op :action 'take-rels-1600
 			:add-list '(rels-1600))
@@ -9815,21 +9626,16 @@
 		(make-op :action 'take-rels-2050
 			:add-list '(rels-2050))
 		(make-op :action 'take-rels-3010
-			:preconds '(hist-3010)
 			:add-list '(rels-3010))
 		(make-op :action 'take-rels-3020
-			:preconds '(hist-3020)
 			:add-list '(rels-3020))
 		(make-op :action 'take-rels-3030
-			:preconds '(hist-3030)
 			:add-list '(rels-3030))
 		(make-op :action 'take-rels-3050
 			:add-list '(rels-3050))
 		(make-op :action 'take-rels-3060
-			:preconds '(hist-3060)
 			:add-list '(rels-3060))
 		(make-op :action 'take-rels-3080
-			:preconds '(hist-3080)
 			:add-list '(rels-3080))
 		(make-op :action 'take-rels-3090
 			:add-list '(rels-3090))
@@ -9838,95 +9644,73 @@
 		(make-op :action 'take-rels-3125
 			:add-list '(rels-3125))
 		(make-op :action 'take-rels-3150
-			:preconds '(phil-1000 phil-3020 rels-3120)
+			:preconds '(rels-3120 phil-3020 phil-1000)
 			:add-list '(rels-3150))
 		(make-op :action 'take-rels-3160
-			:preconds '(anth-3160)
 			:add-list '(rels-3160))
 		(make-op :action 'take-rels-3165
-			:preconds '(anth-3165)
 			:add-list '(rels-3165))
 		(make-op :action 'take-rels-3170
-			:preconds '(clas-3170 hist-3170)
 			:add-list '(rels-3170))
 		(make-op :action 'take-rels-3190
 			:add-list '(rels-3190))
 		(make-op :action 'take-rels-3210
-			:preconds '(arth-3210 clas-3210 engl-3210 hist-3210)
 			:add-list '(rels-3210))
 		(make-op :action 'take-rels-3220
-			:preconds '(hist-3220)
 			:add-list '(rels-3220))
 		(make-op :action 'take-rels-3270
-			:preconds '(hist-3270)
 			:add-list '(rels-3270))
 		(make-op :action 'take-rels-3290
-			:preconds '(clas-3290 hist-3290)
 			:add-list '(rels-3290))
 		(make-op :action 'take-rels-3410
-			:preconds '(hist-3410)
 			:add-list '(rels-3410))
 		(make-op :action 'take-rels-3420
 			:add-list '(rels-3420))
 		(make-op :action 'take-rels-3430
-			:preconds '(hist-3430)
 			:add-list '(rels-3430))
 		(make-op :action 'take-rels-3456
-			:preconds '(hist-3456)
 			:add-list '(rels-3456))
 		(make-op :action 'take-rels-3470
-			:preconds '(hist-3470)
 			:add-list '(rels-3470))
 		(make-op :action 'take-rels-3482
-			:preconds '(hist-3482)
 			:add-list '(rels-3482))
 		(make-op :action 'take-rels-3510
 			:add-list '(rels-3510))
 		(make-op :action 'take-rels-3710
-			:preconds '(anth-3710 engl-3710 hist-3710)
 			:add-list '(rels-3710))
 		(make-op :action 'take-rels-3820
-			:preconds '(rels-1010 rels-3020 rels-3420)
+			:preconds '(rels-3420 rels-3020 rels-1010)
 			:add-list '(rels-3820))
 		(make-op :action 'take-rels-3830
-			:preconds '(engl-3830 hist-3830 kin-3830)
+			:preconds '(kin-3830)
 			:add-list '(rels-3830))
 		(make-op :action 'take-rels-3990
 			:preconds '(rels-1010)
 			:add-list '(rels-3990))
 		(make-op :action 'take-rels-4015
-			:preconds '(hist-4015)
 			:add-list '(rels-4015))
 		(make-op :action 'take-rels-4230
-			:preconds '(hist-4230)
 			:add-list '(rels-4230))
 		(make-op :action 'take-rels-4350
-			:preconds '(clas-3210 hist-4350)
+			:preconds '(clas-3210)
 			:add-list '(rels-4350))
 		(make-op :action 'take-rels-4520
 			:add-list '(rels-4520))
 		(make-op :action 'take-rels-4555
-			:preconds '(hist-4555)
 			:add-list '(rels-4555))
 		(make-op :action 'take-rels-4560
 			:add-list '(rels-4560))
 		(make-op :action 'take-rels-4565
-			:preconds '(hist-4565)
 			:add-list '(rels-4565))
 		(make-op :action 'take-rels-4566
-			:preconds '(hist-4566)
 			:add-list '(rels-4566))
 		(make-op :action 'take-rels-4567
-			:preconds '(hist-4567)
 			:add-list '(rels-4567))
 		(make-op :action 'take-rels-4730
-			:preconds '(hist-4730)
 			:add-list '(rels-4730))
 		(make-op :action 'take-rels-4790
-			:preconds '(hist-4790)
 			:add-list '(rels-4790))
 		(make-op :action 'take-rels-4825
-			:preconds '(hist-4825)
 			:add-list '(rels-4825))
 		(make-op :action 'take-rels-4910
 			:add-list '(rels-4910))
@@ -9936,10 +9720,9 @@
 			:preconds '(rels-3990)
 			:add-list '(rels-4990))
 		(make-op :action 'take-rels-5195
-			:preconds '(anth-1090 rels-1090 anth-3160 rels-1010 anth-5195)
+			:preconds '(rels-1010 anth-3160 rels-1090 anth-1090)
 			:add-list '(rels-5195))
 		(make-op :action 'take-rels-5740
-			:preconds '(arth-5740)
 			:add-list '(rels-5740))
 		(make-op :action 'take-russ-1010
 			:add-list '(russ-1010))
@@ -10000,10 +9783,10 @@
 		(make-op :action 'take-sced-3400
 			:add-list '(sced-3400))
 		(make-op :action 'take-sced-3500
-			:preconds '(sced-3300 sced-4300)
+			:preconds '(sced-4300 sced-3300)
 			:add-list '(sced-3500))
 		(make-op :action 'take-sced-3550
-			:preconds '(sced-3300 sced-4300)
+			:preconds '(sced-4300 sced-3300)
 			:add-list '(sced-3550))
 		(make-op :action 'take-sced-4300
 			:add-list '(sced-4300))
@@ -10061,10 +9844,10 @@
 		(make-op :action 'take-sw-2400
 			:add-list '(sw-2400))
 		(make-op :action 'take-sw-3050
-			:preconds '(sw-1010 sw-2100 sw-2400)
+			:preconds '(sw-2400 sw-2100 sw-1010)
 			:add-list '(sw-3050))
 		(make-op :action 'take-sw-3250
-			:preconds '(sw-1010 sw-2100 sw-2400)
+			:preconds '(sw-2400 sw-2100 sw-1010)
 			:add-list '(sw-3250))
 		(make-op :action 'take-sw-3350
 			:add-list '(sw-3350))
@@ -10082,10 +9865,10 @@
 		(make-op :action 'take-sw-3850
 			:add-list '(sw-3850))
 		(make-op :action 'take-sw-4010
-			:preconds '(span-2020 sw-1010 span-4010 sw-6010)
+			:preconds '(span-4010 sw-1010 span-2020)
 			:add-list '(sw-4010))
 		(make-op :action 'take-sw-4100
-			:preconds '(sw-1010 sw-2100 sw-2400)
+			:preconds '(sw-2400 sw-2100 sw-1010)
 			:add-list '(sw-4100))
 		(make-op :action 'take-sw-4150
 			:preconds '(sw-3050)
@@ -10094,28 +9877,24 @@
 			:preconds '(sw-3050)
 			:add-list '(sw-4160))
 		(make-op :action 'take-sw-4525
-			:preconds '(sw-6525)
 			:add-list '(sw-4525))
 		(make-op :action 'take-sw-4540
-			:preconds '(sw-6540)
 			:add-list '(sw-4540))
 		(make-op :action 'take-sw-4580
-			:preconds '(sw-6580)
 			:add-list '(sw-4580))
 		(make-op :action 'take-sw-4870
 			:add-list '(sw-4870))
 		(make-op :action 'take-sw-4900
-			:preconds '(sw-1010 sw-2100 sw-2400)
+			:preconds '(sw-2400 sw-2100 sw-1010)
 			:add-list '(sw-4900))
 		(make-op :action 'take-sw-4920
-			:preconds '(sw-6920)
 			:add-list '(sw-4920))
 		(make-op :action 'take-sw-4925
 			:add-list '(sw-4925))
 		(make-op :action 'take-sw-4950
 			:add-list '(sw-4950))
 		(make-op :action 'take-sw-5350
-			:preconds '(sw-1010 sw-2100 sw-2400 sw-4150 sw-4160)
+			:preconds '(sw-4160 sw-4150 sw-2400 sw-2100 sw-1010)
 			:add-list '(sw-5350))
 		(make-op :action 'take-sw-5870
 			:preconds '(sw-4870)
@@ -10132,7 +9911,7 @@
 			:preconds '(sw-5905)
 			:add-list '(sw-5906))
 		(make-op :action 'take-sw-5907
-			:preconds '(sw-5905 sw-5906)
+			:preconds '(sw-5906 sw-5905)
 			:add-list '(sw-5907))
 		(make-op :action 'take-cj-4200
 			:add-list '(cj-4200))
@@ -10172,7 +9951,6 @@
 		(make-op :action 'take-soc-3200
 			:add-list '(soc-3200))
 		(make-op :action 'take-soc-3260
-			:preconds '(pols-3260)
 			:add-list '(soc-3260))
 		(make-op :action 'take-soc-3300
 			:add-list '(soc-3300))
@@ -10185,7 +9963,7 @@
 		(make-op :action 'take-soc-3340
 			:add-list '(soc-3340))
 		(make-op :action 'take-soc-3400
-			:preconds '(cj-1010 cj-1330)
+			:preconds '(cj-1330 cj-1010)
 			:add-list '(soc-3400))
 		(make-op :action 'take-soc-3410
 			:add-list '(soc-3410))
@@ -10208,10 +9986,8 @@
 		(make-op :action 'take-soc-4010
 			:add-list '(soc-4010))
 		(make-op :action 'take-soc-4230
-			:preconds '(soc-6230)
 			:add-list '(soc-4230))
 		(make-op :action 'take-soc-4350
-			:preconds '(soc-7350)
 			:add-list '(soc-4350))
 		(make-op :action 'take-soc-4410
 			:preconds '(soc-3420)
@@ -10219,7 +9995,7 @@
 		(make-op :action 'take-soc-4420
 			:add-list '(soc-4420))
 		(make-op :action 'take-soc-4600
-			:preconds '(soc-1010 soc-3010 soc-3110 soc-3120 soc-4010)
+			:preconds '(soc-4010 soc-3120 soc-3110 soc-3010 soc-1010)
 			:add-list '(soc-4600))
 		(make-op :action 'take-soc-4620
 			:add-list '(soc-4620))
@@ -10234,10 +10010,8 @@
 		(make-op :action 'take-soc-5120
 			:add-list '(soc-5120))
 		(make-op :action 'take-soc-5130
-			:preconds '(anth-5130 soc-6130)
 			:add-list '(soc-5130))
 		(make-op :action 'take-soc-5270
-			:preconds '(soc-6270)
 			:add-list '(soc-5270))
 		(make-op :action 'take-soc-5420
 			:add-list '(soc-5420))
@@ -10253,7 +10027,7 @@
 			:preconds '(span-1010)
 			:add-list '(span-1020))
 		(make-op :action 'take-span-1050
-			:preconds '(span-1010 span-1020)
+			:preconds '(span-1020 span-1010)
 			:add-list '(span-1050))
 		(make-op :action 'take-span-1800
 			:add-list '(span-1800))
@@ -10279,7 +10053,7 @@
 			:preconds '(span-2020)
 			:add-list '(span-3060))
 		(make-op :action 'take-span-3061
-			:preconds '(span-3040 span-3060)
+			:preconds '(span-3060 span-3040)
 			:add-list '(span-3061))
 		(make-op :action 'take-span-3081
 			:preconds '(span-3061)
@@ -10340,16 +10114,16 @@
 			:preconds '(span-2020)
 			:add-list '(span-3800))
 		(make-op :action 'take-span-4010
-			:preconds '(span-2020 sw-1010 sw-4010)
+			:preconds '(sw-1010 span-2020)
 			:add-list '(span-4010))
 		(make-op :action 'take-span-4071
-			:preconds '(span-3061 span-3081 span-3082)
+			:preconds '(span-3082 span-3081 span-3061)
 			:add-list '(span-4071))
 		(make-op :action 'take-span-4072
 			:preconds '(span-4071)
 			:add-list '(span-4072))
 		(make-op :action 'take-span-4081
-			:preconds '(span-4071 span-4072)
+			:preconds '(span-4072 span-4071)
 			:add-list '(span-4081))
 		(make-op :action 'take-span-4082
 			:preconds '(span-4072)
@@ -10363,28 +10137,27 @@
 		(make-op :action 'take-span-4880
 			:add-list '(span-4880))
 		(make-op :action 'take-span-4900
-			:preconds '(span-3600 span-3610 span-3620 span-3630 span-3640 span-3650 span-3660)
+			:preconds '(span-3660 span-3650 span-3640 span-3630 span-3620 span-3610 span-3600)
 			:add-list '(span-4900))
 		(make-op :action 'take-span-4910
-			:preconds '(span-3600 span-3610 span-3620 span-3630 span-3640 span-3650 span-3660)
+			:preconds '(span-3660 span-3650 span-3640 span-3630 span-3620 span-3610 span-3600)
 			:add-list '(span-4910))
 		(make-op :action 'take-span-4920
 			:add-list '(span-4920))
 		(make-op :action 'take-span-4930
-			:preconds '(span-3600 span-3610 span-3620 span-3630 span-3640)
+			:preconds '(span-3640 span-3630 span-3620 span-3610 span-3600)
 			:add-list '(span-4930))
 		(make-op :action 'take-span-4940
-			:preconds '(span-3600 span-3610 span-3620 span-3630 span-3640 span-3650 span-3660)
+			:preconds '(span-3660 span-3650 span-3640 span-3630 span-3620 span-3610 span-3600)
 			:add-list '(span-4940))
 		(make-op :action 'take-span-4990
 			:add-list '(span-4990))
 		(make-op :action 'take-span-5060
-			:preconds '(span-3040 span-3060)
+			:preconds '(span-3060 span-3040)
 			:add-list '(span-5060))
 		(make-op :action 'take-sped-1000
 			:add-list '(sped-1000))
 		(make-op :action 'take-sped-1010
-			:preconds '(reh-1010)
 			:add-list '(sped-1010))
 		(make-op :action 'take-sped-2790
 			:add-list '(sped-2790))
@@ -10394,16 +10167,15 @@
 			:preconds '(comd-3200)
 			:add-list '(sped-4000))
 		(make-op :action 'take-sped-4106
-			:preconds '(comd-6660 sped-6106)
 			:add-list '(sped-4106))
 		(make-op :action 'take-sped-4107
-			:preconds '(sped-4106 comd-6660 comd-6840 sped-6107)
+			:preconds '(sped-4106)
 			:add-list '(sped-4107))
 		(make-op :action 'take-sped-4108
-			:preconds '(sped-4106 comd-6660 sped-4107 comd-6840)
+			:preconds '(sped-4107 sped-4106)
 			:add-list '(sped-4108))
 		(make-op :action 'take-sped-4109
-			:preconds '(sped-4106 comd-6660 sped-4107 comd-6840 comd-6890 sped-6109)
+			:preconds '(sped-4107 sped-4106)
 			:add-list '(sped-4109))
 		(make-op :action 'take-sped-4300
 			:add-list '(sped-4300))
@@ -10414,50 +10186,50 @@
 		(make-op :action 'take-sped-4970
 			:add-list '(sped-4970))
 		(make-op :action 'take-sped-5010
-			:preconds '(sped-4000 sped-5030 sped-5040)
+			:preconds '(sped-5040 sped-5030 sped-4000)
 			:add-list '(sped-5010))
 		(make-op :action 'take-sped-5011
 			:add-list '(sped-5011))
 		(make-op :action 'take-sped-5012
 			:add-list '(sped-5012))
 		(make-op :action 'take-sped-5013
-			:preconds '(sped-5011 sped-5012 sped-5014)
+			:preconds '(sped-5014 sped-5012 sped-5011)
 			:add-list '(sped-5013))
 		(make-op :action 'take-sped-5014
-			:preconds '(sped-5011 sped-5012)
+			:preconds '(sped-5012 sped-5011)
 			:add-list '(sped-5014))
 		(make-op :action 'take-sped-5015
-			:preconds '(sped-5011 sped-5012 sped-5014)
+			:preconds '(sped-5014 sped-5012 sped-5011)
 			:add-list '(sped-5015))
 		(make-op :action 'take-sped-5016
-			:preconds '(sped-5011 sped-5012 sped-5014 sped-5015)
+			:preconds '(sped-5015 sped-5014 sped-5012 sped-5011)
 			:add-list '(sped-5016))
 		(make-op :action 'take-sped-5017
-			:preconds '(sped-5013 sped-5016 sped-5018)
+			:preconds '(sped-5018 sped-5016 sped-5013)
 			:add-list '(sped-5017))
 		(make-op :action 'take-sped-5018
-			:preconds '(sped-5011 sped-5012)
+			:preconds '(sped-5012 sped-5011)
 			:add-list '(sped-5018))
 		(make-op :action 'take-sped-5030
 			:add-list '(sped-5030))
 		(make-op :action 'take-sped-5040
 			:add-list '(sped-5040))
 		(make-op :action 'take-sped-5050
-			:preconds '(sped-5010 sped-5070)
+			:preconds '(sped-5070 sped-5010)
 			:add-list '(sped-5050))
 		(make-op :action 'take-sped-5060
-			:preconds '(sped-5010 sped-5070)
+			:preconds '(sped-5070 sped-5010)
 			:add-list '(sped-5060))
 		(make-op :action 'take-sped-5070
-			:preconds '(sped-4000 sped-5040)
+			:preconds '(sped-5040 sped-4000)
 			:add-list '(sped-5070))
 		(make-op :action 'take-sped-5080
-			:preconds '(sped-5010 sped-5070)
+			:preconds '(sped-5070 sped-5010)
 			:add-list '(sped-5080))
 		(make-op :action 'take-sped-5105
 			:add-list '(sped-5105))
 		(make-op :action 'take-sped-5110
-			:preconds '(sped-5010 sped-5070 sped-5105 sped-5140 sped-5170 sped-5180)
+			:preconds '(sped-5180 sped-5170 sped-5140 sped-5105 sped-5070 sped-5010)
 			:add-list '(sped-5110))
 		(make-op :action 'take-sped-5120
 			:preconds '(sped-5105)
@@ -10469,101 +10241,101 @@
 			:preconds '(sped-5105)
 			:add-list '(sped-5130))
 		(make-op :action 'take-sped-5135
-			:preconds '(sped-5010 sped-5070 sped-5140 sped-5170 sped-5180)
+			:preconds '(sped-5180 sped-5170 sped-5140 sped-5070 sped-5010)
 			:add-list '(sped-5135))
 		(make-op :action 'take-sped-5140
-			:preconds '(sped-4000 sped-5040 sped-5120 sped-5130)
+			:preconds '(sped-5130 sped-5120 sped-5040 sped-4000)
 			:add-list '(sped-5140))
 		(make-op :action 'take-sped-5150
-			:preconds '(sped-5010 sped-5070 sped-5140 sped-5170 sped-5180)
+			:preconds '(sped-5180 sped-5170 sped-5140 sped-5070 sped-5010)
 			:add-list '(sped-5150))
 		(make-op :action 'take-sped-5160
-			:preconds '(sped-5010 sped-5070 sped-5140 sped-5170 sped-5180)
+			:preconds '(sped-5180 sped-5170 sped-5140 sped-5070 sped-5010)
 			:add-list '(sped-5160))
 		(make-op :action 'take-sped-5170
-			:preconds '(sped-4000 sped-5040 sped-5120 sped-5130)
+			:preconds '(sped-5130 sped-5120 sped-5040 sped-4000)
 			:add-list '(sped-5170))
 		(make-op :action 'take-sped-5175
-			:preconds '(sped-5010 sped-5070 sped-5140 sped-5170 sped-5180)
+			:preconds '(sped-5180 sped-5170 sped-5140 sped-5070 sped-5010)
 			:add-list '(sped-5175))
 		(make-op :action 'take-sped-5180
-			:preconds '(sped-5130 sped-5170)
+			:preconds '(sped-5170 sped-5130)
 			:add-list '(sped-5180))
 		(make-op :action 'take-sped-5190
-			:preconds '(sped-5010 sped-5070 sped-5140 sped-5170 sped-5180)
+			:preconds '(sped-5180 sped-5170 sped-5140 sped-5070 sped-5010)
 			:add-list '(sped-5190))
 		(make-op :action 'take-sped-5200
 			:add-list '(sped-5200))
 		(make-op :action 'take-sped-5210
 			:add-list '(sped-5210))
 		(make-op :action 'take-sped-5220
-			:preconds '(sped-5200 sped-5210)
+			:preconds '(sped-5210 sped-5200)
 			:add-list '(sped-5220))
 		(make-op :action 'take-sped-5230
 			:add-list '(sped-5230))
 		(make-op :action 'take-sped-5310
-			:preconds '(eled-3100 sped-4000 sped-5040)
+			:preconds '(sped-5040 sped-4000 eled-3100)
 			:add-list '(sped-5310))
 		(make-op :action 'take-sped-5311
 			:add-list '(sped-5311))
 		(make-op :action 'take-sped-5312
-			:preconds '(sped-5011 sped-5012 sped-5311 sped-5415)
+			:preconds '(sped-5415 sped-5311 sped-5012 sped-5011)
 			:add-list '(sped-5312))
 		(make-op :action 'take-sped-5320
-			:preconds '(sped-5010 sped-5070 sped-5310 sped-5340 sped-5410)
+			:preconds '(sped-5410 sped-5340 sped-5310 sped-5070 sped-5010)
 			:add-list '(sped-5320))
 		(make-op :action 'take-sped-5330
-			:preconds '(eled-3100 sped-4000 sped-5040 teal-2660)
+			:preconds '(teal-2660 sped-5040 sped-4000 eled-3100)
 			:add-list '(sped-5330))
 		(make-op :action 'take-sped-5340
-			:preconds '(eled-3100 sped-4000 sped-5040 teal-2660)
+			:preconds '(teal-2660 sped-5040 sped-4000 eled-3100)
 			:add-list '(sped-5340))
 		(make-op :action 'take-sped-5350
 			:add-list '(sped-5350))
 		(make-op :action 'take-sped-5360
 			:add-list '(sped-5360))
 		(make-op :action 'take-sped-5410
-			:preconds '(eled-3100 sped-4000 sped-5040)
+			:preconds '(sped-5040 sped-4000 eled-3100)
 			:add-list '(sped-5410))
 		(make-op :action 'take-sped-5415
 			:add-list '(sped-5415))
 		(make-op :action 'take-sped-5420
-			:preconds '(sped-5010 sped-5070 sped-5310 sped-5340 sped-5410)
+			:preconds '(sped-5410 sped-5340 sped-5310 sped-5070 sped-5010)
 			:add-list '(sped-5420))
 		(make-op :action 'take-sped-5425
-			:preconds '(sped-5011 sped-5012 sped-5311 sped-5415)
+			:preconds '(sped-5415 sped-5311 sped-5012 sped-5011)
 			:add-list '(sped-5425))
 		(make-op :action 'take-sped-5430
 			:add-list '(sped-5430))
 		(make-op :action 'take-sped-5500
 			:add-list '(sped-5500))
 		(make-op :action 'take-sped-5510
-			:preconds '(eled-3100 sped-4000 sped-5040)
+			:preconds '(sped-5040 sped-4000 eled-3100)
 			:add-list '(sped-5510))
 		(make-op :action 'take-sped-5511
 			:add-list '(sped-5511))
 		(make-op :action 'take-sped-5512
-			:preconds '(sped-5011 sped-5012 sped-5511 sped-5615)
+			:preconds '(sped-5615 sped-5511 sped-5012 sped-5011)
 			:add-list '(sped-5512))
 		(make-op :action 'take-sped-5520
-			:preconds '(sped-5010 sped-5070 sped-5510 sped-5600)
+			:preconds '(sped-5600 sped-5510 sped-5070 sped-5010)
 			:add-list '(sped-5520))
 		(make-op :action 'take-sped-5530
-			:preconds '(sped-5010 sped-5070)
+			:preconds '(sped-5070 sped-5010)
 			:add-list '(sped-5530))
 		(make-op :action 'take-sped-5540
-			:preconds '(eled-3100 sped-4000 sped-5040 teal-2660)
+			:preconds '(teal-2660 sped-5040 sped-4000 eled-3100)
 			:add-list '(sped-5540))
 		(make-op :action 'take-sped-5600
-			:preconds '(eled-3100 sped-4000 sped-5040)
+			:preconds '(sped-5040 sped-4000 eled-3100)
 			:add-list '(sped-5600))
 		(make-op :action 'take-sped-5610
-			:preconds '(sped-5010 sped-5070 sped-5510 sped-5600)
+			:preconds '(sped-5600 sped-5510 sped-5070 sped-5010)
 			:add-list '(sped-5610))
 		(make-op :action 'take-sped-5615
 			:add-list '(sped-5615))
 		(make-op :action 'take-sped-5625
-			:preconds '(sped-5011 sped-5012 sped-5511 sped-5615)
+			:preconds '(sped-5615 sped-5511 sped-5012 sped-5011)
 			:add-list '(sped-5625))
 		(make-op :action 'take-sped-5630
 			:add-list '(sped-5630))
@@ -10571,64 +10343,64 @@
 			:preconds '(sped-5630)
 			:add-list '(sped-5640))
 		(make-op :action 'take-sped-5710
-			:preconds '(hdfs-2600 hdfs-2630 hdfs-3500 sped-4000 sped-5040)
+			:preconds '(sped-5040 sped-4000 hdfs-3500 hdfs-2630 hdfs-2600)
 			:add-list '(sped-5710))
 		(make-op :action 'take-sped-5711
 			:add-list '(sped-5711))
 		(make-op :action 'take-sped-5712
-			:preconds '(sped-5011 sped-5012 sped-5711)
+			:preconds '(sped-5711 sped-5012 sped-5011)
 			:add-list '(sped-5712))
 		(make-op :action 'take-sped-5713
-			:preconds '(sped-5014 sped-5712 sped-5714)
+			:preconds '(sped-5714 sped-5712 sped-5014)
 			:add-list '(sped-5713))
 		(make-op :action 'take-sped-5714
-			:preconds '(sped-5011 sped-5012 sped-5711)
+			:preconds '(sped-5711 sped-5012 sped-5011)
 			:add-list '(sped-5714))
 		(make-op :action 'take-sped-5790
 			:add-list '(sped-5790))
 		(make-op :action 'take-sped-5810
-			:preconds '(hdfs-2600 hdfs-2630 hdfs-3500 sped-4000 sped-5040)
+			:preconds '(sped-5040 sped-4000 hdfs-3500 hdfs-2630 hdfs-2600)
 			:add-list '(sped-5810))
 		(make-op :action 'take-sped-5820
-			:preconds '(sped-5010 sped-5070 sped-5310 sped-5710 sped-5810 sped-5840)
+			:preconds '(sped-5840 sped-5810 sped-5710 sped-5310 sped-5070 sped-5010)
 			:add-list '(sped-5820))
 		(make-op :action 'take-sped-5840
-			:preconds '(hdfs-2600 hdfs-2630 sped-4000 sped-5040)
+			:preconds '(sped-5040 sped-4000 hdfs-2630 hdfs-2600)
 			:add-list '(sped-5840))
 		(make-op :action 'take-sped-5880
-			:preconds '(hdfs-2600 hdfs-2630 sped-4000 sped-5040)
+			:preconds '(sped-5040 sped-4000 hdfs-2630 hdfs-2600)
 			:add-list '(sped-5880))
 		(make-op :action 'take-sped-5900
 			:add-list '(sped-5900))
 		(make-op :action 'take-sped-5910
 			:add-list '(sped-5910))
 		(make-op :action 'take-sped-5920
-			:preconds '(sped-5710 sped-5810)
+			:preconds '(sped-5810 sped-5710)
 			:add-list '(sped-5920))
 		(make-op :action 'take-stat-1040
-			:preconds '(math-1050 math-1100)
+			:preconds '(math-1100 math-1050)
 			:add-list '(stat-1040))
 		(make-op :action 'take-stat-1045
 			:preconds '(math-1050)
 			:add-list '(stat-1045))
 		(make-op :action 'take-stat-1080
-			:preconds '(math-1050 math-1100)
+			:preconds '(math-1100 math-1050)
 			:add-list '(stat-1080))
 		(make-op :action 'take-stat-2000
-			:preconds '(math-1050 math-1100)
+			:preconds '(math-1100 math-1050)
 			:add-list '(stat-2000))
 		(make-op :action 'take-stat-2250
 			:add-list '(stat-2250))
 		(make-op :action 'take-stat-2300
-			:preconds '(math-1050 math-1100)
+			:preconds '(math-1100 math-1050)
 			:add-list '(stat-2300))
 		(make-op :action 'take-stat-2950
 			:add-list '(stat-2950))
 		(make-op :action 'take-stat-3000
-			:preconds '(math-1100 math-1210)
+			:preconds '(math-1210 math-1100)
 			:add-list '(stat-3000))
 		(make-op :action 'take-stat-3080
-			:preconds '(math-1100 math-1210)
+			:preconds '(math-1210 math-1100)
 			:add-list '(stat-3080))
 		(make-op :action 'take-stat-4010
 			:preconds '(stat-3000)
@@ -10636,7 +10408,7 @@
 		(make-op :action 'take-stat-4250
 			:add-list '(stat-4250))
 		(make-op :action 'take-stat-4500
-			:preconds '(math-3110 math-4200 math-4310 stat-2000 stat-3000 math-4500)
+			:preconds '(math-4500 stat-3000 stat-2000 math-4310 math-4200 math-3110)
 			:add-list '(stat-4500))
 		(make-op :action 'take-stat-4950
 			:add-list '(stat-4950))
@@ -10644,49 +10416,48 @@
 			:preconds '(stat-2000)
 			:add-list '(stat-5050))
 		(make-op :action 'take-stat-5080
-			:preconds '(stat-3000 stat-5100 stat-5050 stat-5550 stat-6080)
+			:preconds '(stat-5550 stat-5050 stat-5100 stat-3000)
 			:add-list '(stat-5080))
 		(make-op :action 'take-stat-5100
-			:preconds '(stat-2000 stat-3000)
+			:preconds '(stat-3000 stat-2000)
 			:add-list '(stat-5100))
 		(make-op :action 'take-stat-5120
 			:preconds '(stat-5100)
 			:add-list '(stat-5120))
 		(make-op :action 'take-stat-5150
-			:preconds '(stat-5650 stat-6150)
+			:preconds '(stat-5650)
 			:add-list '(stat-5150))
 		(make-op :action 'take-stat-5170
-			:preconds '(stat-5100 stat-5050 stat-6170)
+			:preconds '(stat-5050 stat-5100)
 			:add-list '(stat-5170))
 		(make-op :action 'take-stat-5200
-			:preconds '(stat-2000 stat-2300 stat-3000)
+			:preconds '(stat-3000 stat-2300 stat-2000)
 			:add-list '(stat-5200))
 		(make-op :action 'take-stat-5410
-			:preconds '(stat-3000 stat-5100 stat-5050 stat-5550 stat-5560 stat-6560 stat-6410)
+			:preconds '(stat-5560 stat-5550 stat-5050 stat-5100 stat-3000)
 			:add-list '(stat-5410))
 		(make-op :action 'take-stat-5500
-			:preconds '(stat-5100 stat-5200 stat-6500)
+			:preconds '(stat-5200 stat-5100)
 			:add-list '(stat-5500))
 		(make-op :action 'take-stat-5550
 			:preconds '(stat-5050)
 			:add-list '(stat-5550))
 		(make-op :action 'take-stat-5555
-			:preconds '(stat-5050 stat-6555)
+			:preconds '(stat-5050)
 			:add-list '(stat-5555))
 		(make-op :action 'take-stat-5560
-			:preconds '(stat-5050 stat-5550 stat-6560)
+			:preconds '(stat-5550 stat-5050)
 			:add-list '(stat-5560))
 		(make-op :action 'take-stat-5570
-			:preconds '(stat-5100 stat-5200 stat-6570)
+			:preconds '(stat-5200 stat-5100)
 			:add-list '(stat-5570))
 		(make-op :action 'take-stat-5645
-			:preconds '(math-1210 stat-3000 math-5710 math-1220 math-2270 math-5645 stat-6645)
+			:preconds '(math-2270 math-1220 math-5710 stat-3000 math-1210)
 			:add-list '(stat-5645))
 		(make-op :action 'take-stat-5650
 			:preconds '(stat-5100)
 			:add-list '(stat-5650))
 		(make-op :action 'take-stat-5685
-			:preconds '(stat-6685)
 			:add-list '(stat-5685))
 		(make-op :action 'take-stat-5810
 			:add-list '(stat-5810))
@@ -10738,100 +10509,86 @@
 		(make-op :action 'take-teal-1010
 			:add-list '(teal-1010))
 		(make-op :action 'take-teal-2660
-			:preconds '(hdfs-1500 eled-1010 teal-1010)
+			:preconds '(teal-1010 eled-1010 hdfs-1500)
 			:add-list '(teal-2660))
 		(make-op :action 'take-teal-3780
-			:preconds '(hist-3780)
 			:add-list '(teal-3780))
 		(make-op :action 'take-teal-4530
-			:preconds '(teal-6530)
 			:add-list '(teal-4530))
 		(make-op :action 'take-teal-4600
-			:preconds '(teal-6600)
 			:add-list '(teal-4600))
 		(make-op :action 'take-teal-4610
-			:preconds '(teal-6610)
 			:add-list '(teal-4610))
 		(make-op :action 'take-teal-4620
-			:preconds '(teal-6620)
 			:add-list '(teal-4620))
 		(make-op :action 'take-teal-4630
-			:preconds '(eled-4062 eled-4063 math-1210 teal-6630)
+			:preconds '(math-1210 eled-4063 eled-4062)
 			:add-list '(teal-4630))
 		(make-op :action 'take-teal-4730
 			:add-list '(teal-4730))
 		(make-op :action 'take-teal-4745
 			:add-list '(teal-4745))
 		(make-op :action 'take-teal-4755
-			:preconds '(teal-6755)
 			:add-list '(teal-4755))
 		(make-op :action 'take-teal-4760
 			:add-list '(teal-4760))
 		(make-op :action 'take-teal-4770
-			:preconds '(teal-6770)
 			:add-list '(teal-4770))
 		(make-op :action 'take-teal-4780
-			:preconds '(teal-6780)
 			:add-list '(teal-4780))
 		(make-op :action 'take-teal-4790
-			:preconds '(teal-6790)
 			:add-list '(teal-4790))
 		(make-op :action 'take-teal-4900
 			:add-list '(teal-4900))
 		(make-op :action 'take-teal-5030
 			:add-list '(teal-5030))
 		(make-op :action 'take-teal-5080
-			:preconds '(art-3700 musc-3260 thea-3320 thea-3330 thea-3340 thea-3380)
+			:preconds '(thea-3380 thea-3340 thea-3330 thea-3320 musc-3260 art-3700)
 			:add-list '(teal-5080))
 		(make-op :action 'take-teal-5205
 			:add-list '(teal-5205))
 		(make-op :action 'take-teal-5215
-			:preconds '(eled-4020 eled-4056)
+			:preconds '(eled-4056 eled-4020)
 			:add-list '(teal-5215))
 		(make-op :action 'take-teal-5230
 			:add-list '(teal-5230))
 		(make-op :action 'take-teal-5235
-			:preconds '(eled-4030 eled-4040 eled-4042)
+			:preconds '(eled-4042 eled-4040 eled-4030)
 			:add-list '(teal-5235))
 		(make-op :action 'take-teal-5320
 			:add-list '(teal-5320))
 		(make-op :action 'take-teal-5380
 			:add-list '(teal-5380))
 		(make-op :action 'take-teal-5390
-			:preconds '(eled-4030 eled-4040 eled-4042)
+			:preconds '(eled-4042 eled-4040 eled-4030)
 			:add-list '(teal-5390))
 		(make-op :action 'take-teal-5420
-			:preconds '(teal-6420)
 			:add-list '(teal-5420))
 		(make-op :action 'take-teal-5440
 			:add-list '(teal-5440))
 		(make-op :action 'take-teal-5450
-			:preconds '(teal-6450)
 			:add-list '(teal-5450))
 		(make-op :action 'take-teal-5460
-			:preconds '(teal-6460)
 			:add-list '(teal-5460))
 		(make-op :action 'take-teal-5480
-			:preconds '(teal-6480)
 			:add-list '(teal-5480))
 		(make-op :action 'take-teal-5500
 			:add-list '(teal-5500))
 		(make-op :action 'take-teal-5521
-			:preconds '(eled-4062 eled-4056)
+			:preconds '(eled-4056 eled-4062)
 			:add-list '(teal-5521))
 		(make-op :action 'take-teal-5523
-			:preconds '(eled-4062 eled-4056)
+			:preconds '(eled-4056 eled-4062)
 			:add-list '(teal-5523))
 		(make-op :action 'take-teal-5560
-			:preconds '(educ-5560 educ-6560 teal-6560)
 			:add-list '(teal-5560))
 		(make-op :action 'take-teal-5630
 			:add-list '(teal-5630))
 		(make-op :action 'take-teal-5710
-			:preconds '(eled-3000 eled-3001)
+			:preconds '(eled-3001 eled-3000)
 			:add-list '(teal-5710))
 		(make-op :action 'take-teal-5711
-			:preconds '(eled-3000 eled-3001)
+			:preconds '(eled-3001 eled-3000)
 			:add-list '(teal-5711))
 		(make-op :action 'take-teal-5730
 			:add-list '(teal-5730))
@@ -10901,10 +10658,10 @@
 		(make-op :action 'take-tee-2200
 			:add-list '(tee-2200))
 		(make-op :action 'take-tee-2220
-			:preconds '(tee-1200 math-1050)
+			:preconds '(math-1050 tee-1200)
 			:add-list '(tee-2220))
 		(make-op :action 'take-tee-2240
-			:preconds '(tee-2310 tee-2400)
+			:preconds '(tee-2400 tee-2310)
 			:add-list '(tee-2240))
 		(make-op :action 'take-tee-2300
 			:add-list '(tee-2300))
@@ -10924,13 +10681,13 @@
 			:preconds '(tee-2310)
 			:add-list '(tee-2400))
 		(make-op :action 'take-tee-2660
-			:preconds '(math-1060 tee-1200)
+			:preconds '(tee-1200 math-1060)
 			:add-list '(tee-2660))
 		(make-op :action 'take-tee-2850
-			:preconds '(math-1050 math-1060)
+			:preconds '(math-1060 math-1050)
 			:add-list '(tee-2850))
 		(make-op :action 'take-tee-3030
-			:preconds '(tee-1030 tesy-1030 tee-1200 tesy-1200 mae-1200 eddt-2620 tesy-3030)
+			:preconds '(tesy-3030 eddt-2620 mae-1200 tesy-1200 tee-1200 tesy-1030 tee-1030)
 			:add-list '(tee-3030))
 		(make-op :action 'take-tee-3040
 			:add-list '(tee-3040))
@@ -10939,31 +10696,30 @@
 		(make-op :action 'take-tee-3070
 			:add-list '(tee-3070))
 		(make-op :action 'take-tee-3200
-			:preconds '(tee-1000 tee-3300)
+			:preconds '(tee-3300 tee-1000)
 			:add-list '(tee-3200))
 		(make-op :action 'take-tee-3230
-			:preconds '(tee-1200 math-1050)
+			:preconds '(math-1050 tee-1200)
 			:add-list '(tee-3230))
 		(make-op :action 'take-tee-3240
 			:preconds '(tee-1200)
 			:add-list '(tee-3240))
 		(make-op :action 'take-tee-3270
-			:preconds '(tee-1200 tesy-1200 tesy-3270)
+			:preconds '(tesy-3270 tesy-1200 tee-1200)
 			:add-list '(tee-3270))
 		(make-op :action 'take-tee-3300
-			:preconds '(tee-1000 tee-3200)
+			:preconds '(tee-1000)
 			:add-list '(tee-3300))
 		(make-op :action 'take-tee-3380
-			:preconds '(tee-2240 tee-2370)
+			:preconds '(tee-2370 tee-2240)
 			:add-list '(tee-3380))
 		(make-op :action 'take-tee-3390
 			:preconds '(tee-3380)
 			:add-list '(tee-3390))
 		(make-op :action 'take-tee-3400
-			:preconds '(tee-2300 tee-2400)
+			:preconds '(tee-2400 tee-2300)
 			:add-list '(tee-3400))
 		(make-op :action 'take-tee-3440
-			:preconds '(aste-3440)
 			:add-list '(tee-3440))
 		(make-op :action 'take-tee-3510
 			:add-list '(tee-3510))
@@ -10977,22 +10733,20 @@
 		(make-op :action 'take-tee-3930
 			:add-list '(tee-3930))
 		(make-op :action 'take-tee-4210
-			:preconds '(aste-4210 bsed-4210 fcse-4210)
 			:add-list '(tee-4210))
 		(make-op :action 'take-tee-4230
-			:preconds '(tee-1030 tesy-1030 tesy-4230)
+			:preconds '(tesy-4230 tesy-1030 tee-1030)
 			:add-list '(tee-4230))
 		(make-op :action 'take-tee-4300
-			:preconds '(tee-3200 tee-3300 tee-4400)
+			:preconds '(tee-4400 tee-3300 tee-3200)
 			:add-list '(tee-4300))
 		(make-op :action 'take-tee-4310
-			:preconds '(chem-1110 math-1060 tee-6310)
+			:preconds '(math-1060 chem-1110)
 			:add-list '(tee-4310))
 		(make-op :action 'take-tee-4400
-			:preconds '(tee-3200 tee-3300 tee-4300)
+			:preconds '(tee-3300 tee-3200)
 			:add-list '(tee-4400))
 		(make-op :action 'take-tee-4440
-			:preconds '(aste-6440 tee-6440)
 			:add-list '(tee-4440))
 		(make-op :action 'take-tee-4700
 			:add-list '(tee-4700))
@@ -11010,7 +10764,7 @@
 			:preconds '(tee-2200)
 			:add-list '(tee-5200))
 		(make-op :action 'take-tee-5220
-			:preconds '(tee-3200 tee-3300)
+			:preconds '(tee-3300 tee-3200)
 			:add-list '(tee-5220))
 		(make-op :action 'take-tee-5230
 			:add-list '(tee-5230))
@@ -11020,7 +10774,6 @@
 			:preconds '(tee-5630)
 			:add-list '(tee-5500))
 		(make-op :action 'take-tee-5630
-			:preconds '(tee-5500)
 			:add-list '(tee-5630))
 		(make-op :action 'take-tee-5800
 			:add-list '(tee-5800))
@@ -11035,7 +10788,6 @@
 		(make-op :action 'take-tesy-1030
 			:add-list '(tesy-1030))
 		(make-op :action 'take-tesy-1200
-			:preconds '(tee-1200)
 			:add-list '(tesy-1200))
 		(make-op :action 'take-tesy-2250
 			:add-list '(tesy-2250))
@@ -11046,7 +10798,7 @@
 		(make-op :action 'take-tesy-3020
 			:add-list '(tesy-3020))
 		(make-op :action 'take-tesy-3030
-			:preconds '(tee-1030 tesy-1030 tee-1200 tesy-1200 mae-1200 eddt-2620 tee-3030)
+			:preconds '(eddt-2620 mae-1200 tesy-1200 tee-1200 tesy-1030 tee-1030)
 			:add-list '(tesy-3030))
 		(make-op :action 'take-tesy-3040
 			:preconds '(tesy-1200)
@@ -11056,12 +10808,12 @@
 		(make-op :action 'take-tesy-3120
 			:add-list '(tesy-3120))
 		(make-op :action 'take-tesy-3200
-			:preconds '(tee-1200 mae-1200)
+			:preconds '(mae-1200 tee-1200)
 			:add-list '(tesy-3200))
 		(make-op :action 'take-tesy-3210
 			:add-list '(tesy-3210))
 		(make-op :action 'take-tesy-3270
-			:preconds '(tee-1200 tesy-1200 tee-3270)
+			:preconds '(tesy-1200 tee-1200)
 			:add-list '(tesy-3270))
 		(make-op :action 'take-tesy-3300
 			:add-list '(tesy-3300))
@@ -11070,7 +10822,7 @@
 		(make-op :action 'take-tesy-4000
 			:add-list '(tesy-4000))
 		(make-op :action 'take-tesy-4230
-			:preconds '(tee-1030 tesy-1030 tee-4230)
+			:preconds '(tesy-1030 tee-1030)
 			:add-list '(tesy-4230))
 		(make-op :action 'take-tesy-4250
 			:add-list '(tesy-4250))
@@ -11128,7 +10880,7 @@
 		(make-op :action 'take-thea-1000
 			:add-list '(thea-1000))
 		(make-op :action 'take-thea-1010
-			:preconds '(thea-1000 thea-1713)
+			:preconds '(thea-1713 thea-1000)
 			:add-list '(thea-1010))
 		(make-op :action 'take-thea-1013
 			:add-list '(thea-1013))
@@ -11139,10 +10891,10 @@
 		(make-op :action 'take-thea-1050
 			:add-list '(thea-1050))
 		(make-op :action 'take-thea-1113
-			:preconds '(thea-1000 thea-1713)
+			:preconds '(thea-1713 thea-1000)
 			:add-list '(thea-1113))
 		(make-op :action 'take-thea-1210
-			:preconds '(thea-1000 thea-1713)
+			:preconds '(thea-1713 thea-1000)
 			:add-list '(thea-1210))
 		(make-op :action 'take-thea-1223
 			:add-list '(thea-1223))
@@ -11153,7 +10905,7 @@
 		(make-op :action 'take-thea-1713
 			:add-list '(thea-1713))
 		(make-op :action 'take-thea-2000
-			:preconds '(thea-1000 thea-1010)
+			:preconds '(thea-1010 thea-1000)
 			:add-list '(thea-2000))
 		(make-op :action 'take-thea-2010
 			:preconds '(thea-2000)
@@ -11162,7 +10914,7 @@
 			:preconds '(thea-1033 thea-1033)
 			:add-list '(thea-2033))
 		(make-op :action 'take-thea-2100
-			:preconds '(thea-1113 thea-1713)
+			:preconds '(thea-1713 thea-1113)
 			:add-list '(thea-2100))
 		(make-op :action 'take-thea-2110
 			:preconds '(thea-2100)
@@ -11186,21 +10938,21 @@
 		(make-op :action 'take-thea-2510
 			:add-list '(thea-2510))
 		(make-op :action 'take-thea-2520
-			:preconds '(thea-1513 thea-1713)
+			:preconds '(thea-1713 thea-1513)
 			:add-list '(thea-2520))
 		(make-op :action 'take-thea-2530
 			:add-list '(thea-2530))
 		(make-op :action 'take-thea-2540
-			:preconds '(thea-1513 thea-1713)
+			:preconds '(thea-1713 thea-1513)
 			:add-list '(thea-2540))
 		(make-op :action 'take-thea-2550
-			:preconds '(thea-1000 thea-1033 thea-1513 thea-1713)
+			:preconds '(thea-1713 thea-1513 thea-1033 thea-1000)
 			:add-list '(thea-2550))
 		(make-op :action 'take-thea-2555
-			:preconds '(thea-1513 thea-2203)
+			:preconds '(thea-2203 thea-1513)
 			:add-list '(thea-2555))
 		(make-op :action 'take-thea-2560
-			:preconds '(thea-1513 thea-1713)
+			:preconds '(thea-1713 thea-1513)
 			:add-list '(thea-2560))
 		(make-op :action 'take-thea-2570
 			:preconds '(thea-1513)
@@ -11211,7 +10963,7 @@
 			:preconds '(thea-2203)
 			:add-list '(thea-2580))
 		(make-op :action 'take-thea-2610
-			:preconds '(thea-1000 thea-1033 thea-1713)
+			:preconds '(thea-1713 thea-1033 thea-1000)
 			:add-list '(thea-2610))
 		(make-op :action 'take-thea-2666
 			:add-list '(thea-2666))
@@ -11246,7 +10998,7 @@
 		(make-op :action 'take-thea-3300
 			:add-list '(thea-3300))
 		(make-op :action 'take-thea-3320
-			:preconds '(eled-3000 eled-3001)
+			:preconds '(eled-3001 eled-3000)
 			:add-list '(thea-3320))
 		(make-op :action 'take-thea-3330
 			:add-list '(thea-3330))
@@ -11255,10 +11007,10 @@
 		(make-op :action 'take-thea-3380
 			:add-list '(thea-3380))
 		(make-op :action 'take-thea-3500
-			:preconds '(thea-1513 thea-2500)
+			:preconds '(thea-2500 thea-1513)
 			:add-list '(thea-3500))
 		(make-op :action 'take-thea-3550
-			:preconds '(thea-1513 thea-1713)
+			:preconds '(thea-1713 thea-1513)
 			:add-list '(thea-3550))
 		(make-op :action 'take-thea-3560
 			:add-list '(thea-3560))
@@ -11267,14 +11019,14 @@
 		(make-op :action 'take-thea-3580
 			:add-list '(thea-3580))
 		(make-op :action 'take-thea-3610
-			:preconds '(thea-1713 thea-1033 thea-1000)
+			:preconds '(thea-1000 thea-1033 thea-1713)
 			:add-list '(thea-3610))
 		(make-op :action 'take-thea-3710
 			:add-list '(thea-3710))
 		(make-op :action 'take-thea-3720
 			:add-list '(thea-3720))
 		(make-op :action 'take-thea-4000
-			:preconds '(thea-3010 thea-3030)
+			:preconds '(thea-3030 thea-3010)
 			:add-list '(thea-4000))
 		(make-op :action 'take-thea-4010
 			:preconds '(thea-3030)
@@ -11289,7 +11041,6 @@
 			:preconds '(thea-3300)
 			:add-list '(thea-4300))
 		(make-op :action 'take-thea-4320
-			:preconds '(thea-6320)
 			:add-list '(thea-4320))
 		(make-op :action 'take-thea-4340
 			:preconds '(thea-3340)
@@ -11298,7 +11049,7 @@
 			:preconds '(thea-1713)
 			:add-list '(thea-4350))
 		(make-op :action 'take-thea-4360
-			:preconds '(thea-3380 thea-3340 thea-4340)
+			:preconds '(thea-4340 thea-3340 thea-3380)
 			:add-list '(thea-4360))
 		(make-op :action 'take-thea-4520
 			:preconds '(thea-2520)
@@ -11309,13 +11060,13 @@
 		(make-op :action 'take-thea-4550
 			:add-list '(thea-4550))
 		(make-op :action 'take-thea-4555
-			:preconds '(thea-1513 thea-1713 thea-2203)
+			:preconds '(thea-2203 thea-1713 thea-1513)
 			:add-list '(thea-4555))
 		(make-op :action 'take-thea-4560
-			:preconds '(thea-2500 thea-2560)
+			:preconds '(thea-2560 thea-2500)
 			:add-list '(thea-4560))
 		(make-op :action 'take-thea-4710
-			:preconds '(thea-3710 thea-3720)
+			:preconds '(thea-3720 thea-3710)
 			:add-list '(thea-4710))
 		(make-op :action 'take-thea-4720
 			:add-list '(thea-4720))
@@ -11323,26 +11074,26 @@
 			:preconds '(thea-4720)
 			:add-list '(thea-4730))
 		(make-op :action 'take-thea-4760
-			:preconds '(thea-1713 engl-2010 engl-4250)
+			:preconds '(engl-2010 thea-1713)
 			:add-list '(thea-4760))
 		(make-op :action 'take-thea-4820
-			:preconds '(thea-1000 thea-1033 thea-1713)
+			:preconds '(thea-1713 thea-1033 thea-1000)
 			:add-list '(thea-4820))
 		(make-op :action 'take-thea-4860
-			:preconds '(thea-4760 engl-4250)
+			:preconds '(engl-4250 thea-4760)
 			:add-list '(thea-4860))
 		(make-op :action 'take-thea-5310
 			:add-list '(thea-5310))
 		(make-op :action 'take-thea-5390
 			:add-list '(thea-5390))
 		(make-op :action 'take-thea-5550
-			:preconds '(thea-2560 thea-2520)
+			:preconds '(thea-2520 thea-2560)
 			:add-list '(thea-5550))
 		(make-op :action 'take-thea-5590
-			:preconds '(thea-4560 thea-4520 thea-4540 thea-6590)
+			:preconds '(thea-4540 thea-4520 thea-4560)
 			:add-list '(thea-5590))
 		(make-op :action 'take-thea-5610
-			:preconds '(thea-3610 thea-3710 thea-3720)
+			:preconds '(thea-3720 thea-3710 thea-3610)
 			:add-list '(thea-5610))
 		(make-op :action 'take-thea-5630
 			:add-list '(thea-5630))
@@ -11350,20 +11101,18 @@
 			:preconds '(thea-5390)
 			:add-list '(thea-5631))
 		(make-op :action 'take-thea-5720
-			:preconds '(thea-3710 thea-3720)
+			:preconds '(thea-3720 thea-3710)
 			:add-list '(thea-5720))
 		(make-op :action 'take-thea-5900
-			:preconds '(thea-1513 thea-1713 thea-2203)
+			:preconds '(thea-2203 thea-1713 thea-1513)
 			:add-list '(thea-5900))
 		(make-op :action 'take-thea-5910
 			:add-list '(thea-5910))
 		(make-op :action 'take-thea-5940
 			:add-list '(thea-5940))
 		(make-op :action 'take-thea-5960
-			:preconds '(thea-6960)
 			:add-list '(thea-5960))
 		(make-op :action 'take-thea-5980
-			:preconds '(thea-6980)
 			:add-list '(thea-5980))
 		(make-op :action 'take-usu-1010
 			:add-list '(usu-1010))
@@ -11414,7 +11163,6 @@
 		(make-op :action 'take-usu-2400
 			:add-list '(usu-2400))
 		(make-op :action 'take-usu-3070
-			:preconds '(honr-3070)
 			:add-list '(usu-3070))
 		(make-op :action 'take-usu-3071
 			:add-list '(usu-3071))
@@ -11434,10 +11182,10 @@
 		(make-op :action 'take-wats-1200
 			:add-list '(wats-1200))
 		(make-op :action 'take-wats-2000
-			:preconds '(envs-2000 wild-2000)
+			:preconds '(wild-2000)
 			:add-list '(wats-2000))
 		(make-op :action 'take-wats-2220
-			:preconds '(biol-1610 biol-1620 biol-1620)
+			:preconds '(biol-1620 biol-1620 biol-1610)
 			:add-list '(wats-2220))
 		(make-op :action 'take-wats-2500
 			:preconds '(biol-1620)
@@ -11452,7 +11200,7 @@
 			:preconds '(wats-3050)
 			:add-list '(wats-3060))
 		(make-op :action 'take-wats-3100
-			:preconds '(biol-1010 biol-1610 biol-1620)
+			:preconds '(biol-1620 biol-1610 biol-1010)
 			:add-list '(wats-3100))
 		(make-op :action 'take-wats-3110
 			:preconds '(wats-3100)
@@ -11460,61 +11208,55 @@
 		(make-op :action 'take-wats-3450
 			:add-list '(wats-3450))
 		(make-op :action 'take-wats-3600
-			:preconds '(math-1060 math-1100 math-1210 phys-2210 geo-3600)
+			:preconds '(phys-2210 math-1210 math-1100 math-1060)
 			:add-list '(wats-3600))
 		(make-op :action 'take-wats-3700
 			:add-list '(wats-3700))
 		(make-op :action 'take-wats-3910
-			:preconds '(math-1050 phys-2110 phys-2210 math-1100 math-1210)
+			:preconds '(math-1210 math-1100 phys-2210 phys-2110 math-1050)
 			:add-list '(wats-3910))
 		(make-op :action 'take-wats-4000
-			:preconds '(wats-6000)
 			:add-list '(wats-4000))
 		(make-op :action 'take-wats-4110
-			:preconds '(chem-1210 chem-1215 chem-1220 chem-1225 wats-2220 wats-3700 wats-6110)
+			:preconds '(wats-3700 wats-2220 chem-1225 chem-1220 chem-1215 chem-1210)
 			:add-list '(wats-4110))
 		(make-op :action 'take-wats-4210
-			:preconds '(wats-6210)
 			:add-list '(wats-4210))
 		(make-op :action 'take-wats-4250
 			:add-list '(wats-4250))
 		(make-op :action 'take-wats-4310
-			:preconds '(wats-3700 wats-6310)
+			:preconds '(wats-3700)
 			:add-list '(wats-4310))
 		(make-op :action 'take-wats-4490
-			:preconds '(math-1100 math-1210 wats-3700 wats-6490)
+			:preconds '(wats-3700 math-1210 math-1100)
 			:add-list '(wats-4490))
 		(make-op :action 'take-wats-4500
-			:preconds '(chem-1210 chem-1215 chem-1220 chem-1225 wats-2220 wats-3700 wats-6500)
+			:preconds '(wats-3700 wats-2220 chem-1225 chem-1220 chem-1215 chem-1210)
 			:add-list '(wats-4500))
 		(make-op :action 'take-wats-4510
-			:preconds '(chem-1210 chem-1220 wats-4500)
+			:preconds '(wats-4500 chem-1220 chem-1210)
 			:add-list '(wats-4510))
 		(make-op :action 'take-wats-4520
 			:add-list '(wats-4520))
 		(make-op :action 'take-wats-4530
-			:preconds '(wats-6530)
 			:add-list '(wats-4530))
 		(make-op :action 'take-wats-4540
-			:preconds '(biol-1010 biol-1610 biol-1620 wats-6540)
+			:preconds '(biol-1620 biol-1610 biol-1010)
 			:add-list '(wats-4540))
 		(make-op :action 'take-wats-4580
-			:preconds '(wats-6580)
 			:add-list '(wats-4580))
 		(make-op :action 'take-wats-4600
-			:preconds '(math-1100 math-1210 wats-6600)
+			:preconds '(math-1210 math-1100)
 			:add-list '(wats-4600))
 		(make-op :action 'take-wats-4650
-			:preconds '(wats-6650)
 			:add-list '(wats-4650))
 		(make-op :action 'take-wats-4720
-			:preconds '(wats-6720)
 			:add-list '(wats-4720))
 		(make-op :action 'take-wats-4930
-			:preconds '(geog-2800 wats-6920)
+			:preconds '(geog-2800)
 			:add-list '(wats-4930))
 		(make-op :action 'take-wats-4931
-			:preconds '(wats-4930 wats-6920 wats-6921)
+			:preconds '(wats-4930)
 			:add-list '(wats-4931))
 		(make-op :action 'take-wats-4950
 			:add-list '(wats-4950))
@@ -11523,32 +11265,29 @@
 		(make-op :action 'take-wats-4970
 			:add-list '(wats-4970))
 		(make-op :action 'take-wats-4980
-			:preconds '(wats-6800 wats-7800)
 			:add-list '(wats-4980))
 		(make-op :action 'take-wats-4990
 			:add-list '(wats-4990))
 		(make-op :action 'take-wats-5003
-			:preconds '(math-1100 math-1210 phys-2110 phys-2210 wats-6003)
+			:preconds '(phys-2210 phys-2110 math-1210 math-1100)
 			:add-list '(wats-5003))
 		(make-op :action 'take-wats-5150
-			:preconds '(geo-5150 wats-6150)
 			:add-list '(wats-5150))
 		(make-op :action 'take-wats-5200
 			:add-list '(wats-5200))
 		(make-op :action 'take-wats-5300
-			:preconds '(wats-2220 biol-2220)
+			:preconds '(biol-2220 wats-2220)
 			:add-list '(wats-5300))
 		(make-op :action 'take-wats-5310
-			:preconds '(biol-2220 wats-2220 wats-5300)
+			:preconds '(wats-5300 wats-2220 biol-2220)
 			:add-list '(wats-5310))
 		(make-op :action 'take-wats-5340
-			:preconds '(geog-2800 wild-2800 wats-5300)
+			:preconds '(wats-5300 wild-2800 geog-2800)
 			:add-list '(wats-5340))
 		(make-op :action 'take-wats-5350
 			:preconds '(wats-5340)
 			:add-list '(wats-5350))
 		(make-op :action 'take-wats-5550
-			:preconds '(biol-5550)
 			:add-list '(wats-5550))
 		(make-op :action 'take-wats-5610
 			:add-list '(wats-5610))
@@ -11567,7 +11306,7 @@
 		(make-op :action 'take-wats-5630
 			:add-list '(wats-5630))
 		(make-op :action 'take-wats-5640
-			:preconds '(wats-2220 biol-2220 wats-3700 wats-7640)
+			:preconds '(wats-3700 biol-2220 wats-2220)
 			:add-list '(wats-5640))
 		(make-op :action 'take-wats-5650
 			:add-list '(wats-5650))
@@ -11576,7 +11315,7 @@
 		(make-op :action 'take-wats-5670
 			:add-list '(wats-5670))
 		(make-op :action 'take-wats-5680
-			:preconds '(geo-3600 wats-3600 geo-5680 psc-5680 wats-6680)
+			:preconds '(wats-3600 geo-3600)
 			:add-list '(wats-5680))
 		(make-op :action 'take-weld-1010
 			:add-list '(weld-1010))
@@ -11612,31 +11351,30 @@
 		(make-op :action 'take-weld-2988
 			:add-list '(weld-2988))
 		(make-op :action 'take-wild-2000
-			:preconds '(envs-2000 wats-2000)
 			:add-list '(wild-2000))
 		(make-op :action 'take-wild-2200
 			:add-list '(wild-2200))
 		(make-op :action 'take-wild-2250
 			:add-list '(wild-2250))
 		(make-op :action 'take-wild-2400
-			:preconds '(math-1050 biol-1610 biol-1620)
+			:preconds '(biol-1620 biol-1610 math-1050)
 			:add-list '(wild-2400))
 		(make-op :action 'take-wild-2800
 			:add-list '(wild-2800))
 		(make-op :action 'take-wild-3100
 			:add-list '(wild-3100))
 		(make-op :action 'take-wild-3300
-			:preconds '(biol-1610 biol-1620 biol-2220 wats-2220)
+			:preconds '(wats-2220 biol-2220 biol-1620 biol-1610)
 			:add-list '(wild-3300))
 		(make-op :action 'take-wild-3500
 			:add-list '(wild-3500))
 		(make-op :action 'take-wild-3600
 			:add-list '(wild-3600))
 		(make-op :action 'take-wild-3800
-			:preconds '(biol-1620 wats-2220 biol-2220)
+			:preconds '(biol-2220 wats-2220 biol-1620)
 			:add-list '(wild-3800))
 		(make-op :action 'take-wild-3810
-			:preconds '(wats-2220 biol-2220 math-1100 stat-2000 stat-3000)
+			:preconds '(stat-3000 stat-2000 math-1100 biol-2220 wats-2220)
 			:add-list '(wild-3810))
 		(make-op :action 'take-wild-3820
 			:preconds '(math-1050)
@@ -11649,15 +11387,13 @@
 		(make-op :action 'take-wild-4000
 			:add-list '(wild-4000))
 		(make-op :action 'take-wild-4100
-			:preconds '(engl-2010 wild-3800)
+			:preconds '(wild-3800 engl-2010)
 			:add-list '(wild-4100))
 		(make-op :action 'take-wild-4250
 			:add-list '(wild-4250))
 		(make-op :action 'take-wild-4300
-			:preconds '(wild-6300)
 			:add-list '(wild-4300))
 		(make-op :action 'take-wild-4340
-			:preconds '(wild-6340)
 			:add-list '(wild-4340))
 		(make-op :action 'take-wild-4500
 			:preconds '(wild-3810)
@@ -11665,24 +11401,23 @@
 		(make-op :action 'take-wild-4550
 			:add-list '(wild-4550))
 		(make-op :action 'take-wild-4570
-			:preconds '(wild-6570)
 			:add-list '(wild-4570))
 		(make-op :action 'take-wild-4600
-			:preconds '(wats-2220 biol-2220)
+			:preconds '(biol-2220 wats-2220)
 			:add-list '(wild-4600))
 		(make-op :action 'take-wild-4640
 			:add-list '(wild-4640))
 		(make-op :action 'take-wild-4700
-			:preconds '(biol-1610 biol-1620 wats-2220 biol-2220)
+			:preconds '(biol-2220 wats-2220 biol-1620 biol-1610)
 			:add-list '(wild-4700))
 		(make-op :action 'take-wild-4750
-			:preconds '(biol-2220 wats-2220 math-1100 stat-2000 stat-3000 wild-2400 wild-3810)
+			:preconds '(wild-3810 wild-2400 stat-3000 stat-2000 math-1100 wats-2220 biol-2220)
 			:add-list '(wild-4750))
 		(make-op :action 'take-wild-4880
-			:preconds '(chem-1110 chem-1210 biol-1610)
+			:preconds '(biol-1610 chem-1210 chem-1110)
 			:add-list '(wild-4880))
 		(make-op :action 'take-wild-4910
-			:preconds '(wild-2400 wild-3800 wild-3810 wild-4750)
+			:preconds '(wild-4750 wild-3810 wild-3800 wild-2400)
 			:add-list '(wild-4910))
 		(make-op :action 'take-wild-4950
 			:add-list '(wild-4950))
@@ -11693,29 +11428,25 @@
 		(make-op :action 'take-wild-4980
 			:add-list '(wild-4980))
 		(make-op :action 'take-wild-5220
-			:preconds '(wild-7220)
 			:add-list '(wild-5220))
 		(make-op :action 'take-wild-5300
-			:preconds '(wild-7300)
 			:add-list '(wild-5300))
 		(make-op :action 'take-wild-5350
-			:preconds '(chem-1110 psc-3000 psc-5350 wild-6350)
+			:preconds '(psc-3000 chem-1110)
 			:add-list '(wild-5350))
 		(make-op :action 'take-wild-5560
-			:preconds '(biol-1620 wats-2220 biol-2220 engl-2010 wild-6560)
+			:preconds '(engl-2010 biol-2220 wats-2220 biol-1620)
 			:add-list '(wild-5560))
 		(make-op :action 'take-wild-5580
-			:preconds '(biol-1620 biol-1625 biol-5580)
+			:preconds '(biol-1625 biol-1620)
 			:add-list '(wild-5580))
 		(make-op :action 'take-wild-5700
 			:add-list '(wild-5700))
 		(make-op :action 'take-wild-5710
 			:add-list '(wild-5710))
 		(make-op :action 'take-wild-5750
-			:preconds '(wild-6750)
 			:add-list '(wild-5750))
 		(make-op :action 'take-wild-5860
-			:preconds '(advs-5860)
 			:add-list '(wild-5860))))
 (mapc #'convert-op *registration-ops*)
 (provide :ops)

@@ -7,7 +7,7 @@
 
 ;;; get the auxfuns and ops
 (require :auxfuns "auxfuns")
-(require :ops "ops")
+(require :ops "ops2")
 
 ;;; ==============================
 
